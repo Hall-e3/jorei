@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { head_logo } from "../../constants";
 import { Link } from "react-router-dom";
 import { Bars3CenterLeftIcon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import Logo from "./Logo";
 
 const routes = [
   {
@@ -63,11 +63,11 @@ export default function Navbar() {
 
   return (
     <>
-      <div className={`w-full py-5 ${show ? "fixed top-0 border-b-2 border-stroke  bg-[#2e2d2c] drop-shadow-lg duration-700 z-99" : " bg-[#ff7000]"}`}>
+      <div className={`w-full py-5 ${show ? "fixed top-0 border-b-2 border-stroke  bg-[#2e2d2c] drop-shadow-lg duration-700 z-99" : " bg-[#860063]"}`}>
         <div className="max-w-[1580px] mx-auto h-full px-10 md:px-0">
           <div className="h-full flex items-center justify-between gap-8">
             <Link to="/" className="flex-1 flex items-center gap-3">
-              <img src={head_logo} alt="head_logo" className="h-10 md:h-13" />
+              <Logo width={100} height={100} />
             </Link>
             <div className="hidden md:flex md:flex-1 items-center justify-between gap-10">
               {routes.map((route) => (

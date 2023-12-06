@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { footer_logo, linkedin, twitter } from "../../constants";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import Logo from "./Logo";
+import LinkedIn from "./LinkedIn";
+import Twitter from "./Twitter";
 
 export default function Footer() {
   const [first, setFirst] = useState(false);
@@ -29,217 +31,102 @@ export default function Footer() {
         <div className="flex flex-col space-y-16">
           <div className="flex flex-col space-y-4 md:space-y-4 md:flex-row justify-between px-10 transition">
             <div className="flex-1">
-              <img
-                src={footer_logo}
-                alt="footer_logo"
-                className="h-10 md:h-16"
-              />
+              <Logo width={100} height={100} />
             </div>
             <div className="md:hidden transition flex flex-col space-y-3 md:space-y-0">
               <div className="flex items-center justify-between border-b pb-3 border-b-white">
-                <h5
-                  onClick={handleSmallFirst}
-                  className="font-semibold text-[1rem] md:text-lg text-white cursor-pointer"
-                >
+                <h5 onClick={handleSmallFirst} className="font-semibold text-[1rem] md:text-lg text-white cursor-pointer">
                   Quick Links
                 </h5>
                 <ChevronDownIcon className="h-4 w-4 text-white" />
               </div>
               {smallFirst && (
                 <div className="flex flex-col space-y-3 transition">
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Careers
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Contact
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition ">
-                    About us
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Locations
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Privacy Policy
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Cookie Policy
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Sitemap
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Terms of Use
-                  </p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Careers</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Contact</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition ">About us</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Locations</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Privacy Policy</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Cookie Policy</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Sitemap</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Terms of Use</p>
                 </div>
               )}
             </div>
             <div className="md:hidden transition flex flex-col space-y-3 md:space-y-0">
               <div className="flex items-center justify-between border-b pb-3 border-b-white">
-                <h5
-                  onClick={handleSmallSecond}
-                  className="font-semibold text-[1rem] md:text-lg text-white"
-                >
+                <h5 onClick={handleSmallSecond} className="font-semibold text-[1rem] md:text-lg text-white">
                   Products & Services
                 </h5>
                 <ChevronDownIcon className="h-4 w-4 text-white" />
               </div>
               {smallSecond && (
                 <div className="flex flex-col space-y-3 transition">
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Grains & Oilseeds
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    CFS & Oilseeds
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Cotton
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Editable Oils
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Rice
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Rubber
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Specialty Grains & Seed
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Integrated Feed & Protein
-                  </p>
-                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">
-                    Wood Products
-                  </p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Grains & Oilseeds</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">CFS & Oilseeds</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Cotton</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Editable Oils</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Rice</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Rubber</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Specialty Grains & Seed</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Integrated Feed & Protein</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Wood Products</p>
                 </div>
               )}
             </div>
-            <div
-              onClick={handleSecond}
-              className="hidden md:flex flex-col space-y-4 md:flex-1"
-            >
-              <h5 className="font-semibold text-lg text-white cursor-pointer">
-                Quick Links
-              </h5>
-              <div
-                className={`flex ${
-                  second ? "flex-row space-x-10" : "flex-col space-y-3"
-                } `}
-              >
+            <div onClick={handleSecond} className="hidden md:flex flex-col space-y-4 md:flex-1">
+              <h5 className="font-semibold text-lg text-white cursor-pointer">Quick Links</h5>
+              <div className={`flex ${second ? "flex-row space-x-10" : "flex-col space-y-3"} `}>
                 <div className="flex flex-col space-y-2">
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Careers
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Contact
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition ">
-                    About us
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Locations
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Privacy Policy
-                  </p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Careers</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Contact</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition ">About us</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Locations</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Privacy Policy</p>
                 </div>
                 <div className="flex flex-col space-y-2">
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Cookie Policy
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Sitemap
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Terms of Use
-                  </p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Cookie Policy</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Sitemap</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Terms of Use</p>
                 </div>
               </div>
             </div>
-            <div
-              onClick={handleFirst}
-              className="hidden md:flex flex-col space-y-4 cursor-pointer md:flex-1"
-            >
-              <h5 className="font-semibold text-lg text-white">
-                Products & Services
-              </h5>
-              <div
-                className={`flex ${
-                  first
-                    ? "flex-row space-x-10 items-center"
-                    : "flex-col space-y-2"
-                }`}
-              >
+            <div onClick={handleFirst} className="hidden md:flex flex-col space-y-4 cursor-pointer md:flex-1">
+              <h5 className="font-semibold text-lg text-white">Products & Services</h5>
+              <div className={`flex ${first ? "flex-row space-x-10 items-center" : "flex-col space-y-2"}`}>
                 <div className="flex flex-col space-y-2">
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Grains & Oilseeds
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    CFS & Oilseeds
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Cotton
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Editable Oils
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Rice
-                  </p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Grains & Oilseeds</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">CFS & Oilseeds</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Cotton</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Editable Oils</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Rice</p>
                 </div>
                 <div className="flex flex-col space-y-2">
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Rubber
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Specialty Grains & Seed
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Integrated Feed & Protein
-                  </p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    Wood Products
-                  </p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Rubber</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Specialty Grains & Seed</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Integrated Feed & Protein</p>
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Wood Products</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-col space-y-4">
               <div className="border-b border-b-white pb-3 md:border-none md:pb-0">
-                <h5 className="font-semibold text-[1rem] md:text-lg text-white">
-                  Socials
-                </h5>
+                <h5 className="font-semibold text-[1rem] md:text-lg text-white">Socials</h5>
               </div>
               <div className="flex flex-col space-y-2">
                 <div className="flex flex-row space-x-2 items-center">
-                  <img
-                    src={linkedin}
-                    alt="linkedin"
-                    className="h-5 w-5 object-contain"
-                  />
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    LinkedIn
-                  </p>
+                  <LinkedIn width={100} height={100} />
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">LinkedIn</p>
                 </div>
                 <div className="flex flex-row space-x-2 items-center">
-                  <img
-                    src={twitter}
-                    alt="twitter"
-                    className="object-contain h-5 w-5"
-                  />
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">
-                    X
-                  </p>
+                  <Twitter width={100} height={100} />
+                  <p className="text-md font-thin text-white hover:text-orange-800 transition">X</p>
                 </div>
               </div>
             </div>
           </div>
           <div>
-            <p className="text-[13px] font-medium text-white text-center">
-              © 2023 jorel Agri Holdings Pte Ltd. All Rights Reserved Co. Reg
-              No. 202115457K
-            </p>
+            <p className="text-[13px] font-medium text-white text-center">© 2023 jorel Agri Holdings Pte Ltd. All Rights Reserved Co. Reg No. 202115457K</p>
           </div>
         </div>
       </div>
