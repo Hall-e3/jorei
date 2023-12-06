@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Logo } from "../components";
-import { Bars3CenterLeftIcon, CalendarIcon, ChevronLeftIcon, ChevronRightIcon, MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Button, Carousel, Logo } from "../components";
+import { Bars3CenterLeftIcon, CalendarIcon, ChevronLeftIcon, ChevronRightIcon, MagnifyingGlassIcon, PlayIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { image2, image3, img1, img2, img3, img4, img5 } from "../constants";
 
 const slidesData = [
@@ -61,9 +61,9 @@ export default function Home() {
   }, [currentSlide]);
 
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full overflow-x-hidden">
       <div className="bg-[#860063] py-2">
-        <div className="max-w-[1480px] mx-auto px-8">
+        <div className="max-w-[1260px] mx-auto px-8">
           <div className="flex flex-row items-center">
             <div className="flex-1">
               <Logo width={50} height={50} />
@@ -92,7 +92,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-[#860063] pt-8 pb-15 " id="curve">
-        <div className="max-w-[1480px] mx-auto px-8">
+        <div className="max-w-[1260px] mx-auto px-8">
           <div className="flex flex-col items-center space-y-4">
             <div className="flex flex-col space-y-2">
               <h1 className="text-center text-white text-[2rem] font-bold leading-10">Naturally good food & beverage ingredients and solutions</h1>
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
       </div>
       <div className="py-10 px-8">
-        <div className="max-w-[1480px] mx-auto">
+        <div className="max-w-[1260px] mx-auto">
           <div className="bg-[#f78c2a] px-8 py-4 rounded-[0.45rem] flex flex-col space-y-4 items-center justify-evenly overflow-hidden">
             <div className="flex flex-row items-center space-x-3">
               <CalendarIcon className="w-7 h-7 text-white" />
@@ -137,9 +137,9 @@ export default function Home() {
         </div>
       </div>
       <div className="py-10">
-        <div className="max-w-[1480px] mx-auto px-8">
+        <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-8 items-center">
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-3 px-8">
               <h4 className="text-[#222] font-bold text-[1.5rem] leading-8 text-center">
                 Five leading product platforms coming together to serve growing customer needs
               </h4>
@@ -148,38 +148,68 @@ export default function Home() {
                 the real value comes when we cross-pollinate our thinking to open up exciting new possibilities.
               </p>
             </div>
-            <div className="overflow-hidden relative">
-              <div className="flex transition-transform transform ease-out duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-                {slidesData.map((item, index) => (
-                  <div
-                    key={item.id}
-                    className={`w-full h-full translate-x-0 transform transition-transform duration-300 ${
-                      index === currentSlide ? "translate-x-100" : "translate-x-0"
-                    }`}>
-                    <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg py-10 px-10 w-[20rem]">
-                      <div className="flex flex-col space-y-3 items-center">
-                        <img src={item.image} alt={item.title} className="h-[12.5rem] w-[12.5rem] rounded-full" />
-                        <p className="text-[1.125rem] font-bold leading-6 text-[#222]">{item.title}</p>
-                      </div>
-                      <p className="text-[.875rem] leading-5  text-center font-light">{item.description}</p>
 
-                      <div className="flex flex-row items-center space-x-3">
-                        <h6 className="text-[1rem] font-medium text-[#860063] leading-5">Read More</h6>
-                        <div className="h-5 w-5 flex items-center justify-center rounded-full bg-[#860063]">
-                          <ChevronRightIcon className="h-4 w-4 text-white" />
-                        </div>
-                      </div>
+            <div className="w-full relative px-4 md:hidden">
+              <Carousel slidesData={slidesData} autoSlide={true} />
+            </div>
+            <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center">
+              {slidesData.map((item, index) => (
+                <div className="flex-1 flex flex-col space-y-6  items-center bg-white rounded-[1.25rem] shadow-lg py-8 px-4 h-[22.25rem]">
+                  <div className="flex flex-col space-y-3 items-center">
+                    <img src={item.image} alt={item.title} className="h-[8.5rem] w-[8.5rem] rounded-full" />
+                    <p className="text-[1.125rem] font-bold leading-6 text-[#222]">{item.title}</p>
+                  </div>
+                  <p className="text-[.875rem] leading-5  text-center font-light">{item.description.slice(0, 70)}</p>
+
+                  <div className="flex flex-row items-center space-x-3">
+                    <h6 className="text-[1rem] font-medium text-[#860063] leading-5">Read More</h6>
+                    <div className="h-5 w-5 flex items-center justify-center rounded-full bg-[#860063]">
+                      <ChevronRightIcon className="h-4 w-4 text-white" />
                     </div>
                   </div>
-                ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="py-10">
+        <div className="max-w-[1260px] mx-auto px-8">
+          <div className="flex flex-col space-y-6">
+            <h5 className="font-bold text-[1.5rem] leading-8 text-center">It's not a film. It's who we are.</h5>
+            <div className="flex flex-col ">
+              <div className="order-last md:order-none">
+                <p className="text-center text-[1.125rem] font-normal leading-5">
+                  olam food ingredients is now known as&nbsp;<b>ofi</b>. Focused on the raw materials and ingredient platforms that we're known for globally
+                  -&nbsp;
+                  <a href="#">
+                    <b>cocoa</b>
+                  </a>
+                  ,&nbsp;
+                  <a href="#">
+                    <b>coffee</b>
+                  </a>
+                  ,&nbsp;
+                  <a href="#">
+                    <b>dairy</b>
+                  </a>
+                  ,&nbsp;
+                  <a href="#">
+                    <b>nuts</b>
+                  </a>
+                  , and&nbsp;
+                  <a href="#">
+                    <b>spices</b>
+                  </a>
+                  . We still offer everything we did before. What’s new is that we’re adding capabilities - especially in product development - working closely
+                  with our customers, sharing our fresh ideas to inspire new concepts. Making it real at every step, from plant to palate.
+                </p>
               </div>
-              <div className="absolute bottom-10 flex flex-row items-center space-x-5">
-                <button className="" onClick={goToPreviousSlide}>
-                  <ChevronLeftIcon className="h-8 w-8 text-[#860063]" />
-                </button>
-                <button className="" onClick={goToNextSlide}>
-                  <ChevronRightIcon className="h-8 w-8 text-[#860063]" />
-                </button>
+              <div className="xl:w-[30%]  mb-8  border rounded-lg relative order-first md:order-none">
+                <img src={image2} alt="staff1" className="object-cover w-full h-full rounded-lg" />
+                <div className="bg-gradient-to-r md:bottom-60 md:left-[50%] xl:bottom-50 xl:right-[40%] xl:left-[45%] from-[#005bac] to-primary_green motion-safe:animate-ping-once text-white h-25 w-25 rounded-full absolute flex flex-col space-y-5 z-20 top-30 left-[35%] right-[45%] items-center justify-center">
+                  <PlayIcon className="w-7 h-7" />
+                </div>
               </div>
             </div>
           </div>
