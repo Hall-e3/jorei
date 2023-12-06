@@ -11,4 +11,5 @@ import Input from "./primitives/Input";
 import Logo from "./global/Logo";
 import LinkedIn from "./global/LinkedIn";
 import Twitter from "./global/Twitter";
-export { Loader, Spinner, Button, Divider, FetchLoading, Supensing, Footer, Navbar, Input, Hero, Logo, LinkedIn, Twitter };
+import Carousel from "./global/Carousel";
+export { Loader, Spinner, Button, Divider, FetchLoading, Supensing, Footer, Navbar, Input, Hero, Logo, LinkedIn, Twitter, Carousel };
