@@ -3,6 +3,7 @@ import { Button, Carousel, Footer, Logo } from "../components";
 import {
   Bars3CenterLeftIcon,
   CalendarIcon,
+  ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   MagnifyingGlassIcon,
@@ -11,6 +12,7 @@ import {
   XMarkIcon
 } from "@heroicons/react/24/solid";
 import {
+  image1,
   image2,
   image3,
   img1,
@@ -212,6 +214,10 @@ const news = [
 export default function Home() {
   const [search, setSearch] = React.useState(false);
   const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [one, setOne] = React.useState(false);
+  const [two, setTwo] = React.useState(false);
+  const [three, setThree] = React.useState(false);
+  const [four, setFour] = React.useState(false);
 
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesData.length);
@@ -264,19 +270,23 @@ export default function Home() {
       </div>
       <div className="bg-[#860063] pt-8 pb-15 " id="curve">
         <div className="max-w-[1260px] mx-auto px-8">
-          <div className="flex flex-col items-center space-y-4">
-            <div className="flex flex-col space-y-2">
-              <h1 className="text-center text-white text-[2rem] font-bold leading-10">Naturally good food & beverage ingredients and solutions</h1>
-              <p className="text-center text-white text-[1.15rem] font-light">
-                At <span>Ofi</span> we believe in raw potential of nature, ingredients, people, technology,ideas.
-              </p>
-              <p className="text-center text-white text-[1.15rem] font-light">We don't just accept what's put in front of us.</p>
-              <p className="text-center text-white  text-[1.15rem] font-light">
-                We ask, what else could this be? At every level we use our imagination and expertise to find more creative, productive and sustainable ways of
-                doing things.
-              </p>
+          <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4">
+            <div className="md:flex-1 flex flex-col space-y-2 md:space-y-6 md:items-start md:pr-40">
+              <h1 className="text-center md:text-start text-white text-[2rem] md:text-4xl font-bold leading-10 md:leading-tight">
+                Naturally good food & beverage ingredients and solutions
+              </h1>
+              <div className="flex flex-col space-y-3">
+                <p className="text-center md:text-start text-white text-[1.15rem] font-light">
+                  At <span>Ofi</span> we believe in raw potential of nature, ingredients, people, technology,ideas.
+                </p>
+                <p className="text-center md:text-start text-white text-[1.15rem] font-light">We don't just accept what's put in front of us.</p>
+                <p className="text-center md:text-start text-white  text-[1.15rem] font-light">
+                  We ask, what else could this be? At every level we use our imagination and expertise to find more creative, productive and sustainable ways of
+                  doing things.
+                </p>
+              </div>
             </div>
-            <div>
+            <div className="md:flex-none">
               <div className="border-2 border-white rounded-full p-4">
                 <img src={image2} alt="image2" className="h-[15.5rem] w-[15.5rem]" />
               </div>
@@ -284,7 +294,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="py-10 px-8">
+      <div className="py-10 px-8 hidden">
         <div className="max-w-[1260px] mx-auto">
           <div className="bg-[#f78c2a] px-8 py-4 rounded-[0.45rem] flex flex-col space-y-4 items-center justify-evenly overflow-hidden">
             <div className="flex flex-row items-center space-x-3">
@@ -310,8 +320,8 @@ export default function Home() {
       <div className="py-10">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-8 items-center">
-            <div className="flex flex-col space-y-3 px-8">
-              <h4 className="text-[#222] font-bold text-[1.5rem] leading-8 text-center">
+            <div className="flex flex-col space-y-3 px-8 md:px-0">
+              <h4 className="text-[#222] font-bold text-[1.5rem] md:text-4xl leading-8 text-center">
                 Five leading product platforms coming together to serve growing customer needs
               </h4>
               <p className="text-[1.125rem] font-light leading-6 text-center">
@@ -344,21 +354,23 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="py-10">
-        <div className="max-w-[1260px] mx-auto px-8">
-          <div className="flex flex-col space-y-6">
+      <div className="py-10 md:py-0 ">
+        <div className="max-w-[1260px] mx-auto px-8 md:px-20">
+          <div className="flex flex-col space-y-6 md:space-y-10 py-20">
             <h5 className="font-bold text-[1.5rem] leading-8 text-center">It's not a film. It's who we are.</h5>
-            <div className="flex flex-col ">
-              <div className="order-last md:order-none">
-                <p className="text-center text-[1.125rem] font-normal leading-5">
-                  olam food ingredients is now known as&nbsp;<b>ofi</b>. Focused on the raw materials and ingredient platforms that we're known for globally
+            <div className="flex flex-col md:flex-row md:space-x-8">
+              <div className="h-full md:w-1/3 md:overflow-hidden order-last md:order-none">
+                <p className="text-center md:text-start text-[1.125rem] md:text-xl text- text-[#333] font-normal leading-5 md:leading-7">
+                  olam food ingredients is now known as<b>ofi</b>. Focused on the raw materials and ingredient platforms that we're known for globally
                   <span>cocoa</span>,<span>coffee</span>,<span>dairy</span>,<span>nuts</span>, and
                   <span>spices</span>. We still offer everything we did before. What’s new is that we’re adding capabilities - especially in product development
                   - working closely with our customers, sharing our fresh ideas to inspire new concepts. Making it real at every step, from plant to palate.
                 </p>
               </div>
-              <div className="xl:w-[30%]  mb-8  border rounded-lg relative order-first md:order-none">
-                <img src={image2} alt="staff1" className="object-cover w-full h-full rounded-lg" />
+              <div className="w-full mb-8 md:mb-0 md:w-2/3  border rounded-lg relative order-first md:order-none ">
+                <div className="md:h-[300px] w-full">
+                  <img src={image2} alt="staff1" className="object-cover w-full h-full rounded-lg" />
+                </div>
                 <div className="bg-gradient-to-r md:bottom-60 md:left-[50%] xl:bottom-50 xl:right-[40%] xl:left-[45%] from-[#005bac] to-primary_green motion-safe:animate-ping-once text-white h-25 w-25 rounded-full absolute flex flex-col space-y-5 z-20 top-30 left-[35%] right-[45%] items-center justify-center">
                   <PlayIcon className="w-7 h-7" />
                 </div>
@@ -410,17 +422,59 @@ export default function Home() {
         </div>
       </div>
       <div className="py-20 relative">
-        <div className="max-w-[1260px] mx-auto">
+        <div className="max-w-[1260px] mx-auto md:px-20">
           <div className="flex flex-col space-y-10 ">
             <div className="flex flex-col space-y-8 px-8">
-              <h4 className="text-[1.5rem] font-bold leading-6 text-center text-[#222]">It's not a new idea. It's a chance for infinite possibilities.</h4>
-              <p className="text-[1.125rem] text-center font-light leading-6 text-[#4a4949]">
+              <h4 className="block md:hidden text-[1.5rem] md:text-4xl font-bold leading-6 text-center text-[#222]">
+                It's not a new idea. It's a chance for infinite possibilities.
+              </h4>
+              <div className="hidden md:flex md:flex-col md:space-y-3">
+                <h4 className=" text-[1.5rem] md:text-3xl font-bold leading-6 text-center text-[#222]">It's not a new idea.</h4>
+                <h4 className=" text-[1.5rem] md:text-3xl font-bold leading-6 text-center text-[#222]">
+                  It's not a new idea. It's a chance for infinite possibilities.
+                </h4>
+              </div>
+              <p className="text-[1.125rem] md:text-md text-center font-light leading-6 text-[#4a4949]">
                 It’s easy to make something taste amazing. It’s much harder to fill it with nutritional benefits too. And what about making sure it’s ethically
                 sourced and right for the planet? Whatever category you’re serving, let’s supersede the benchmark with our portfolio of highly complementary
                 natural and delicious ingredients. Co-creation is easy!
               </p>
             </div>
             <div className="">
+              <div className="hidden md:block px-10 md:px-0">
+                <div className="max-w-[1580px] mx-auto">
+                  <div className="flex flex-col space-y-8">
+                    <div className=" ">
+                      <div className="flex items-center space-x-1">
+                        <p className="px-4 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#f8f6f8] text-[#860063] font-medium text-base">Bakery</p>
+                        <p className="px-6 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-base">Beverages</p>
+                        <p className="px-4 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-base">
+                          Chocolate & Confectionery
+                        </p>
+                        <p className="px-4 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-base">Dairy & Desserts</p>
+                        <p className="px-4 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-base">Savory & Culinary</p>
+                        <p className="px-4 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-base">Snacking</p>
+                      </div>
+                      <div className="py-20 bg-[#f8f6f8] px-20 rounded-lg">
+                        <div className="flex flex-row justify-between items-center">
+                          <div className="flex-1 pr-40">
+                            <p className="leading-snug font-normal text-xl text-[#333]">
+                              Our well-established network of farmers and cooperatives, and our skills in logistics and risk management enable us to secure
+                              supplies and deliver them to our customers consistently. Our technologies enhance product traceability, adding value for our
+                              customers.
+                            </p>
+                          </div>
+                          <div className="flex-none">
+                            <div className="border-2 border-[#ccc] rounded-full p-[.5rem]">
+                              <img src={p4} alt="image2" className="h-[15.5rem] w-[15.5rem] rounded-full object-contain" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="w-full md:hidden">
                 <div className="overflow-hidden w-full">
                   <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
@@ -460,7 +514,7 @@ export default function Home() {
       <div className="py-20 relative">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-10 ">
-            <h4 className="text-[1.5rem] font-bold leading-6 text-center text-[#222]">ofi is already part of your everyday life…</h4>
+            <h4 className="text-[1.5rem] font-bold leading-6 text-center md:text-4xl text-[#222]">ofi is already part of your everyday life…</h4>
 
             <div className="">
               <div className="w-full md:hidden">
@@ -490,10 +544,29 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center">
+                {datas.map((item) => (
+                  <div key={item.id} className="flex-1 flex flex-col space-y-6  items-center bg-white py-8 px-4 h-[22.25rem]">
+                    <div className="flex flex-col space-y-3 items-center">
+                      <img src={item.image} alt={item.title} className="h-[8.5rem] w-[8.5rem] rounded-full" />
+                      <p className="text-[1.125rem] font-bold leading-6 text-[#222]">{item.title}</p>
+                    </div>
+                    <p className="text-[.875rem] leading-5  text-center font-light">{item.description.slice(0, 70)}</p>
+
+                    <div className="flex flex-row items-center space-x-3">
+                      <h6 className="text-[1rem] font-medium text-[#860063] leading-5">Read More</h6>
+                      <div className="h-5 w-5 flex items-center justify-center rounded-full bg-[#860063]">
+                        <ChevronRightIcon className="h-4 w-4 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <div className="py-20 relative bg-[#f8f6f8]">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col">
@@ -537,9 +610,31 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center">
+                {news.map((item) => (
+                  <div key={item.id} className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg">
+                    <img src={item.image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
+
+                    <div className="w-full flex flex-row items-center justify-between px-6">
+                      <Button text="Articles" buttonStyle="flex bg-[#860063] rounded-[1.875rem]  text-center px-6 py-2 text-[#fff]" />
+                      <p className="text-[.85rem] font-medium text-[#860063] leading-5 text-center">{item.date}</p>
+                    </div>
+                    <div className="flex flex-col space-y-5 px-6">
+                      <h6 className="text-[1rem] font-bold leading-5">{item.title}</h6>
+                      <p className="text-[1rem] font-normal leading-6 text-[#4a4949]">{item.description}</p>
+                    </div>
+                    <div className="w-full flex flex-row items-center justify-between px-6 pb-3">
+                      <h6 className="text-[1rem] font-medium text-[#860063] leading-5 text-center">Read More</h6>
+                      <div className="h-12 w-12 flex items-center justify-center rounded-full shadow-lg">
+                        <ShareIcon className="w-7 h-7" />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
               <Button
                 text="Read more news"
-                buttonStyle="flex bg-[#860063] rounded-[1.875rem] h-[2.625rem] text-center py-[.625rem] px-[2.8125rem] text-[#fff]"
+                buttonStyle="flex bg-[#860063] rounded-[1.875rem] h-[2.625rem] text-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
               />
             </div>
           </div>
