@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Carousel, Logo } from "../components";
 import { Bars3CenterLeftIcon, CalendarIcon, ChevronLeftIcon, ChevronRightIcon, MagnifyingGlassIcon, PlayIcon, XMarkIcon } from "@heroicons/react/24/solid";
-import { image2, image3, img1, img2, img3, img4, img5 } from "../constants";
+import { image2, image3, img1, img2, img3, img4, img5, mid1, mid2, mid3, mid4, mid5 } from "../constants";
 
 const slidesData = [
   {
@@ -40,6 +40,39 @@ const slidesData = [
   }
 ];
 
+const slides = [
+  {
+    id: 1,
+    title: "Consumers want traceability & sustainability",
+    image: mid1,
+    description: "At we’re constantly increasing volumes of , working closely with farmers to improve supply chain data."
+  },
+  {
+    id: 2,
+    title: "Product & Application Development",
+    image: mid2,
+    description: "Use our natural ingredients to create delicious or refresh existing ones."
+  },
+  {
+    id: 3,
+    title: "Agri Science & Technology",
+    image: mid3,
+    description: "Learn how we enhance for better products."
+  },
+  {
+    id: 4,
+    title: "Digital Technology and Tools",
+    image: mid4,
+    description: "We offer unique for farming improvement. Enhanced data ensures supply chain transparency."
+  },
+  {
+    id: 5,
+    title: "Ingredient Innovation",
+    image: mid5,
+    description: "Discover how we drive ingredient innovation and sustainability.."
+  }
+];
+
 export default function Home() {
   const [search, setSearch] = React.useState(false);
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -59,6 +92,8 @@ export default function Home() {
       clearInterval(intervalId);
     };
   }, [currentSlide]);
+
+  const translateValue = -currentSlide * 100;
 
   return (
     <div className="h-screen w-full overflow-x-hidden">
@@ -181,34 +216,51 @@ export default function Home() {
               <div className="order-last md:order-none">
                 <p className="text-center text-[1.125rem] font-normal leading-5">
                   olam food ingredients is now known as&nbsp;<b>ofi</b>. Focused on the raw materials and ingredient platforms that we're known for globally
-                  -&nbsp;
-                  <a href="#">
-                    <b>cocoa</b>
-                  </a>
-                  ,&nbsp;
-                  <a href="#">
-                    <b>coffee</b>
-                  </a>
-                  ,&nbsp;
-                  <a href="#">
-                    <b>dairy</b>
-                  </a>
-                  ,&nbsp;
-                  <a href="#">
-                    <b>nuts</b>
-                  </a>
-                  , and&nbsp;
-                  <a href="#">
-                    <b>spices</b>
-                  </a>
-                  . We still offer everything we did before. What’s new is that we’re adding capabilities - especially in product development - working closely
-                  with our customers, sharing our fresh ideas to inspire new concepts. Making it real at every step, from plant to palate.
+                  <span>cocoa</span>,<span>coffee</span>,<span>dairy</span>,<span>nuts</span>, and
+                  <span>spices</span>. We still offer everything we did before. What’s new is that we’re adding capabilities - especially in product development
+                  - working closely with our customers, sharing our fresh ideas to inspire new concepts. Making it real at every step, from plant to palate.
                 </p>
               </div>
               <div className="xl:w-[30%]  mb-8  border rounded-lg relative order-first md:order-none">
                 <img src={image2} alt="staff1" className="object-cover w-full h-full rounded-lg" />
                 <div className="bg-gradient-to-r md:bottom-60 md:left-[50%] xl:bottom-50 xl:right-[40%] xl:left-[45%] from-[#005bac] to-primary_green motion-safe:animate-ping-once text-white h-25 w-25 rounded-full absolute flex flex-col space-y-5 z-20 top-30 left-[35%] right-[45%] items-center justify-center">
                   <PlayIcon className="w-7 h-7" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="py-20">
+        <div className="max-w-[1260px] mx-auto px-8">
+          <div className="flex flex-col items-center">
+            <div className="bg-[#f78c2a] h-[.375rem] w-[7.5rem] z-1" />
+            <div className="flex flex-col items-center space-y-10 ">
+              <h5 className="font-bold text-[1.5rem] leading-8 text-center pt-10">Traceable, delicious & nutritious?</h5>
+              <div className="w-full relative px-20 md:hidden">
+                <div className="overflow-hidden relative w-full">
+                  <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(${translateValue}%)` }}>
+                    {slides.map((slide, index) => (
+                      <div key={index} className="flex-shrink-0 w-full px-4">
+                        <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg">
+                          <img src={slide.image} alt="mid1" className="rounded-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
+                          <div className="flex flex-col space-y-5">
+                            <h6 className="text-[1rem] font-bold leading-5">{slide.title}</h6>
+                            <p className="text-[1.125rem] font-normal leading-6 text-[#4a4949]">{slide.description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="absolute bottom-0 left-[50%] -translate-x-1/2 flex flex-row items-center space-x-5">
+                    <button className="bg-[#860063] h-4 w-4 flex items-center justify-center rounded-full" onClick={goToPreviousSlide}>
+                      <ChevronLeftIcon className="h-6 w-6 text-white" />
+                    </button>
+                    <button className="bg-[#860063] h-4 w-4 flex items-center justify-center rounded-full" onClick={goToNextSlide}>
+                      <ChevronRightIcon className="h-6 w-6 text-white" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
