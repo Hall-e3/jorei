@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Carousel, Logo } from "../components";
 import { Bars3CenterLeftIcon, CalendarIcon, ChevronLeftIcon, ChevronRightIcon, MagnifyingGlassIcon, PlayIcon, XMarkIcon } from "@heroicons/react/24/solid";
-import { image2, image3, img1, img2, img3, img4, img5, mid1, mid2, mid3, mid4, mid5 } from "../constants";
+import { image2, image3, img1, img2, img3, img4, img5, m1, m2, m3, m4, m5, mid1, mid2, mid3, mid4, mid5, p1, p2, p3, p4, p5, p6 } from "../constants";
 
 const slidesData = [
   {
@@ -70,6 +70,79 @@ const slides = [
     title: "Ingredient Innovation",
     image: mid5,
     description: "Discover how we drive ingredient innovation and sustainability.."
+  }
+];
+
+const data = [
+  {
+    id: 1,
+    title: "Savory & Culinary",
+    image: p5,
+    description:
+      "It’s great when you can respond to trends. It’s even better when you spark them yourself. Together, we can create sauces, nut-based cheeses, and spice blends that fulfil existing desires or even feed new ones. How about putting a new spin on traditional dishes with trend-led ingredients like our choco mole sauce inspired by the Oaxaca region of Mexico? Using authentic spices and premium cocoa, this sauce is rich in antioxidants with a deep color and enticing aroma that will delight the senses.  "
+  },
+  {
+    id: 2,
+    title: "Bakery",
+    image: p2,
+    description:
+      "Your next cookie filling, cake topping, pie crust, biscuit crumb or bread mix starts with our playground of ingredients. Let’s get busy combining tastes, textures and colors that not only delight consumers, but also the people and planet around them. Give sweet treats a natural twist by combining our cocoa powder and nut pastes to create indulgent center-filled cookies with a premium texture. "
+  },
+  {
+    id: 3,
+    title: "Dairy & Desserts",
+    image: p1,
+    description:
+      "Emerging flavor trends in milks, yogurts and ice-creams are a real opportunity to create healthy, tasty, formulations that consumers can indulge in. Why not try new twists on familiar pairings, such as chocolate doughnut and coffee flavored ice cream? In cocoa alone, our R&D specialists can help tackle challenges in both dairy and plant-based desserts: from a unique methodology to pair cocoa powders with pea, nut, or oat bases to address taste, to reducing bitterness of FMP formats with our Fresco Cacao."
+  },
+  {
+    id: 4,
+    title: "Snacking",
+    image: p6,
+    description:
+      "Join our search for the next trail mix, cereal, or snack bar hit. Together, we can find new ingredient combinations that fulfil consumer desire for taste, texture, nutrition, and traceability. One idea? Take consumers on a journey through the world’s most vibrant cuisines with seasoned nut recipes drawing on our Blends of the Americas spice range, including Blanched Almonds with Spicy Citrus Coast and Candied Cashews with Warm Sedona Sunset.  "
+  },
+  {
+    id: 5,
+    title: "Beverages",
+    image: p3,
+    description:
+      "From cold brewed spiced coffee to golden milk made with dairy powder or nuts to suit modern consumer preferences. Even the most basic ingredient can make a real difference. With us, you can customize and co-create from plant to palate to find taste, texture and nutritional profiles that make your hot, cold, or plant-based beverages unique."
+  },
+  {
+    id: 6,
+    title: "Chocolate & Confectionery",
+    image: p4,
+    description:
+      "The world loves cocoa, in chocolate, confectionery, ice cream, bars and desserts. The need to make these better for our bodies and planet has never been greater. We’re bringing lots of fresh thinking to the table – like reducing sugar and sodium in recipes with clever cocoa creations and vegan, organic and traceable solutions. How about creating delicious vegan ‘milk’ chocolate bars with our gluten-free and grain-free cashew flour?"
+  }
+];
+
+const datas = [
+  {
+    id: 1,
+    image: m1,
+    description: "1 in 5 chocolate bars consumed globally use our cocoa beans and products"
+  },
+  {
+    id: 2,
+    image: m2,
+    description: "The coffee beans we supply can provide around 90 billions cups of coffee"
+  },
+  {
+    id: 3,
+    image: m3,
+    description: "Our annual volume of dairy products can make 19 billion slices of cheese"
+  },
+  {
+    id: 4,
+    image: m4,
+    description: "Almonds we supply will produce enough flour to bake 350 million cup cakes"
+  },
+  {
+    id: 5,
+    image: m5,
+    description: "We add taste and flavor globally with 270 million bottles of spices per year"
   }
 ];
 
@@ -232,20 +305,20 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="py-20">
-        <div className="max-w-[1260px] mx-auto px-8">
-          <div className="flex flex-col items-center">
+      <div className="py-20 relative">
+        <div className="max-w-[1260px] mx-auto">
+          <div className="flex flex-col">
             <div className="bg-[#f78c2a] h-[.375rem] w-[7.5rem] z-1" />
             <div className="flex flex-col items-center space-y-10 ">
               <h5 className="font-bold text-[1.5rem] leading-8 text-center pt-10">Traceable, delicious & nutritious?</h5>
-              <div className="w-full relative px-20 md:hidden">
-                <div className="overflow-hidden relative w-full">
-                  <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(${translateValue}%)` }}>
+              <div className="w-full md:hidden">
+                <div className="overflow-hidden w-full">
+                  <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
                     {slides.map((slide, index) => (
-                      <div key={index} className="flex-shrink-0 w-full px-4">
-                        <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg">
+                      <div key={index} className="flex-shrink-0 w-full px-8">
+                        <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg h-[70vh]">
                           <img src={slide.image} alt="mid1" className="rounded-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
-                          <div className="flex flex-col space-y-5">
+                          <div className="flex flex-col space-y-5 px-6 pt-10 pb-10">
                             <h6 className="text-[1rem] font-bold leading-5">{slide.title}</h6>
                             <p className="text-[1.125rem] font-normal leading-6 text-[#4a4949]">{slide.description}</p>
                           </div>
@@ -253,7 +326,59 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-                  <div className="absolute bottom-0 left-[50%] -translate-x-1/2 flex flex-row items-center space-x-5">
+                  <div className="absolute bottom-8 left-[50%] -translate-x-1/2 flex flex-row items-center space-x-5">
+                    <button className="bg-[#860063] h-4 w-4 flex items-center justify-center rounded-full" onClick={goToPreviousSlide}>
+                      <ChevronLeftIcon className="h-6 w-6 text-white" />
+                    </button>
+                    <button className="bg-[#860063] h-4 w-4 flex items-center justify-center rounded-full" onClick={goToNextSlide}>
+                      <ChevronRightIcon className="h-6 w-6 text-white" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <Button
+                text="Read about ofi innovation"
+                buttonStyle="flex bg-[#860063] rounded-[1.875rem] h-[2.625rem] text-center py-[.625rem] px-[2.8125rem] text-[#fff]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="py-20 relative">
+        <div className="max-w-[1260px] mx-auto">
+          <div className="flex flex-col space-y-10 ">
+            <div className="flex flex-col space-y-8 px-8">
+              <h4 className="text-[1.5rem] font-bold leading-6 text-center text-[#222]">It's not a new idea. It's a chance for infinite possibilities.</h4>
+              <p className="text-[1.125rem] text-center font-light leading-6 text-[#4a4949]">
+                It’s easy to make something taste amazing. It’s much harder to fill it with nutritional benefits too. And what about making sure it’s ethically
+                sourced and right for the planet? Whatever category you’re serving, let’s supersede the benchmark with our portfolio of highly complementary
+                natural and delicious ingredients. Co-creation is easy!
+              </p>
+            </div>
+            <div className="">
+              <div className="w-full md:hidden">
+                <div className="overflow-hidden w-full">
+                  <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
+                    {data.map((item, index) => (
+                      <div key={index} className="flex-shrink-0 w-full px-8">
+                        <div className="flex flex-col space-y-8 bg-white rounded-[1.25rem] shadow-lg py-8">
+                          <div className="bg-[#860063] flex items-center justify-center py-[1.375rem] rounded-tl-[1rem] rounded-tr-[1rem]">
+                            <h6 className="text-[1.125rem] font-bold leading-6 text-[#222]">{item.title}</h6>
+                          </div>
+                          <div className="flex flex-col space-y-6 items-center">
+                            <p className="text-[1.125rem] text-center font-light leading-6 text-[#4a4949]">{item.description.slice(0, 200)}....</p>
+                            <h6 className="text-[1rem] font-medium text-[#860063] leading-5 text-center">Read More</h6>
+                            <div>
+                              <div className="border-2 border-[#ccc] rounded-full p-[.5rem]">
+                                <img src={item.image} alt="image2" className="h-[15.5rem] w-[15.5rem] rounded-full" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="absolute bottom-12 left-[50%] -translate-x-1/2 flex flex-row items-center space-x-5">
                     <button className="bg-[#860063] h-4 w-4 flex items-center justify-center rounded-full" onClick={goToPreviousSlide}>
                       <ChevronLeftIcon className="h-6 w-6 text-white" />
                     </button>
@@ -264,6 +389,55 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="py-20 relative">
+        <div className="max-w-[1260px] mx-auto">
+          <div className="flex flex-col space-y-10 ">
+            <h4 className="text-[1.5rem] font-bold leading-6 text-center text-[#222]">ofi is already part of your everyday life…</h4>
+
+            <div className="">
+              <div className="w-full md:hidden">
+                <div className="overflow-hidden w-full">
+                  <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
+                    {datas.map((item, index) => (
+                      <div key={index} className="flex-shrink-0 w-full px-8">
+                        <div className="flex flex-col space-y-8 bg-white rounded-[1.25rem]">
+                          <div className="flex flex-col space-y-6 items-center">
+                            <div>
+                              <img src={item.image} alt="image2" className="h-[15.5rem] w-[15.5rem] rounded-full" />
+                            </div>
+                            <p className="text-[1.125rem] text-center font-light leading-6 text-[#4a4949]">{item.description}</p>
+                            <h6 className="text-[1rem] font-medium text-[#860063] leading-5 text-center">Read More</h6>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="absolute bottom-12 left-[50%] -translate-x-1/2 flex flex-row items-center space-x-5">
+                    <button className="bg-[#860063] h-4 w-4 flex items-center justify-center rounded-full" onClick={goToPreviousSlide}>
+                      <ChevronLeftIcon className="h-6 w-6 text-white" />
+                    </button>
+                    <button className="bg-[#860063] h-4 w-4 flex items-center justify-center rounded-full" onClick={goToNextSlide}>
+                      <ChevronRightIcon className="h-6 w-6 text-white" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="py-20 relative bg-[#f78c2a] px-10">
+        <div className="max-w-[1260px] mx-auto">
+          <div className="flex flex-col space-y-8 items-center">
+            <h4 className="text-[1.5rem] font-bold leading-6 text-center text-[#222]">ofi is already part of your everyday life…</h4>
+            <p className="text-center text-[1.25rem] font-light text-white">We’d love to hear from you. Get in touch today.</p>
+            <Button
+              text="Contact Us"
+              buttonStyle="text-[1rem] font-light border-[.0625rem] border-white text-white h-[2.625rem] max-w-[21.4375rem] py-[.625rem] px-[2.8125rem] flex item-center rounded-[1.875rem]"
+            />
           </div>
         </div>
       </div>
