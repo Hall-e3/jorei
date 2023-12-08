@@ -1,7 +1,43 @@
 import React from "react";
-import { Button, Carousel, Logo } from "../components";
-import { Bars3CenterLeftIcon, CalendarIcon, ChevronLeftIcon, ChevronRightIcon, MagnifyingGlassIcon, PlayIcon, XMarkIcon } from "@heroicons/react/24/solid";
-import { image2, image3, img1, img2, img3, img4, img5, m1, m2, m3, m4, m5, mid1, mid2, mid3, mid4, mid5, p1, p2, p3, p4, p5, p6 } from "../constants";
+import { Button, Carousel, Footer, Logo } from "../components";
+import {
+  Bars3CenterLeftIcon,
+  CalendarIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  MagnifyingGlassIcon,
+  PlayIcon,
+  ShareIcon,
+  XMarkIcon
+} from "@heroicons/react/24/solid";
+import {
+  image2,
+  image3,
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  m1,
+  m2,
+  m3,
+  m4,
+  m5,
+  mid1,
+  mid2,
+  mid3,
+  mid4,
+  mid5,
+  new1,
+  new2,
+  new3,
+  p1,
+  p2,
+  p3,
+  p4,
+  p5,
+  p6
+} from "../constants";
 
 const slidesData = [
   {
@@ -143,6 +179,33 @@ const datas = [
     id: 5,
     image: m5,
     description: "We add taste and flavor globally with 270 million bottles of spices per year"
+  }
+];
+
+const news = [
+  {
+    id: 1,
+    image: new1,
+    title: "ofi's Carbon Scenario Planner wins prestigious Food Ingredients Europe Award",
+    date: "Nov 28, 2023",
+    description:
+      "’s Carbon Scenario Planner (CSP), a new digital tool developed to help food and beverage manufacturers model the impact of different scenarios for reducing greenhouse gas emissions has won the 2023 Sustainability Innovation Award at Food Ingredients Europe in Frankfurt. This is the "
+  },
+  {
+    id: 2,
+    image: new2,
+    title: "Cultivating the next generation of process engineers",
+    date: "Nov 28, 2023",
+    description:
+      "’s Carbon Scenario Planner (CSP), a new digital tool developed to help food and beverage manufacturers model the impact of different scenarios for reducing greenhouse gas emissions has won the 2023 Sustainability Innovation Award at Food Ingredients Europe in Frankfurt. This is the "
+  },
+  {
+    id: 3,
+    image: new3,
+    title: "ofi Employee Spotlight: Horacio Bueno and Shannon Arballo, North America",
+    date: "Nov 28, 2023",
+    description:
+      "’s Carbon Scenario Planner (CSP), a new digital tool developed to help food and beverage manufacturers model the impact of different scenarios for reducing greenhouse gas emissions has won the 2023 Sustainability Innovation Award at Food Ingredients Europe in Frankfurt. This is the "
   }
 ];
 
@@ -308,7 +371,9 @@ export default function Home() {
       <div className="py-20 relative">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col">
-            <div className="bg-[#f78c2a] h-[.375rem] w-[7.5rem] z-1" />
+            <div className="flex items-center justify-center">
+              <div className="bg-[#f78c2a] h-[.375rem] w-[7.5rem] z-1" />
+            </div>
             <div className="flex flex-col items-center space-y-10 ">
               <h5 className="font-bold text-[1.5rem] leading-8 text-center pt-10">Traceable, delicious & nutritious?</h5>
               <div className="w-full md:hidden">
@@ -365,7 +430,7 @@ export default function Home() {
                           <div className="bg-[#860063] flex items-center justify-center py-[1.375rem] rounded-tl-[1rem] rounded-tr-[1rem]">
                             <h6 className="text-[1.125rem] font-bold leading-6 text-[#222]">{item.title}</h6>
                           </div>
-                          <div className="flex flex-col space-y-6 items-center">
+                          <div className="flex flex-col space-y-6 items-center bg-[#f8f6f8]">
                             <p className="text-[1.125rem] text-center font-light leading-6 text-[#4a4949]">{item.description.slice(0, 200)}....</p>
                             <h6 className="text-[1rem] font-medium text-[#860063] leading-5 text-center">Read More</h6>
                             <div>
@@ -429,7 +494,58 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="py-20 relative bg-[#f78c2a] px-10">
+      <div className="py-20 relative bg-[#f8f6f8]">
+        <div className="max-w-[1260px] mx-auto">
+          <div className="flex flex-col">
+            <div className="flex items-center justify-center">
+              <div className="bg-[#f78c2a] h-[.375rem] w-[7.5rem] z-1" />
+            </div>
+            <div className="flex flex-col items-center space-y-10 ">
+              <h5 className="font-bold text-[1.5rem] leading-8 text-center pt-10">Read ofi news</h5>
+              <div className="w-full md:hidden">
+                <div className="overflow-hidden w-full">
+                  <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
+                    {news.map((slide, index) => (
+                      <div key={index} className="flex-shrink-0 w-full px-6">
+                        <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg">
+                          <img src={slide.image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
+
+                          <div className="w-full flex flex-row items-center justify-between px-6">
+                            <Button text="Articles" buttonStyle="flex bg-[#860063] rounded-[1.875rem]  text-center px-6 py-2 text-[#fff]" />
+                            <p className="text-[.85rem] font-medium text-[#860063] leading-5 text-center">{slide.date}</p>
+                          </div>
+                          <div className="flex flex-col space-y-5 px-6">
+                            <h6 className="text-[1rem] font-bold leading-5">{slide.title}</h6>
+                            <p className="text-[1rem] font-normal leading-6 text-[#4a4949]">{slide.description}</p>
+                          </div>
+                          <div className="w-full flex flex-row items-center justify-between px-6 pb-3">
+                            <h6 className="text-[1rem] font-medium text-[#860063] leading-5 text-center">Read More</h6>
+                            <div className="h-12 w-12 flex items-center justify-center rounded-full shadow-lg">
+                              <ShareIcon className="w-7 h-7" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="absolute bottom-8 left-[50%] -translate-x-1/2 flex flex-row items-center space-x-5">
+                    <button
+                      className="bg-white border border-[#860063] h-4 w-4 flex items-center justify-center rounded-full"
+                      onClick={goToPreviousSlide}></button>
+                    <button className="bg-white border border-[#860063] h-4 w-4 flex items-center justify-center rounded-full" onClick={goToNextSlide}></button>
+                    <button className="bg-white border border-[#860063] h-4 w-4 flex items-center justify-center rounded-full" onClick={goToNextSlide}></button>
+                  </div>
+                </div>
+              </div>
+              <Button
+                text="Read more news"
+                buttonStyle="flex bg-[#860063] rounded-[1.875rem] h-[2.625rem] text-center py-[.625rem] px-[2.8125rem] text-[#fff]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="py-30 relative bg-[#f78c2a] px-10">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-8 items-center">
             <h4 className="text-[1.5rem] font-bold leading-6 text-center text-[#222]">ofi is already part of your everyday life…</h4>
@@ -441,6 +557,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

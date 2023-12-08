@@ -22,4 +22,7 @@ const m2 = require("../assets/images/m2.jpg");
 const m3 = require("../assets/images/m3.jpg");
 const m4 = require("../assets/images/m4.jpg");
 const m5 = require("../assets/images/m5.png");
-export { image1, image2, image3, img1, img2, img3, img4, img5, mid1, mid2, mid3, mid4, mid5, p1, p2, p3, p4, p5, p6, m1, m2, m3, m4, m5 };
+const new2 = require("../assets/images/new2.png");
+const new1 = require("../assets/images/new1.jpg");
+const new3 = require("../assets/images/new3.jpeg");
+export { image1, image2, image3, img1, img2, img3, img4, img5, mid1, mid2, mid3, mid4, mid5, p1, p2, p3, p4, p5, p6, m1, m2, m3, m4, m5, new1, new2, new3 };
