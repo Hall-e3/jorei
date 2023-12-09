@@ -1,16 +1,6 @@
 import React from "react";
-import { Button, Carousel, Footer, Logo } from "../components";
-import {
-  Bars3CenterLeftIcon,
-  CalendarIcon,
-  ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  MagnifyingGlassIcon,
-  PlayIcon,
-  ShareIcon,
-  XMarkIcon
-} from "@heroicons/react/24/solid";
+import { Button, Carousel, Footer, Hero } from "../components";
+import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon, PlayIcon, ShareIcon } from "@heroicons/react/24/solid";
 import {
   image1,
   image2,
@@ -212,7 +202,6 @@ const news = [
 ];
 
 export default function Home() {
-  const [search, setSearch] = React.useState(false);
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [one, setOne] = React.useState(false);
   const [two, setTwo] = React.useState(false);
@@ -239,40 +228,12 @@ export default function Home() {
 
   return (
     <div className="h-screen w-full overflow-x-hidden">
-      <div className="bg-[#860063] py-2">
-        <div className="max-w-[1260px] mx-auto px-8">
-          <div className="flex flex-row items-center">
-            <div className="flex-1">
-              <Logo width={50} height={50} />
-            </div>
-            <div className="flex-none flex flex-row items-center space-x-3">
-              {search ? (
-                <div className="h-[2.25rem] w-[10.9375rem] text-left  flex flex-row items-center border-b border-white py-2.5">
-                  <MagnifyingGlassIcon className="w-6 h-6 text-[#f78c2a]" />
-                  <input className="outline-none w-full bg-[#860063] pl-1.5 text-white" />
-                  <XMarkIcon onClick={() => setSearch(false)} className="h-6 w-6 text-white font-bold" />
-                </div>
-              ) : (
-                <div
-                  onClick={() => setSearch(true)}
-                  className="h-[2.25rem] rounded-[1.875rem] w-[10.9375rem] text-left px-[.9375rem] flex flex-row items-center border border-white py-2.5">
-                  <MagnifyingGlassIcon className="w-5 h-5 text-[#f78c2a]" />
-                  <input className="outline-none w-full bg-[#860063] pl-1.5" placeholder="Search" />
-                </div>
-              )}
-
-              <div>
-                <Bars3CenterLeftIcon className="text-white w-7 h-7 cursor-pointer block md:hidden" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Hero />
       <div className="bg-[#860063] pt-8 pb-15 " id="curve">
         <div className="max-w-[1260px] mx-auto px-8">
           <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4">
             <div className="md:flex-1 flex flex-col space-y-2 md:space-y-6 md:items-start md:pr-40">
-              <h1 className="text-center md:text-start text-white text-[2rem] md:text-4xl font-bold leading-10 md:leading-tight">
+              <h1 className="text-center md:text-start text-white text-[2rem] md:text-[3rem] font-bold leading-10 md:leading-tight">
                 Naturally good food & beverage ingredients and solutions
               </h1>
               <div className="flex flex-col space-y-3">
@@ -357,7 +318,7 @@ export default function Home() {
       <div className="py-10 md:py-0 ">
         <div className="max-w-[1260px] mx-auto px-8 md:px-20">
           <div className="flex flex-col space-y-6 md:space-y-10 py-20">
-            <h5 className="font-bold text-[1.5rem] leading-8 text-center">It's not a film. It's who we are.</h5>
+            <h5 className="font-bold text-[1.5rem] md:text-4xl leading-8 text-center">It's not a film. It's who we are.</h5>
             <div className="flex flex-col md:flex-row md:space-x-8">
               <div className="h-full md:w-1/3 md:overflow-hidden order-last md:order-none">
                 <p className="text-center md:text-start text-[1.125rem] md:text-xl text- text-[#333] font-normal leading-5 md:leading-7">
@@ -387,7 +348,7 @@ export default function Home() {
               <div className="bg-[#f78c2a] h-[.375rem] w-[7.5rem] z-1" />
             </div>
             <div className="flex flex-col items-center space-y-10 ">
-              <h5 className="font-bold text-[1.5rem] leading-8 text-center pt-10">Traceable, delicious & nutritious?</h5>
+              <h5 className="font-bold text-[1.5rem] md:text-4xl leading-8 text-center pt-10">Traceable, delicious & nutritious?</h5>
               <div className="w-full md:hidden">
                 <div className="overflow-hidden w-full">
                   <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
@@ -410,6 +371,66 @@ export default function Home() {
                     <button className="bg-[#860063] h-4 w-4 flex items-center justify-center rounded-full" onClick={goToNextSlide}>
                       <ChevronRightIcon className="h-6 w-6 text-white" />
                     </button>
+                  </div>
+                </div>
+              </div>
+              <div className="hidden w-full md:flex">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+                  <div className="col-span-1">
+                    <div key={slides[0].id} className="h-full flex-shrink-0 w-full">
+                      <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg h-full">
+                        <img src={slides[0].image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
+                        <div className="flex flex-col space-y-5 px-6 pt-10 pb-10">
+                          <h6 className="text-[1rem] font-bold leading-5">{slides[0].title}</h6>
+                          <p className="text-[1.125rem] font-normal leading-6 text-[#4a4949]">{slides[0].description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-span-2">
+                    <div className="grid grid-rows-2 gap-10">
+                      <div className="flex flex-row items-center justify-between space-x-10">
+                        <div key={slides[1].id} className="flex-shrink-1 w-full">
+                          <div className="flex flex-col space-y-3 items-center bg-white rounded-[1.25rem] shadow-lg">
+                            <img src={slides[1].image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem]  object-cover" />
+                            <div className="flex flex-col space-y-5 px-6 py-3">
+                              <h6 className="text-[1rem] font-bold leading-5">{slides[1].title}</h6>
+                              <p className="text-[1.125rem] font-normal leading-6 text-[#4a4949]">{slides[1].description}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div key={slides[0].id} className="flex-shrink-1 w-full h-full">
+                          <div className="h-full flex flex-col space-y-3 items-center justify-center bg-white rounded-[1.25rem] shadow-lg">
+                            <div className="flex flex-col space-y-5 px-6 py-3">
+                              <h6 className="text-[1rem] font-bold leading-5">{slides[0].title}</h6>
+                              <p className="text-[1.125rem] font-normal leading-6 text-[#4a4949]">{slides[0].description}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div key={slides[4].id} className="flex-shrink-1 w-full">
+                          <div className="flex flex-row space-x-3 items-center bg-white rounded-[1.25rem] shadow-lg">
+                            <img src={slides[4].image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem]  object-cover" />
+                            <div className="flex flex-col space-y-5 px-6 py-3">
+                              <h6 className="text-[1rem] font-bold leading-5">{slides[4].title}</h6>
+                              <p className="text-[1.125rem] font-normal leading-6 text-[#4a4949]">{slides[4].description}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-span-1 ">
+                    <div key={slides[3].id} className="h-full flex-shrink-0 w-full ">
+                      <div className="flex flex-col justify-between items-center bg-[#860063] rounded-[1.25rem] shadow-lg h-full">
+                        <div className="flex flex-col space-y-5 px-6 pt-10 pb-10">
+                          <h6 className="text-[1rem] font-bold leading-5 text-white">{slides[3].title}</h6>
+                          <p className="text-[1.125rem] font-normal leading-6 text-white">{slides[3].description}</p>
+                        </div>
+                        <img src={slides[3].image} alt="mid1" className="rounded-bl-[1.25rem] rounded-br-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -574,7 +595,7 @@ export default function Home() {
               <div className="bg-[#f78c2a] h-[.375rem] w-[7.5rem] z-1" />
             </div>
             <div className="flex flex-col items-center space-y-10 ">
-              <h5 className="font-bold text-[1.5rem] leading-8 text-center pt-10">Read ofi news</h5>
+              <h5 className="font-bold text-[1.5rem] md:text-4xl leading-8 text-center pt-10">Read ofi news</h5>
               <div className="w-full md:hidden">
                 <div className="overflow-hidden w-full">
                   <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
@@ -615,18 +636,20 @@ export default function Home() {
                   <div key={item.id} className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg">
                     <img src={item.image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
 
-                    <div className="w-full flex flex-row items-center justify-between px-6">
-                      <Button text="Articles" buttonStyle="flex bg-[#860063] rounded-[1.875rem]  text-center px-6 py-2 text-[#fff]" />
-                      <p className="text-[.85rem] font-medium text-[#860063] leading-5 text-center">{item.date}</p>
-                    </div>
-                    <div className="flex flex-col space-y-5 px-6">
-                      <h6 className="text-[1rem] font-bold leading-5">{item.title}</h6>
-                      <p className="text-[1rem] font-normal leading-6 text-[#4a4949]">{item.description}</p>
-                    </div>
-                    <div className="w-full flex flex-row items-center justify-between px-6 pb-3">
-                      <h6 className="text-[1rem] font-medium text-[#860063] leading-5 text-center">Read More</h6>
-                      <div className="h-12 w-12 flex items-center justify-center rounded-full shadow-lg">
-                        <ShareIcon className="w-7 h-7" />
+                    <div className="flex flex-col space-y-6 items-center px-6">
+                      <div className="w-full flex flex-row items-center justify-between px-6">
+                        <Button text="Articles" buttonStyle="flex bg-[#860063] rounded-[1.875rem]  text-center px-6 py-2 text-[#fff]" />
+                        <p className="text-[.85rem] font-medium text-[#860063] leading-5 text-center">{item.date}</p>
+                      </div>
+                      <div className="flex flex-col space-y-5 px-6">
+                        <h6 className="text-[1rem] font-bold leading-5">{item.title}</h6>
+                        <p className="text-[1rem] font-normal leading-6 text-[#4a4949]">{item.description.slice(0, 100)}</p>
+                      </div>
+                      <div className="w-full flex flex-row items-center justify-between px-6 pb-3">
+                        <h6 className="text-[1rem] font-medium text-[#860063] leading-5 text-center">Read More</h6>
+                        <div className="h-12 w-12 flex items-center justify-center rounded-full shadow-lg">
+                          <ShareIcon className="w-7 h-7" />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -643,7 +666,7 @@ export default function Home() {
       <div className="py-30 relative bg-[#f78c2a] px-10">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-8 items-center">
-            <h4 className="text-[1.5rem] font-bold leading-6 text-center text-[#222]">ofi is already part of your everyday life…</h4>
+            <h4 className="text-[1.5rem] font-bold md:text-4xl leading-6 text-center text-[#222]">ofi is already part of your everyday life…</h4>
             <p className="text-center text-[1.25rem] font-light text-white">We’d love to hear from you. Get in touch today.</p>
             <Button
               text="Contact Us"

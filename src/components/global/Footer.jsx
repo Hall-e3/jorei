@@ -42,10 +42,10 @@ export default function Footer() {
 
   return (
     <div className="py-20 bg-[#2e2d2c] border-t-[0.375rem] md:border-t-2 border-t-orange-800">
-      <div className="max-w-[1580px] mx-auto">
+      <div className="max-w-[1260px] mx-auto">
         <div className="flex flex-col space-y-16">
-          <div className="flex flex-col space-y-10 md:space-y-4 md:flex-row justify-between px-10 transition">
-            <div className="flex-1 flex flex-col justify-between space-y-4">
+          <div className="flex flex-col space-y-10 md:space-y-4 md:flex-row justify-between px-10 md:px-0 transition">
+            <div className="md:hidden flex-1 flex flex-col justify-between space-y-4">
               <div className="flex flex-row items-center justify-between">
                 <Logo width={60} height={60} />
                 <div className="flex flex-row items-center space-x-4">
@@ -61,9 +61,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col space-y-3 items-end">
                 <p className="text-sm font-normal md:text-md md:font-thin text-white">Copyright © 2022</p>
-                <p className="text-sm font-normal md:text-md md:font-thin text-white">
-                  Olam International Limited. All Rights Reserved. Co Reg No: 199504676H
-                </p>
+                <p className="text-sm font-normal md:text-md md:font-thin text-white">Olam International Limited. All Rights Reserved. Co Reg No: 199504676H</p>
                 <div className="flex flex-row space-x-3 ">
                   <p className="text-sm font-normal md:text-md md:font-thin text-white">Privacy Policy</p>
                   <p className="text-sm font-normal md:text-md md:font-thin text-white">Cookie Policy</p>
@@ -156,44 +154,95 @@ export default function Footer() {
                 </div>
               )}
             </div>
-            <div onClick={handleSecond} className="hidden md:flex flex-col space-y-4 md:flex-1">
-              <h5 className="font-semibold text-lg text-white cursor-pointer">Quick Links</h5>
-              <div className={`flex ${second ? "flex-row space-x-10" : "flex-col space-y-3"} `}>
-                <div className="flex flex-col space-y-2">
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Careers</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Contact</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition ">About us</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Locations</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Privacy Policy</p>
+            {/* medium */}
+            <div className="hidden md:flex">
+              <div onClick={handleSecond} className="flex flex-col space-y-4 md:flex-1">
+                <h5 onClick={handleSmallFirst} className="font-semibold text-[1rem] md:text-lg text-[#f78c2a] cursor-pointer">
+                  Olam food ingredients(ofi)
+                </h5>
+                <div className="flex flex-col space-y-3 transition">
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white">About us</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white">Innovation</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white ">Sustainability</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white">Investors</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white">Careers</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white">News & Events</p>
                 </div>
-                <div className="flex flex-col space-y-2">
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Cookie Policy</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Sitemap</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Terms of Use</p>
+              </div>
+              <div onClick={handleFirst} className="hidden md:flex flex-col space-y-4 cursor-pointer md:flex-1">
+                <h5 onClick={handleSmallSecond} className="font-semibold text-[1rem] md:text-lg text-[#f78c2a]">
+                  Products & Ingredients
+                </h5>
+                <div className="flex flex-col space-y-3 transition">
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Cocoa</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Coffee</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Cotton</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Dairy</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Nuts</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Spices</p>
+                </div>
+              </div>
+              <div onClick={handleFirst} className="hidden md:flex flex-col space-y-4 cursor-pointer md:flex-1">
+                <h5 onClick={handleSmallThree} className="font-semibold text-[1rem] md:text-lg text-[#f78c2a]">
+                  Shop
+                </h5>
+                <div className="flex flex-col space-y-3 transition">
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Nuts - Australia</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Nuts - USA</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Specialty Coffee - UK</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Specialty Coffee - USA</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Specialty Coffee - EU</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Spices - USA</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">deZaan Cocoa - USA</p>
                 </div>
               </div>
             </div>
-            <div onClick={handleFirst} className="hidden md:flex flex-col space-y-4 cursor-pointer md:flex-1">
-              <h5 className="font-semibold text-lg text-white">Products & Services</h5>
-              <div className={`flex ${first ? "flex-row space-x-10 items-center" : "flex-col space-y-2"}`}>
-                <div className="flex flex-col space-y-2">
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Grains & Oilseeds</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">CFS & Oilseeds</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Cotton</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Editable Oils</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Rice</p>
+            <div className="hidden md:flex">
+              <div onClick={handleFirst} className="flex flex-col space-y-4 cursor-pointer md:flex-1">
+                <h5 onClick={handleSmallFour} className="font-semibold text-[1rem] md:text-lg text-[#f78c2a]">
+                  Disclosures
+                </h5>
+                <div className="flex flex-col space-y-3 transition">
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Transparency in Coverage</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Modern Slavery Statement</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">CA Supply Chain Transparency Act</p>
                 </div>
-                <div className="flex flex-col space-y-2">
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Rubber</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Specialty Grains & Seed</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Integrated Feed & Protein</p>
-                  <p className="text-md font-thin text-white hover:text-orange-800 transition">Wood Products</p>
+              </div>
+              <div onClick={handleFirst} className="flex flex-col space-y-4 cursor-pointer md:flex-1">
+                <h5 onClick={handleSmallFive} className="font-semibold text-[1rem] md:text-lg text-white">
+                  Helpful Links
+                </h5>
+                <div className="flex flex-col space-y-3 transition">
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Contact us</p>
+                  <p className="text-sm font-normal md:text-md md:font-thin text-white hover:text-orange-800 transition">Sign up for news</p>
                 </div>
               </div>
             </div>
           </div>
-          <div>
-            <p className="text-[13px] font-medium text-white text-center">© 2023 jorel Agri Holdings Pte Ltd. All Rights Reserved Co. Reg No. 202115457K</p>
+          <div className="hidden flex-1 md:flex flex-col justify-between space-y-4">
+            <div className="flex flex-row items-center justify-between">
+              <Logo width={60} height={60} />
+              <div className="flex flex-row items-center space-x-4">
+                <div className="flex flex-row space-x-2 items-center">
+                  <LinkedIn width={25} height={25} />
+                  <p className="hidden text-md font-thin text-white hover:text-orange-800 transition">LinkedIn</p>
+                </div>
+                <div className="flex flex-row space-x-2 items-center">
+                  <Twitter width={25} height={25} />
+                  <p className="hidden text-md font-thin text-white hover:text-orange-800 transition">X</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col space-y-3 items-end">
+              <p className="text-sm font-normal md:text-md md:font-thin text-white">Copyright © 2022</p>
+              <p className="text-sm font-normal md:text-md md:font-thin text-white">Olam International Limited. All Rights Reserved. Co Reg No: 199504676H</p>
+              <div className="flex flex-row space-x-3 ">
+                <p className="text-sm font-normal md:text-md md:font-thin text-white">Privacy Policy</p>
+                <p className="text-sm font-normal md:text-md md:font-thin text-white">Cookie Policy</p>
+                <p className="text-sm font-normal md:text-md md:font-thin text-white">Sitemap</p>
+              </div>
+              <p className="text-sm font-normal md:text-md md:font-thin text-white">Disclaimer</p>
+            </div>
           </div>
         </div>
       </div>
