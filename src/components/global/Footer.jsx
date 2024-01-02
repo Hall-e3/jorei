@@ -157,7 +157,7 @@ export default function Footer() {
             {/* medium */}
             <div className="hidden md:flex">
               <div onClick={handleSecond} className="flex flex-col space-y-4 md:flex-1">
-                <h5 onClick={handleSmallFirst} className="font-semibold text-[1rem] md:text-lg text-[#f78c2a] cursor-pointer">
+                <h5 onClick={handleSmallFirst} className="font-semibold text-[16px] md:text-lg text-[#f78c2a] cursor-pointer">
                   Olam food ingredients(ofi)
                 </h5>
                 <div className="flex flex-col space-y-3 transition">
@@ -170,7 +170,7 @@ export default function Footer() {
                 </div>
               </div>
               <div onClick={handleFirst} className="hidden md:flex flex-col space-y-4 cursor-pointer md:flex-1">
-                <h5 onClick={handleSmallSecond} className="font-semibold text-[1rem] md:text-lg text-[#f78c2a]">
+                <h5 onClick={handleSmallSecond} className="font-semibold text-[16px] md:text-lg text-[#f78c2a]">
                   Products & Ingredients
                 </h5>
                 <div className="flex flex-col space-y-3 transition">
@@ -183,7 +183,7 @@ export default function Footer() {
                 </div>
               </div>
               <div onClick={handleFirst} className="hidden md:flex flex-col space-y-4 cursor-pointer md:flex-1">
-                <h5 onClick={handleSmallThree} className="font-semibold text-[1rem] md:text-lg text-[#f78c2a]">
+                <h5 onClick={handleSmallThree} className="font-semibold text-[16px] md:text-lg text-[#f78c2a]">
                   Shop
                 </h5>
                 <div className="flex flex-col space-y-3 transition">
@@ -199,7 +199,7 @@ export default function Footer() {
             </div>
             <div className="hidden md:flex">
               <div onClick={handleFirst} className="flex flex-col space-y-4 cursor-pointer md:flex-1">
-                <h5 onClick={handleSmallFour} className="font-semibold text-[1rem] md:text-lg text-[#f78c2a]">
+                <h5 onClick={handleSmallFour} className="font-semibold text-[16px] md:text-lg text-[#f78c2a]">
                   Disclosures
                 </h5>
                 <div className="flex flex-col space-y-3 transition">
@@ -209,7 +209,7 @@ export default function Footer() {
                 </div>
               </div>
               <div onClick={handleFirst} className="flex flex-col space-y-4 cursor-pointer md:flex-1">
-                <h5 onClick={handleSmallFive} className="font-semibold text-[1rem] md:text-lg text-white">
+                <h5 onClick={handleSmallFive} className="font-semibold text-[16px] md:text-lg text-white">
                   Helpful Links
                 </h5>
                 <div className="flex flex-col space-y-3 transition">

@@ -23,7 +23,7 @@ export default function Hero() {
             {search ? (
               <div className="h-[2.25rem] w-[10.9375rem] text-left  flex flex-row items-center border-b border-white py-2.5">
                 <MagnifyingGlassIcon className="w-6 h-6 text-[#f78c2a]" />
-                <input className="text-sm outline-none w-full bg-[#860063] pl-1.5 text-white" />
+                <input className="text-sm outline-none w-full bg-SECONDARY_GREEN pl-1.5 text-white" />
                 <XMarkIcon onClick={() => setSearch(false)} className="h-6 w-6 text-white font-bold" />
               </div>
             ) : (
@@ -31,7 +31,7 @@ export default function Hero() {
                 onClick={() => setSearch(true)}
                 className="h-[2.25rem] rounded-[1.875rem] w-[10.9375rem] text-left px-[.9375rem] flex flex-row items-center border border-white py-2.5">
                 <MagnifyingGlassIcon className="w-5 h-5 text-[#f78c2a]" />
-                <input className="text-sm outline-none w-full bg-[#860063] pl-1.5" placeholder="Search" />
+                <input className="text-sm outline-none w-full bg-SECONDARY_GREEN pl-1.5" placeholder="Search" />
               </div>
             )}
 
@@ -44,10 +44,10 @@ export default function Hero() {
               <>
                 <div className="h-[2.25rem] w-[10.9375rem] text-left  flex md:hidden flex-row items-center border-b border-white py-2.5">
                   <MagnifyingGlassIcon className="w-6 h-6 text-[#f78c2a]" />
-                  <input className="outline-none w-full bg-[#888888] pl-1.5 text-white" />
+                  <input className="outline-none w-full bg-SECONDARY_GREEN pl-1.5 text-white" />
                   <XMarkIcon onClick={() => setSearch(false)} className="h-6 w-6 text-white font-bold" />
                 </div>
-                <div className="h-[2.5rem] w-full text-left  hidden md:flex flex-row items-center border border-[#860063] bg-white py-2.5 px-3 rounded-[1.25rem]">
+                <div className="h-[2.5rem] w-full text-left  hidden md:flex flex-row items-center border border-SECONDARY_GREEN bg-white py-2.5 px-3 rounded-[1.25rem]">
                   <input className="text-sm outline-none w-full  pl-1.5 font-light" placeholder="Search for products,ingredients,events...." />
                   <div className="flex flex-row items-center space-x-4">
                     <MagnifyingGlassIcon className="w-5 h-5 text-[#f78c2a]" />
