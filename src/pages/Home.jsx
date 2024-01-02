@@ -229,19 +229,19 @@ export default function Home() {
   return (
     <div className="h-screen w-full overflow-x-hidden">
       <Hero />
-      <div className="bg-[#860063] pt-8 pb-15 " id="curve">
+      <div className="bg-SECONDARY_GREEN pt-8 pb-15 " id="curve">
         <div className="max-w-[1260px] mx-auto px-8">
           <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4">
             <div className="md:flex-1 flex flex-col space-y-2 md:space-y-6 md:items-start md:pr-40">
-              <h1 className="text-center md:text-start text-white text-[2rem] md:text-[3rem] font-bold leading-10 md:leading-tight">
+              <h1 className="text-center md:text-start text-white text-title-md md:text-title-xl font-bold leading-10 md:leading-tight">
                 Naturally good food & beverage ingredients and solutions
               </h1>
               <div className="flex flex-col space-y-3">
-                <p className="text-center md:text-start text-white text-[1.15rem] font-light">
+                <p className="text-center md:text-start text-white text-title-xsm font-light">
                   At <span>Ofi</span> we believe in raw potential of nature, ingredients, people, technology,ideas.
                 </p>
-                <p className="text-center md:text-start text-white text-[1.15rem] font-light">We don't just accept what's put in front of us.</p>
-                <p className="text-center md:text-start text-white  text-[1.15rem] font-light">
+                <p className="text-center md:text-start text-white text-title-xsm font-light">We don't just accept what's put in front of us.</p>
+                <p className="text-center md:text-start text-white  text-title-xsm font-light">
                   We ask, what else could this be? At every level we use our imagination and expertise to find more creative, productive and sustainable ways of
                   doing things.
                 </p>
@@ -294,11 +294,11 @@ export default function Home() {
             <div className="w-full relative px-4 md:hidden">
               <Carousel slidesData={slidesData} autoSlide={true} />
             </div>
-            <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center">
+            <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center ">
               {slidesData.map((item, index) => (
-                <div className="flex-1 flex flex-col space-y-6  items-center bg-white rounded-[1.25rem] shadow-lg py-8 px-4 h-[22.25rem]">
+                <div className="flex-1 flex flex-col space-y-6  items-center bg-white rounded-[1.25rem] shadow-lg py-8 px-4 h-[22.25rem] group  transition-all duration-[800ms]">
                   <div className="flex flex-col space-y-3 items-center">
-                    <img src={item.image} alt={item.title} className="h-[8.5rem] w-[8.5rem] rounded-full" />
+                    <img src={item.image} alt={item.title} className="h-[8.5rem] w-[8.5rem] rounded-full group-hover:hidden" />
                     <p className="text-[1.125rem] font-bold leading-6 text-[#222]">{item.title}</p>
                   </div>
                   <p className="text-[.875rem] leading-5  text-center font-light">{item.description.slice(0, 70)}</p>
