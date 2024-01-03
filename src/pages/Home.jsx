@@ -230,7 +230,7 @@ export default function Home() {
     <div className="h-screen w-full overflow-x-hidden">
       <Hero />
       <div className="bg-SECONDARY_GREEN pt-8 pb-15 " id="curve">
-        <div className="max-w-[1260px] mx-auto px-8">
+        <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4">
             <div className="md:flex-1 flex flex-col space-y-4 md:space-y-6 md:items-start md:pr-40">
               <h1 className="text-center md:text-start text-white text-title-md md:text-title-xl font-bold leading-10 md:leading-tight">
@@ -280,7 +280,7 @@ export default function Home() {
       </div>
       <div className="py-10">
         <div className="max-w-[1260px] mx-auto">
-          <div className="flex flex-col space-y-8 items-center">
+          <div className="flex flex-col space-y-8 md:space-y-10 items-center">
             <div className="flex flex-col space-y-3 px-8 md:px-0">
               <h4 className="text-[#222] font-bold text-title-md md:text-title-xl leading-8 text-center">
                 Five leading product platforms coming together to serve growing customer needs
@@ -296,17 +296,17 @@ export default function Home() {
             </div>
             <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center ">
               {slidesData.map((item, index) => (
-                <div className="flex-1 flex flex-col space-y-6  items-center bg-white rounded-[1.25rem] shadow-lg py-8 px-4 h-[22.25rem] group  transition-all duration-[800ms]">
+                <div className="flex-1 flex flex-col space-y-6  items-center bg-white rounded-md shadow-lg py-8 px-4 h-[22.25rem] group  transition-all duration-[800ms]">
                   <div className="flex flex-col space-y-3 items-center">
                     <img src={item.image} alt={item.title} className="h-[8.5rem] w-[8.5rem] rounded-full group-hover:hidden" />
                     <p className="text-[16px] font-bold leading-6 text-[#222]">{item.title}</p>
                   </div>
-                  <p className="text-[16px] leading-5  text-center font-light">{item.description.slice(0, 70)}</p>
+                  <p className="text-[15px] leading-5  text-center font-light">{item.description.slice(0, 70)}</p>
 
                   <div className="flex flex-row items-center space-x-3">
-                    <h6 className="text-[16px] font-medium text-[#860063] leading-5">Read More</h6>
-                    <div className="h-5 w-5 flex items-center justify-center rounded-full bg-[#860063]">
-                      <ChevronRightIcon className="h-4 w-4 text-white" />
+                    <h6 className="text-[15px] font-medium text-[#860063] leading-5">Read More</h6>
+                    <div className="h-4 w-4 flex items-center justify-center rounded-full bg-[#860063]">
+                      <ChevronRightIcon className="h-3 w-3 text-white" />
                     </div>
                   </div>
                 </div>
@@ -322,7 +322,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:space-x-8">
               <div className="h-full md:w-1/3 md:overflow-hidden order-last md:order-none">
                 <p className="text-center md:text-start text-[16px] text- text-[#333] font-normal leading-5 md:leading-7">
-                  olam food ingredients is now known as<b>ofi</b>. Focused on the raw materials and ingredient platforms that we're known for globally
+                  Olam food ingredients is now known as<b>ofi</b>. Focused on the raw materials and ingredient platforms that we're known for globally
                   <span>cocoa</span>,<span>coffee</span>,<span>dairy</span>,<span>nuts</span>, and
                   <span>spices</span>. We still offer everything we did before. What’s new is that we’re adding capabilities - especially in product development
                   - working closely with our customers, sharing our fresh ideas to inspire new concepts. Making it real at every step, from plant to palate.
@@ -381,8 +381,8 @@ export default function Home() {
                       <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg h-full">
                         <img src={slides[0].image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
                         <div className="flex flex-col space-y-5 px-6 pt-10 pb-10">
-                          <h6 className="text-[1rem] font-bold leading-5">{slides[0].title}</h6>
-                          <p className="text-[1.125rem] font-normal leading-6 text-[#4a4949]">{slides[0].description}</p>
+                          <h6 className="text-[16px] font-bold leading-5">{slides[0].title}</h6>
+                          <p className="text-[15px] font-normal leading-6 text-[#4a4949]">{slides[0].description}</p>
                         </div>
                       </div>
                     </div>
@@ -394,16 +394,16 @@ export default function Home() {
                           <div className="flex flex-col space-y-3 items-center bg-white rounded-[1.25rem] shadow-lg">
                             <img src={slides[1].image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem]  object-cover" />
                             <div className="flex flex-col space-y-5 px-6 py-3">
-                              <h6 className="text-[1rem] font-bold leading-5">{slides[1].title}</h6>
-                              <p className="text-[1.125rem] font-normal leading-6 text-[#4a4949]">{slides[1].description}</p>
+                              <h6 className="text-[16px] font-bold leading-5">{slides[1].title}</h6>
+                              <p className="text-[15px] font-normal leading-6 text-[#4a4949]">{slides[1].description}</p>
                             </div>
                           </div>
                         </div>
                         <div key={slides[0].id} className="flex-shrink-1 w-full h-full">
                           <div className="h-full flex flex-col space-y-3 items-center justify-center bg-white rounded-[1.25rem] shadow-lg">
                             <div className="flex flex-col space-y-5 px-6 py-3">
-                              <h6 className="text-[1rem] font-bold leading-5">{slides[0].title}</h6>
-                              <p className="text-[1.125rem] font-normal leading-6 text-[#4a4949]">{slides[0].description}</p>
+                              <h6 className="text-[16px] font-bold leading-5">{slides[0].title}</h6>
+                              <p className="text-[15px] font-normal leading-6 text-[#4a4949]">{slides[0].description}</p>
                             </div>
                           </div>
                         </div>
@@ -413,8 +413,8 @@ export default function Home() {
                           <div className="flex flex-row space-x-3 items-center bg-white rounded-[1.25rem] shadow-lg">
                             <img src={slides[4].image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem]  object-cover" />
                             <div className="flex flex-col space-y-5 px-6 py-3">
-                              <h6 className="text-[1rem] font-bold leading-5">{slides[4].title}</h6>
-                              <p className="text-[1.125rem] font-normal leading-6 text-[#4a4949]">{slides[4].description}</p>
+                              <h6 className="text-[16px] font-bold leading-5">{slides[4].title}</h6>
+                              <p className="text-[15px] font-normal leading-6 text-[#4a4949]">{slides[4].description}</p>
                             </div>
                           </div>
                         </div>
@@ -425,8 +425,8 @@ export default function Home() {
                     <div key={slides[3].id} className="h-full flex-shrink-0 w-full ">
                       <div className="flex flex-col justify-between items-center bg-[#860063] rounded-[1.25rem] shadow-lg h-full">
                         <div className="flex flex-col space-y-5 px-6 pt-10 pb-10">
-                          <h6 className="text-[1rem] font-bold leading-5 text-white">{slides[3].title}</h6>
-                          <p className="text-[1.125rem] font-normal leading-6 text-white">{slides[3].description}</p>
+                          <h6 className="text-[16px] font-bold leading-5 text-white">{slides[3].title}</h6>
+                          <p className="text-[15px] font-normal leading-6 text-white">{slides[3].description}</p>
                         </div>
                         <img src={slides[3].image} alt="mid1" className="rounded-bl-[1.25rem] rounded-br-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
                       </div>
@@ -449,7 +449,7 @@ export default function Home() {
               <h4 className="block md:hidden text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">
                 It's not a new idea. It's a chance for infinite possibilities.
               </h4>
-              <div className="hidden md:flex md:flex-col md:space-y-3">
+              <div className="hidden md:flex md:flex-col md:space-y-1">
                 <h4 className=" text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">It's not a new idea.</h4>
                 <h4 className=" text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">
                   It's not a new idea. It's a chance for infinite possibilities.
@@ -467,19 +467,19 @@ export default function Home() {
                   <div className="flex flex-col space-y-8">
                     <div className=" ">
                       <div className="flex items-center space-x-1">
-                        <p className="px-4 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#f8f6f8] text-[#860063] font-medium text-base">Bakery</p>
-                        <p className="px-6 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-base">Beverages</p>
-                        <p className="px-4 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-base">
+                        <p className="px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#f8f6f8] text-[#860063] font-medium text-[15px]">Bakery</p>
+                        <p className="px-6 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-[15px]">Beverages</p>
+                        <p className="px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-[15px]">
                           Chocolate & Confectionery
                         </p>
-                        <p className="px-4 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-base">Dairy & Desserts</p>
-                        <p className="px-4 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-base">Savory & Culinary</p>
-                        <p className="px-4 py-4.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-base">Snacking</p>
+                        <p className="px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-[15px]">Dairy & Desserts</p>
+                        <p className="px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-[15px]">Savory & Culinary</p>
+                        <p className="px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-[15px]">Snacking</p>
                       </div>
                       <div className="py-20 bg-[#f8f6f8] px-20 rounded-lg">
                         <div className="flex flex-row justify-between items-center">
                           <div className="flex-1 pr-40">
-                            <p className="leading-snug font-normal text-xl text-[#333]">
+                            <p className="leading-snug font-normal text-[16px] text-[#333]">
                               Our well-established network of farmers and cooperatives, and our skills in logistics and risk management enable us to secure
                               supplies and deliver them to our customers consistently. Our technologies enhance product traceability, adding value for our
                               customers.
@@ -567,17 +567,17 @@ export default function Home() {
               </div>
               <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center">
                 {datas.map((item) => (
-                  <div key={item.id} className="flex-1 flex flex-col space-y-6  items-center bg-white py-8 px-4 h-[22.25rem]">
+                  <div key={item.id} className="flex-1 flex flex-col space-y-6 border border-white  items-center bg-white py-8 px-4 h-[22.25rem] group hover:border hover:border-SECONDARY_GREEN duration-300 transition hover:rounded-md">
                     <div className="flex flex-col space-y-3 items-center">
-                      <img src={item.image} alt={item.title} className="h-[8.5rem] w-[8.5rem] rounded-full" />
+                      <img src={item.image} alt={item.title} className="h-[8.5rem] w-[8.5rem] rounded-full group-hover:scale-125 duration-300" />
                       <p className="text-[1.125rem] font-bold leading-6 text-[#222]">{item.title}</p>
                     </div>
                     <p className="text-[.875rem] leading-5  text-center font-light">{item.description.slice(0, 70)}</p>
 
-                    <div className="flex flex-row items-center space-x-3">
-                      <h6 className="text-[1rem] font-medium text-[#860063] leading-5">Read More</h6>
-                      <div className="h-5 w-5 flex items-center justify-center rounded-full bg-[#860063]">
-                        <ChevronRightIcon className="h-4 w-4 text-white" />
+                    <div className="flex flex-row items-center space-x-3 cursor-pointer">
+                      <h6 className="text-[15px] font-medium text-[#860063] leading-5">Read More</h6>
+                      <div className="h-4 w-4  flex items-center justify-center rounded-full bg-[#860063]">
+                        <ChevronRightIcon className="h-3 w-3 text-white" />
                       </div>
                     </div>
                   </div>
@@ -636,19 +636,19 @@ export default function Home() {
                   <div key={item.id} className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg">
                     <img src={item.image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
 
-                    <div className="flex flex-col space-y-6 items-center px-6">
+                    <div className="flex flex-col space-y-6 items-center px-6 md:px-4">
                       <div className="w-full flex flex-row items-center justify-between px-6">
-                        <Button text="Articles" buttonStyle="flex bg-[#860063] rounded-[1.875rem]  text-center px-6 py-2 text-[#fff]" />
-                        <p className="text-[.85rem] font-medium text-[#860063] leading-5 text-center">{item.date}</p>
+                        <Button text="Articles" buttonStyle="flex bg-[#860063] text-[14px] rounded-[1.875rem]  text-center px-6 py-2 text-[#fff]" />
+                        <p className="text-[14px] font-medium text-[#860063] leading-5 text-center">{item.date}</p>
                       </div>
                       <div className="flex flex-col space-y-5 px-6">
-                        <h6 className="text-[1rem] font-bold leading-5">{item.title}</h6>
-                        <p className="text-[1rem] font-normal leading-6 text-[#4a4949]">{item.description.slice(0, 100)}</p>
+                        <h6 className="text-[16px] font-bold leading-5">{item.title}</h6>
+                        <p className="text-[15px] font-normal leading-6 text-[#4a4949]">{item.description.slice(0, 100)}</p>
                       </div>
                       <div className="w-full flex flex-row items-center justify-between px-6 pb-3">
-                        <h6 className="text-[1rem] font-medium text-[#860063] leading-5 text-center">Read More</h6>
-                        <div className="h-12 w-12 flex items-center justify-center rounded-full shadow-lg">
-                          <ShareIcon className="w-7 h-7" />
+                        <h6 className="text-[15px] font-medium text-[#860063] leading-5 text-center">Read More</h6>
+                        <div className="h-9 w-9 flex items-center justify-center rounded-full shadow-lg">
+                          <ShareIcon className="w-5 h-5" />
                         </div>
                       </div>
                     </div>
@@ -663,9 +663,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="py-30 relative bg-[#f78c2a] px-10">
+      <div className="py-20 relative bg-[#f78c2a] px-10">
         <div className="max-w-[1260px] mx-auto">
-          <div className="flex flex-col space-y-8 items-center">
+          <div className="flex flex-col space-y-8 md:space-y-6 items-center">
             <h4 className="font-bold text-title-md md:text-title-xl leading-6 text-center text-[#222]">ofi is already part of your everyday life…</h4>
             <p className="text-center text-[16px] font-light text-white">We’d love to hear from you. Get in touch today.</p>
             <Button

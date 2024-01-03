@@ -14,7 +14,7 @@ export default function Hero() {
   const [search, setSearch] = React.useState(false);
   return (
     <div className="bg-SECONDARY_GREEN py-2">
-      <div className="max-w-[1260px] mx-auto px-8">
+      <div className="max-w-[1260px] mx-auto px-4 md:px-0">
         <div className="flex flex-row items-center">
           <div className="flex-1">
             <Logo width={100} height={100} />
@@ -35,8 +35,8 @@ export default function Hero() {
               </div>
             )}
 
-            <div>
-              <Bars3CenterLeftIcon className="text-white w-7 h-7 cursor-pointer block md:hidden" />
+            <div className="block md:hidden">
+              <Bars3CenterLeftIcon className="text-white w-7 h-7 cursor-pointer" />
             </div>
           </div>
           <div className="hidden flex-none transition duration-300 md:flex flex-row items-center space-x-3">
@@ -62,15 +62,15 @@ export default function Hero() {
                 <div className="flex flex-row items-center space-x-6">
                   <div className="flex flex-row items-center space-x-2">
                     <NewspaperIcon className="w-5 h-5 text-[#f78c2a]" />
-                    <p className="text-white  text-[1rem] font-light">News & Events</p>
+                    <p className="text-white  text-[15.5px] font-light">News & Events</p>
                   </div>
                   <div className="flex flex-row items-center space-x-2">
                     <BriefcaseIcon className="w-5 h-5 text-[#f78c2a]" />
-                    <p className="text-white  text-[1rem] font-light">Careers</p>
+                    <p className="text-white  text-[15.5px] font-light">Careers</p>
                   </div>
                   <div className="flex flex-row items-center space-x-2">
                     <MapPinIcon className="w-5 h-5 text-[#f78c2a]" />
-                    <p className="text-white  text-[1rem] font-light">Location</p>
+                    <p className="text-white  text-[15.5px] font-light">Location</p>
                   </div>
                 </div>
                 <button className="flex items-center group space-x-3 bg-white hover:bg-SECONDARY_GREEN border border-SECONDARY_GREEN hover:border-white px-[2.09375rem] rounded-[1.25rem] h-[2.5rem] max-w-[21.4375rem]">
