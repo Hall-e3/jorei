@@ -1,37 +1,16 @@
 import React from "react";
-import { Button, Footer, Hero, HeroBottom } from "../components";
-import { image2, image4 } from "../constants";
-import { ChevronRightIcon, ShareIcon } from "@heroicons/react/24/solid";
-import { news, products, slidesData } from "../utils/data";
+import { Footer, Hero, HeroBottom } from "../components";
+import { image4 } from "../constants";
+import { products } from "../utils/data";
 
 export default function Products() {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
-
-  const goToNextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesData.length);
-  };
-
-  const goToPreviousSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + slidesData.length) % slidesData.length);
-  };
-
-  React.useEffect(() => {
-    const intervalId = setInterval(goToNextSlide, 3000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [currentSlide]);
-
-  const translateValue = -currentSlide * 100;
-
   return (
     <div className="h-screen w-full">
       <Hero />
       <HeroBottom
-        title="DeliveringValue for Customers"
+        title="Delivering Value for Customers"
         button={true}
-        buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
+        buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center justify-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
         buttonText="Product Customization"
         componentStyle="color_black"
         image={image4}
@@ -40,7 +19,7 @@ export default function Products() {
         <div className="max-w-[1260px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 space-y-10 md:space-y-0 md:gap-20">
             <div>
-              <h3 className="text-title-md md:text-title-xl font-semibold text-[#2e2d2c] leading-tight">
+              <h3 className="text-title-sm sm:text-title-md md:text-title-xl font-semibold text-[#2e2d2c] leading-tight">
                 We offer our customers a<span className="text-[#ff7000]"> deep understanding</span> of market needs, built through our on-the-ground presence in
                 Asia and Africa over the last 30 years.
               </h3>
@@ -65,7 +44,7 @@ export default function Products() {
         <div className="max-w-[1580px] mx-auto">
           <div className="w-full flex flex-col space-y-10 ">
             <div className="flex flex-col space-y-6 items-center">
-              <h3 className="text-title-md md:text-title-xl text-center md:text-left font-semibold text-[#2e2d2c]">Our Products & Services</h3>
+              <h3 className="text-title-sm sm:text-title-md md:text-title-xl text-center md:text-left font-semibold text-[#2e2d2c]">Our Products & Services</h3>
               <p className="text-[16px] leading-1 text-[#2e2d2c] text-center">
                 Whether it's working with rice farmers in Asia, sourcing cotton in Australia, or producing value-added products in Africa, we help our customers
                 around the world meet the increasing demand for food, feed and fibre.

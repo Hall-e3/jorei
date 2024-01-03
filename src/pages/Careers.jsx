@@ -31,7 +31,7 @@ export default function Careers() {
       <HeroBottom
         title="Creating Opportunities toMake a Difference"
         button={true}
-        buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
+        buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center justify-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
         buttonText="Down Fact sheet"
         componentStyle="color_black"
         image={image4}
@@ -40,7 +40,7 @@ export default function Careers() {
         <div className="max-w-[1260px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 space-y-10 md:space-y-0 md:gap-20">
             <div>
-              <h3 className="text-title-md md:text-title-xl font-semibold text-[#2e2d2c] leading-tight">
+              <h3 className="text-title-sm sm:text-title-md md:text-title-xl  text-center md:text-start font-semibold text-[#2e2d2c] leading-tight">
                 Our challenge to you is to
                 <span className="text-[#ff7000]"> imagine the extraordinary.</span>
               </h3>
@@ -63,23 +63,23 @@ export default function Careers() {
 
       <div className="bg-[#f8f6f8] pt-8 pb-15">
         <div className="max-w-[1260px] mx-auto">
-          <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4">
+          <div className="flex flex-col  justify-center md:flex-row md:justify-between items-center space-y-10 md:space-y-4">
             <div className="md:flex-none">
               <div className="border-2 border-white rounded-full p-4">
                 <img src={image2} alt="image2" className="h-[20.5rem] w-[20.5rem]" />
               </div>
             </div>
-            <div className="md:flex-1 flex flex-col space-y-4 md:space-y-6 md:items-end pl-40">
-              <h1 className="text-center md:text-end text-title-md md:text-title-xl font-bold leading-10 md:leading-tight">Who are we looking for?</h1>
+            <div className="md:flex-1 flex flex-col space-y-4 md:space-y-6 md:items-end md:pl-40 px-10 md:px-0">
+              <h1 className="text-center md:text-end text-title-sm sm:text-title-md md:text-title-xl  font-bold leading-10 md:leading-tight">Who are we looking for?</h1>
               <div className="flex flex-col space-y-6">
-                <p className="text-center md:text-start text-[16px]">
+                <p className="text-center md:text-start text-[15px] md:text-[16px]">
                   We ask, what else could this be? At every level we use our imagination and expertise to find more creative, productive and sustainable ways of
                   doing things.We don't just accept what's put in front of us. At <span>Ofi</span> we believe in raw potential of nature, ingredients, people,
                   technology,ideas.
                 </p>
                 <Button
                   text="Job Opportunities"
-                  buttonStyle="flex bg-[#860063] rounded-[1.875rem] h-[2.625rem] w-[30%] text-center  justify-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
+                  buttonStyle="flex bg-[#860063] text-[15px] md:text-[16px] rounded-[1.875rem] h-[2.625rem] md:w-[30%] text-center  justify-center py-[.625rem] px-[2.8125rem] md:px-6 text-[#fff]"
                 />
               </div>
             </div>
@@ -114,17 +114,17 @@ export default function Careers() {
       <div className="bg-[#f8f6f8] pt-8 pb-15">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4">
-            <div className="md:flex-1 flex flex-col space-y-4 md:space-y-6 md:items-start md:pr-40">
-              <h1 className="text-center md:text-start text-title-md md:text-title-xl font-bold leading-10 md:leading-tight">Find your place at Jorei</h1>
-              <div className="flex flex-col space-y-6">
-                <p className="text-center md:text-start  text-[16px]">
+            <div className="md:flex-1 flex flex-col justify-center space-y-10 md:space-y-6 md:items-start md:pr-40">
+              <h1 className="text-center md:text-start text-title-sm sm:text-title-md md:text-title-xl  font-bold leading-10 md:leading-tight ">Find your place at Jorei</h1>
+              <div className="flex flex-col space-y-6 px-10 md:px-0">
+                <p className="text-center md:text-start text-[15px] md:text-[16px]">
                   We ask, what else could this be? At every level we use our imagination and expertise to find more creative, productive and sustainable ways of
                   doing things.We don't just accept what's put in front of us. At <span>Ofi</span> we believe in raw potential of nature, ingredients, people,
                   technology,ideas.
                 </p>
                 <Button
                   text="Job Opportunities"
-                  buttonStyle="flex bg-[#860063] rounded-[1.875rem] h-[2.625rem] w-[30%] text-center  justify-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
+                  buttonStyle="flex bg-[#860063] rounded-[1.875rem] h-[2.625rem] md:w-[30%] text-center  justify-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
                 />
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function Careers() {
               <div className="bg-[#f78c2a] h-[.375rem] w-[7.5rem] z-1" />
             </div>
             <div className="flex flex-col items-center space-y-4 md:space-y-10 ">
-              <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-center pt-10">Read ofi news</h5>
+              <h5 className="font-bold text-title-sm sm:text-title-md md:text-title-xl  leading-8 text-center pt-10">Read ofi news</h5>
               <div className="w-full md:hidden">
                 <div className="overflow-hidden w-full">
                   <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>

@@ -14,7 +14,7 @@ export default function About() {
       <HeroBottom
         title="Cultivating Sustainable Future"
         button={true}
-        buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
+        buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center justify-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
         buttonText="Down Factsheet"
         image={image4}
       />
@@ -23,7 +23,9 @@ export default function About() {
           <div className="hidden md:block px-10 md:px-0">
             <div className="max-w-[1580px] mx-auto">
               <div className="flex flex-col space-y-8">
-                <h4 className="text-title-md md:text-title-xl font-semibold text-[#860063]leading-tight">Proven Expertise that Meet Your Needs</h4>
+                <h4 className="text-title-sm sm:text-title-md md:text-title-xl text-center md:text-start font-semibold text-[#860063]leading-tight">
+                  Proven Expertise that Meet Your Needs
+                </h4>
                 <div className="flex md:hidden flex-col space-y-4">
                   <div
                     onClick={() => setOne(!one)}
@@ -180,7 +182,7 @@ export default function About() {
             </div>
             <div className="flex flex-col items-center mb-[-1.875rem]  py-[1.5625rem]  px-[1.25rem] md:px-15 justify-start md:justify-center h-[30.1875rem] max-w-[19.6875rem] bg-[#2e2d2c] md:bg-white shadow-lg md:max-w-[55%] md:w-[100%] rounded-md absolute bottom-70 left-10 md:bottom-0 md:left-[45%] w-full md:top-40 md:right-0 z-1">
               <div className="flex flex-col space-y-5">
-                <h4 className="text-title-md md:text-title-xl font-semibold text-white md:text-[#2e2d2c] leading-9 md:leading-none">
+                <h4 className="text-title-sm sm:text-title-md md:text-title-xl text-center md:text-start font-semibold text-white md:text-[#2e2d2c] leading-9 md:leading-none">
                   Olam Group's <span className="text-[#860063]">Re-organisation</span>
                 </h4>
                 <p className="text-[15px] md:text-[16px] leading-snug  text-white md:text-[#2e2d2c]">

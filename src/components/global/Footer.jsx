@@ -41,10 +41,10 @@ export default function Footer() {
   };
 
   return (
-    <div className="py-20 bg-[#2e2d2c] border-t-[0.375rem] md:border-t-2 border-t-orange-800">
+    <div className="py-15 bg-[#2e2d2c] border-t-[0.375rem] md:border-t-2 border-t-orange-800">
       <div className="max-w-[1260px] mx-auto">
         <div className="flex flex-col space-y-16">
-          <div className="flex flex-col space-y-10 md:space-y-4 md:flex-row justify-between px-10 md:px-0 transition">
+          <div className="flex flex-col space-y-8 md:space-y-4 md:flex-row justify-between px-10 md:px-0 transition">
             <div className="md:hidden flex-1 flex flex-col justify-between space-y-4">
               <div className="flex flex-row items-center justify-between">
                 <Logo width={60} height={60} />

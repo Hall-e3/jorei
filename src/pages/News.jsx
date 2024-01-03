@@ -18,7 +18,7 @@ export default function News() {
       <HeroBottom
         title="Sharing Our Actions, Performance & Views"
         button={true}
-        buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
+        buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center justify-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
         buttonText="Down Fact sheet"
         componentStyle="color_black"
         image={image4}
@@ -27,7 +27,7 @@ export default function News() {
         <div className="max-w-[1260px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 space-y-10 md:space-y-0 md:gap-20">
             <div>
-              <h3 className="text-title-md md:text-title-xl font-semibold text-[#2e2d2c] leading-tight">
+              <h3 className="text-title-sm sm:text-title-md md:text-title-xl text-center md:text-start font-semibold text-[#2e2d2c] leading-tight">
                 Our challenge to you is to
                 <span className="text-[#ff7000]"> imagine the extraordinary.</span>
               </h3>
@@ -52,7 +52,7 @@ export default function News() {
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-16">
             <div>
-              <h3 className="text-title-md md:text-title-xl font-semibold">Featured News</h3>
+              <h3 className="text-title-sm sm:text-title-md md:text-title-xl text-center md:text-start font-semibold">Featured News</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {dataNews.map((item) => (
@@ -69,10 +69,10 @@ export default function News() {
       </div>
 
       <div className="py-20 ">
-        <div className="max-w-[1580px] mx-auto">
+        <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-14 px-[30px] md:px-0">
             <div className="flex flex-col md:flex-row items-center justify-between">
-              <h3 className="text-title-md md:text-title-xl font-semibold text-black">All News</h3>
+              <h3 className="text-title-sm sm:text-title-md md:text-title-xl text-center md:text-start font-semibold text-black">All News</h3>
               <form className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20">
                 <div className="flex space-x-6 md:space-x-5 items-center">
                   <Input styles="flex flex-col items-start md:space-x-3 md:items-center md:flex-row" label="From" type="date" name="bday" />
