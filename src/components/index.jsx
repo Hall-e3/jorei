@@ -12,4 +12,25 @@ import Logo from "./global/Logo";
 import LinkedIn from "./global/LinkedIn";
 import Twitter from "./global/Twitter";
 import Carousel from "./global/Carousel";
-export { Loader, Spinner, Button, Divider, FetchLoading, Supensing, Footer, Navbar, Input, Hero, Logo, LinkedIn, Twitter, Carousel };
+import HeroBottom from "./global/HeroBottom";
+import ServiceProducts from "./global/ServiceProducts";
+import CareerComponent from "./global/CareerComponent";
+export {
+  Loader,
+  Spinner,
+  Button,
+  Divider,
+  ServiceProducts,
+  FetchLoading,
+  HeroBottom,
+  Supensing,
+  Footer,
+  Navbar,
+  Input,
+  Hero,
+  Logo,
+  LinkedIn,
+  Twitter,
+  Carousel,
+  CareerComponent
+};

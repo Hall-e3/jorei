@@ -49,9 +49,9 @@ export default function Hero() {
     <div className="bg-SECONDARY_GREEN py-2">
       <div className="max-w-[1260px] mx-auto px-4 md:px-0">
         <div className="flex flex-row items-center">
-          <div className="flex-1">
+          <Link to="/" className="flex-1">
             <Logo width={100} height={100} />
-          </div>
+          </Link>
           <div className="flex flex-none md:hidden flex-row items-center space-x-3">
             {search ? (
               <div className="h-[2.25rem] w-[10.9375rem] text-left  flex flex-row items-center border-b border-white py-2.5">
@@ -96,9 +96,7 @@ export default function Hero() {
                   {routes.map((route) => (
                     <Link key={route.id} to={`${route.link}`} onMouseEnter={() => setHoveredLinkId(route.id)} className="flex flex-row items-center space-x-2">
                       {route.icon}
-                      <p className={`text-white text-[15.3px]  ${hoveredLinkId === 4 || hoveredLinkId === 5 ? "hover:text-[#f78c2a]" : ""}`}>
-                        {route.name}
-                      </p>
+                      <p className={`text-white text-[15.3px]  ${hoveredLinkId === 4 || hoveredLinkId === 5 ? "hover:text-[#f78c2a]" : ""}`}>{route.name}</p>
                     </Link>
                   ))}
                 </div>
