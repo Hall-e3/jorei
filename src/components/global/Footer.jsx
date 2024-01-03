@@ -234,14 +234,14 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col space-y-3 items-end">
-              <p className="text-sm font-normal md:text-md md:font-thin text-white">Copyright © 2022</p>
-              <p className="text-sm font-normal md:text-md md:font-thin text-white">Olam International Limited. All Rights Reserved. Co Reg No: 199504676H</p>
+              <p className="text-[11px] font-normal   text-white">Copyright © 2022</p>
+              <p className="text-[11px] font-normal   text-white">Olam International Limited. All Rights Reserved. Co Reg No: 199504676H</p>
               <div className="flex flex-row space-x-3 ">
-                <p className="text-sm font-normal md:text-md md:font-thin text-white">Privacy Policy</p>
-                <p className="text-sm font-normal md:text-md md:font-thin text-white">Cookie Policy</p>
-                <p className="text-sm font-normal md:text-md md:font-thin text-white">Sitemap</p>
+                <p className="text-[11px] font-normal   text-white">Privacy Policy</p>
+                <p className="text-[11px] font-normal   text-white">Cookie Policy</p>
+                <p className="text-[11px] font-normal   text-white">Sitemap</p>
               </div>
-              <p className="text-sm font-normal md:text-md md:font-thin text-white">Disclaimer</p>
+              <p className="text-sm font-normal   text-white">Disclaimer</p>
             </div>
           </div>
         </div>

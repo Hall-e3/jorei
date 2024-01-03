@@ -6,7 +6,6 @@ import { allNews, dataNews, downlinks } from "../utils/data";
 
 export default function News() {
   const [active, setActive] = React.useState(0);
-  console.log(active);
   const handleChange = (evt) => {
     const selectedValue = parseInt(evt.target.value, 10);
     setActive(selectedValue);
