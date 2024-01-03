@@ -237,11 +237,11 @@ export default function Home() {
                 Naturally good food & beverage ingredients and solutions
               </h1>
               <div className="flex flex-col space-y-3">
-                <p className="text-center md:text-start text-white text-[16px] font-light">
+                <p className="text-center md:text-start text-white text-[16px]">
                   At <span>Ofi</span> we believe in raw potential of nature, ingredients, people, technology,ideas.
                 </p>
-                <p className="text-center md:text-start text-white text-[16px] font-light">We don't just accept what's put in front of us.</p>
-                <p className="text-center md:text-start text-white  text-[16px] font-light">
+                <p className="text-center md:text-start text-white text-[16px]">We don't just accept what's put in front of us.</p>
+                <p className="text-center md:text-start text-white  text-[16px]">
                   We ask, what else could this be? At every level we use our imagination and expertise to find more creative, productive and sustainable ways of
                   doing things.
                 </p>
@@ -285,7 +285,7 @@ export default function Home() {
               <h4 className="text-[#222] font-bold text-title-md md:text-title-xl leading-8 text-center">
                 Five leading product platforms coming together to serve growing customer needs
               </h4>
-              <p className="text-[16px] font-light leading-6 text-center">
+              <p className="text-[16px] leading-6 text-center">
                 If you need a reliable supplier of cocoa, coffee, dairy, nuts or spices, our sheer scale and specialist knowledge in each makes us a go-to. But
                 the real value comes when we cross-pollinate our thinking to open up exciting new possibilities.
               </p>
@@ -328,7 +328,7 @@ export default function Home() {
                   - working closely with our customers, sharing our fresh ideas to inspire new concepts. Making it real at every step, from plant to palate.
                 </p>
               </div>
-              <div className="w-full mb-8 md:mb-0 md:w-2/3  border rounded-lg relative order-first md:order-none ">
+              <div className="w-full mb-8 md:mb-0 md:w-2/3  border border-SECONDARY_GREEN rounded-lg relative order-first md:order-none ">
                 <div className="md:h-[300px] w-full">
                   <img src={image2} alt="staff1" className="object-cover w-full h-full rounded-lg" />
                 </div>

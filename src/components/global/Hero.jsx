@@ -9,9 +9,42 @@ import {
   NewspaperIcon,
   XMarkIcon
 } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
+
+const routes = [
+  {
+    id: 1,
+    link: "/news",
+    name: "News & Events",
+    icon: <NewspaperIcon className="w-5 h-5 text-[#f78c2a]" />
+  },
+  {
+    id: 2,
+    link: "/careers",
+    name: "Careers",
+    icon: <BriefcaseIcon className="w-5 h-5 text-[#f78c2a]" />
+  },
+  {
+    id: 3,
+    link: "/location",
+    name: "Location",
+    icon: <MapPinIcon className="w-5 h-5 text-[#f78c2a]" />
+  },
+  {
+    id: 4,
+    link: "/about",
+    name: "About Us"
+  },
+  {
+    id: 5,
+    link: "/products-services",
+    name: "Products & Services"
+  }
+];
 
 export default function Hero() {
   const [search, setSearch] = React.useState(false);
+  const [hoveredLinkId, setHoveredLinkId] = React.useState(0);
   return (
     <div className="bg-SECONDARY_GREEN py-2">
       <div className="max-w-[1260px] mx-auto px-4 md:px-0">
@@ -60,18 +93,14 @@ export default function Hero() {
             ) : (
               <div className="flex flex-row items-center space-x-5">
                 <div className="flex flex-row items-center space-x-6">
-                  <div className="flex flex-row items-center space-x-2">
-                    <NewspaperIcon className="w-5 h-5 text-[#f78c2a]" />
-                    <p className="text-white  text-[15.5px] font-light">News & Events</p>
-                  </div>
-                  <div className="flex flex-row items-center space-x-2">
-                    <BriefcaseIcon className="w-5 h-5 text-[#f78c2a]" />
-                    <p className="text-white  text-[15.5px] font-light">Careers</p>
-                  </div>
-                  <div className="flex flex-row items-center space-x-2">
-                    <MapPinIcon className="w-5 h-5 text-[#f78c2a]" />
-                    <p className="text-white  text-[15.5px] font-light">Location</p>
-                  </div>
+                  {routes.map((route) => (
+                    <Link key={route.id} to={`${route.link}`} onMouseEnter={() => setHoveredLinkId(route.id)} className="flex flex-row items-center space-x-2">
+                      {route.icon}
+                      <p className={`text-white text-[15.3px]  ${hoveredLinkId === 4 || hoveredLinkId === 5 ? "hover:text-[#f78c2a]" : ""}`}>
+                        {route.name}
+                      </p>
+                    </Link>
+                  ))}
                 </div>
                 <button className="flex items-center group space-x-3 bg-white hover:bg-SECONDARY_GREEN border border-SECONDARY_GREEN hover:border-white px-[2.09375rem] rounded-[1.25rem] h-[2.5rem] max-w-[21.4375rem]">
                   <ChatBubbleOvalLeftIcon className="w-6 h-6 text-[#f78c2a]" />
