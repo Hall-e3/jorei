@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "../primitives/Button";
 
-export default function HeroBottom({ image, button, buttonText, buttonStyle, title, subtitle }) {
+export default function HeroBottom({ image, button, id, componentStyle, buttonText, buttonStyle, title, subtitle }) {
   return (
-    <div className="bg-SECONDARY_GREEN pt-8 pb-15 " id="curve">
+    <div className={`bg-SECONDARY_GREEN pt-8 pb-15 ${componentStyle}`} id="curve" >
       <div className="max-w-[1260px] mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4">
           <div className="md:flex-1 flex flex-col space-y-4 md:space-y-6 md:items-start md:pr-40">

@@ -2,10 +2,10 @@ import React from "react";
 
 export default function CareerComponent() {
   return (
-    <div className="md:py-20 px-10 bg-[#f8f6f8]">
+    <div className="md:py-20 py-10 px-10 bg-[#f8f6f8]">
       <div className="max-w-[1260px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0">
-          <h3 className="text-title-md md:text-title-xl md:text-center flex flex-col font-semibold text-[#00b2e7] leading-tight">
+          <h3 className="text-title-md md:text-title-xl text-center md:text-start flex flex-col font-semibold text-[#00b2e7] leading-tight">
             Entrepreneurial
             <span className="text-[#ff5baf]">Agile</span>
             <span className="text-[#8e75f8]">Resourceful</span>

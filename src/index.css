@@ -5,6 +5,10 @@
 #curve {
   clip-path: ellipse(91% 59% at 50% 40%);
   -webkit-clip-path: ellipse(91% 59% at 50% 40%);
+  
+}
+#curve .color_black {
+  background-color: black;
 }
 
 /*  -webkit-clip-path: ellipse(71% 49% at 20% 20%); */
