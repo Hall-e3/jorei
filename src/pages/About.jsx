@@ -1,31 +1,7 @@
 import React from "react";
-import { Button, CareerComponent, Footer, Hero, HeroBottom, ServiceProducts } from "../components";
-import { cotton_american, featured3, featured4, featured5, grow_source, image10, image3, image4, our_organization, p4 } from "../constants";
+import { CareerComponent, Footer, Hero, HeroBottom, ServiceProducts } from "../components";
+import { cotton_american, grow_source, image4, our_organization } from "../constants";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-
-const data = [
-  {
-    id: 1,
-    date: "09 November 2023 | News",
-    title: "Supporting Akosombo Flood victims",
-    subtitle: "Corporate / Sustainability",
-    image: featured3
-  },
-  {
-    id: 2,
-    date: "13 October 2023 | News",
-    title: "Bridging the Gap for Gender Equity in Agriculture",
-    subtitle: "Sustainability",
-    image: featured5
-  },
-  {
-    id: 3,
-    date: "29 September 2023 | Blog",
-    title: "Reducing crop loss to improve Food Security",
-    subtitle: "Sustainability",
-    image: featured4
-  }
-];
 
 export default function About() {
   const [one, setOne] = React.useState(false);

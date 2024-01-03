@@ -13,7 +13,7 @@ export default function Input({
 }) {
   return (
     <div className={`${styles}`}>
-      <label className="block mb-2 text-[1rem] 2xl:text-[14px] font-semibold text-[#2e2d2c]">
+      <label className="block mb-2 text-[14px] text-[#2e2d2c]">
         {label}
       </label>
 

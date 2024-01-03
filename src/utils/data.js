@@ -1,7 +1,20 @@
+import { BriefcaseIcon, MapPinIcon, NewspaperIcon } from "@heroicons/react/24/solid";
 import {
+    animal_feed,
+  featured1,
+  featured2,
   featured3,
   featured4,
   featured5,
+  hover_cfs,
+  hover_cotton,
+  hover_edibleoils,
+  hover_freight,
+  hover_grains,
+  hover_rice,
+  hover_rubber,
+  hover_sgrains,
+  hover_wood,
   img1,
   img2,
   img3,
@@ -219,5 +232,183 @@ export const links = [
     title: "Reducing crop loss to improve Food Security",
     subtitle: "Sustainability",
     image: featured4
+  }
+];
+
+export const routes = [
+  {
+    id: 1,
+    link: "/news",
+    name: "News & Events",
+    icon: <NewspaperIcon className="w-5 h-5 text-[#f78c2a]" />
+  },
+  {
+    id: 2,
+    link: "/careers",
+    name: "Careers",
+    icon: <BriefcaseIcon className="w-5 h-5 text-[#f78c2a]" />
+  },
+  {
+    id: 3,
+    link: "/location",
+    name: "Location",
+    icon: <MapPinIcon className="w-5 h-5 text-[#f78c2a]" />
+  },
+  {
+    id: 4,
+    link: "/about",
+    name: "About Us"
+  },
+  {
+    id: 5,
+    link: "/products-services",
+    name: "Products & Services"
+  }
+];
+export const allNews = [
+  {
+    id: 1,
+    date: "09 November 2023 | News",
+    title: "Supporting Akosombo Flood victims",
+    subtitle: "Corporate / Sustainability",
+    image: featured3
+  },
+  {
+    id: 2,
+    date: "13 October 2023 | News",
+    title: "Bridging the Gap for Gender Equity in Agriculture",
+    subtitle: "Sustainability",
+    image: featured5
+  },
+  {
+    id: 3,
+    date: "29 September 2023 | Blog",
+    title: "Reducing crop loss to improve Food Security",
+    subtitle: "Sustainability",
+    image: featured4
+  },
+  {
+    id: 4,
+    date: "09 November 2023 | News",
+    title: "Supporting Akosombo Flood victims",
+    subtitle: "Corporate / Sustainability",
+    image: featured2
+  },
+  {
+    id: 5,
+    date: "13 October 2023 | News",
+    title: "Bridging the Gap for Gender Equity in Agriculture",
+    subtitle: "Sustainability",
+    image: featured1
+  },
+  {
+    id: 6,
+    date: "29 September 2023 | Blog",
+    title: "Reducing crop loss to improve Food Security",
+    subtitle: "Sustainability",
+    image: featured4
+  }
+];
+
+export const downlinks = [
+  {
+    id: 1,
+    title: "All News"
+  },
+  {
+    id: 2,
+    title: "Corporate"
+  },
+  {
+    id: 3,
+    title: "Business & Product"
+  },
+  {
+    id: 4,
+    title: "Sustainability"
+  }
+];
+
+export const dataNews = [
+  {
+    id: 1,
+    date: "09 November 2023 | News",
+    title: "Supporting Akosombo Flood victims",
+    subtitle: "Corporate / Sustainability",
+    image: featured3
+  },
+  {
+    id: 2,
+    date: "13 October 2023 | News",
+    title: "Bridging the Gap for Gender Equity in Agriculture",
+    subtitle: "Sustainability",
+    image: featured5
+  },
+  {
+    id: 3,
+    date: "29 September 2023 | Blog",
+    title: "Reducing crop loss to improve Food Security",
+    subtitle: "Sustainability",
+    image: featured4
+  }
+];
+
+export const products = [
+  {
+    id: 1,
+    color: "first",
+    title: "Grains & Oilseeds",
+    subtitle: "A Supported, Sustainable Supply Chain.",
+    image: hover_grains
+  },
+  {
+    id: 2,
+    title: "Edible Oils",
+    subtitle: "A Range of Edible Oils Carefully Crafted for Customer Needs.",
+    image: hover_edibleoils,
+    color: "second"
+  },
+  {
+    id: 3,
+    title: "Rice",
+    subtitle: "Sustainable Production of Rice.",
+    image: hover_rice,
+    color: "third"
+  },
+  {
+    id: 4,
+    title: "Specialty Grains & Seeds",
+    subtitle: "Sustainable Production of Specialty Grains & Seeds.",
+    image: hover_sgrains,
+    color: "fourth"
+  },
+  {
+    id: 5,
+    title: "Integrated Feed & Protein",
+    subtitle: "A Supported, Sustainable Supply Chain.",
+    image: animal_feed,
+    color: "fifth"
+  },
+  {
+    id: 6,
+    title: "Cotton",
+    subtitle: "Universal Supplier of First Class, Sustainable Cotton.",
+    image: hover_cotton,
+    color: "sixth"
+  },
+  
+  {
+    id: 7,
+    title: "Commodity Financial Services",
+    subtitle: "Applying Insight, Research and Innovation to CFS.",
+    image: hover_cfs,
+    color: "nine"
+  },
+  {
+    id: 8,
+    title: "Freight Management",
+    subtitle: "Our shipping capabilities cover a wide range of bulk cargoes. ",
+    image: hover_freight,
+    color: "ten"
   }
 ];

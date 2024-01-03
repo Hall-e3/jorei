@@ -1,15 +1,10 @@
 import React from "react";
-import { Button, CareerComponent, Footer, Hero, HeroBottom, ServiceProducts } from "../components";
-import { cotton_american, featured3, featured4, featured5, grow_source, image10, image2, image3, image4, our_organization, p4 } from "../constants";
-import { ChevronDownIcon, ChevronRightIcon, ShareIcon } from "@heroicons/react/24/solid";
+import { Button, Footer, Hero, HeroBottom } from "../components";
+import { image2, image4 } from "../constants";
+import { ChevronRightIcon, ShareIcon } from "@heroicons/react/24/solid";
 import { news, slidesData } from "../utils/data";
 
 export default function Careers() {
-  const [one, setOne] = React.useState(false);
-  const [two, setTwo] = React.useState(false);
-  const [three, setThree] = React.useState(false);
-  const [four, setFour] = React.useState(false);
-
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   const goToNextSlide = () => {

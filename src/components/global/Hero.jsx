@@ -1,46 +1,8 @@
 import React from "react";
 import Logo from "./Logo";
-import {
-  Bars3CenterLeftIcon,
-  BriefcaseIcon,
-  ChatBubbleOvalLeftIcon,
-  MagnifyingGlassIcon,
-  MapPinIcon,
-  NewspaperIcon,
-  XMarkIcon
-} from "@heroicons/react/24/solid";
+import { Bars3CenterLeftIcon, ChatBubbleOvalLeftIcon, MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
-
-const routes = [
-  {
-    id: 1,
-    link: "/news",
-    name: "News & Events",
-    icon: <NewspaperIcon className="w-5 h-5 text-[#f78c2a]" />
-  },
-  {
-    id: 2,
-    link: "/careers",
-    name: "Careers",
-    icon: <BriefcaseIcon className="w-5 h-5 text-[#f78c2a]" />
-  },
-  {
-    id: 3,
-    link: "/location",
-    name: "Location",
-    icon: <MapPinIcon className="w-5 h-5 text-[#f78c2a]" />
-  },
-  {
-    id: 4,
-    link: "/about",
-    name: "About Us"
-  },
-  {
-    id: 5,
-    link: "/products-services",
-    name: "Products & Services"
-  }
-];
+import { routes } from "../../utils/data";
 
 export default function Hero() {
   const [search, setSearch] = React.useState(false);
