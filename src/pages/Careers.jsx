@@ -70,7 +70,9 @@ export default function Careers() {
               </div>
             </div>
             <div className="md:flex-1 flex flex-col space-y-4 md:space-y-6 md:items-end md:pl-40 px-10 md:px-0">
-              <h1 className="text-center md:text-end text-title-sm sm:text-title-md md:text-title-xl  font-bold leading-10 md:leading-tight">Who are we looking for?</h1>
+              <h1 className="text-center md:text-end text-title-sm sm:text-title-md md:text-title-xl  font-bold leading-10 md:leading-tight">
+                Who are we looking for?
+              </h1>
               <div className="flex flex-col space-y-6">
                 <p className="text-center md:text-start text-[15px] md:text-[16px]">
                   We ask, what else could this be? At every level we use our imagination and expertise to find more creative, productive and sustainable ways of
@@ -88,11 +90,11 @@ export default function Careers() {
       </div>
       <div className="pt-8 pb-15">
         <div className="max-w-[1260px] mx-auto">
-          <div className="hidden w-full md:flex flex-row justify-center space-x-5 items-center ">
+          <div className="w-full flex flex-col space-y-3 md:space-y-0 md:flex-row justify-center md:space-x-5 items-center px-10 md:px-0">
             {slidesData.slice(0, 3).map((item, index) => (
               <div
                 key={index}
-                className="flex-1 flex flex-col space-y-6 items-center justify-center bg-white rounded-lg shadow-lg py-8 px-4 h-[30.25rem] w-[30rem] group transition duration-300">
+                className="flex-1 flex flex-col space-y-6 items-center justify-center bg-white rounded-lg shadow-lg py-8 px-4 h-[30%] md:w-[30%] group transition duration-300">
                 <div className="flex flex-col space-y-3 items-center">
                   <img src={item.image} alt={item.title} className="h-[12.5rem] w-[12.5rem] rounded-full group-hover:hidden" />
                   <p className="text-[16px] font-bold leading-6 text-[#222]">{item.title}</p>
@@ -115,7 +117,9 @@ export default function Careers() {
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4">
             <div className="md:flex-1 flex flex-col justify-center space-y-10 md:space-y-6 md:items-start md:pr-40">
-              <h1 className="text-center md:text-start text-title-sm sm:text-title-md md:text-title-xl  font-bold leading-10 md:leading-tight ">Find your place at Jorei</h1>
+              <h1 className="text-center md:text-start text-title-sm sm:text-title-md md:text-title-xl  font-bold leading-10 md:leading-tight ">
+                Find your place at Jorei
+              </h1>
               <div className="flex flex-col space-y-6 px-10 md:px-0">
                 <p className="text-center md:text-start text-[15px] md:text-[16px]">
                   We ask, what else could this be? At every level we use our imagination and expertise to find more creative, productive and sustainable ways of
