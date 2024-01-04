@@ -1,12 +1,13 @@
 import React from "react";
 import { Button, Carousel, Footer, Hero } from "../components";
-import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon, PlayIcon, ShareIcon } from "@heroicons/react/24/solid";
+import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon, ShareIcon } from "@heroicons/react/24/solid";
 import { image2, image3, p4 } from "../constants";
 import { data, datas, news, slides, slidesData } from "../utils/data";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
-
+  const [longText, setLongText] = React.useState(false);
+  const [currentItem, setCurrentItem] = React.useState(null);
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesData.length);
   };
@@ -24,6 +25,23 @@ export default function Home() {
   }, [currentSlide]);
 
   const translateValue = -currentSlide * 100;
+
+  const handleMouseEnter = (itemId) => {
+    setLongText(true);
+    setCurrentItem(itemId);
+  };
+
+  const handleMouseLeave = () => {
+    setLongText(false);
+  };
+
+  const isLongText = () => longText;
+
+  const isCurrentItem = (itemId) => currentItem === itemId;
+
+  const renderDescription = (description, isCurrent, isLong) => {
+    return isCurrent ? (isLong ? description : description.slice(0, 70)) : description.slice(0, 70);
+  };
 
   return (
     <div className="h-screen w-full overflow-x-hidden">
@@ -77,7 +95,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="py-10">
+      <div className="py-10 md:py-20">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-8 md:space-y-10 items-center">
             <div className="flex flex-col space-y-3 px-8 md:px-0">
@@ -93,21 +111,20 @@ export default function Home() {
             <div className="w-full relative px-4 md:hidden">
               <Carousel slidesData={slidesData} autoSlide={true} />
             </div>
-            <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center ">
-              {slidesData.map((item, index) => (
-                <div className="flex-1 flex flex-col space-y-6  items-center bg-white rounded-md shadow-lg py-8 px-4 h-[22.25rem] group  transition-all duration-[800ms]">
+            <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center">
+              {slidesData.map((item) => (
+                <div
+                  key={item.id}
+                  onMouseEnter={() => handleMouseEnter(item.id)}
+                  onMouseLeave={handleMouseLeave}
+                  className={`flex-1 flex flex-col ${
+                    isCurrentItem(item.id) && isLongText() ? "space-y-1" : "space-y-6"
+                  } items-center bg-white rounded-md shadow-lg py-8 px-4 h-[22.25rem] group transition-all duration-[800ms]`}>
                   <div className="flex flex-col space-y-3 items-center">
                     <img src={item.image} alt={item.title} className="h-[8.5rem] w-[8.5rem] rounded-full group-hover:hidden" />
                     <p className="text-[16px] font-bold leading-6 text-[#222]">{item.title}</p>
                   </div>
-                  <p className="text-[15px] leading-5  text-center font-light">{item.description.slice(0, 70)}</p>
-
-                  {/* <div className="flex flex-row items-center space-x-3">
-                    <h6 className="text-[15px] font-medium text-[#860063] leading-5">Read More</h6>
-                    <div className="h-4 w-4 flex items-center justify-center rounded-full bg-[#860063]">
-                      <ChevronRightIcon className="h-3 w-3 text-white" />
-                    </div>
-                  </div> */}
+                  <p className="text-[15px] leading-5 text-center font-light">{renderDescription(item.description, isCurrentItem(item.id), isLongText())}</p>
                 </div>
               ))}
             </div>
@@ -117,7 +134,7 @@ export default function Home() {
       <div className="py-10 md:py-20 bg-background2 bg-no-repeat bg-cover bg-center">
         <div className="max-w-[1260px] mx-auto px-8 ">
           <div className="flex flex-col space-y-6 md:space-y-10 py-20">
-            <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-start">Revolutionizing taste, from crop to creation</h5>
+            <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-center md:text-start">Revolutionizing taste, from crop to creation</h5>
             <div className="flex flex-col md:flex-row md:space-x-8">
               <div className="h-full md:w-1/3 md:overflow-hidden order-last md:order-none">
                 <p className="text-center md:text-start text-[17px] font-bold leading-5 md:leading-7">

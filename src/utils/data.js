@@ -36,7 +36,9 @@ import {
   p4,
   p5,
   p6,
-  spices
+  spices,
+  three,
+  two
 } from "../constants";
 
 export const slidesData = [
@@ -87,7 +89,7 @@ export const slides = [
   {
     id: 2,
     title: "Product & Application Development",
-    image: mid2,
+    image: two,
     description: "Use our natural ingredients to create delicious or refresh existing ones."
   },
   {
@@ -105,7 +107,7 @@ export const slides = [
   {
     id: 5,
     title: "Ingredient Innovation",
-    image: mid5,
+    image: three,
     description: "Discover how we drive ingredient innovation and sustainability.."
   }
 ];
