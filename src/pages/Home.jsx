@@ -102,12 +102,12 @@ export default function Home() {
                   </div>
                   <p className="text-[15px] leading-5  text-center font-light">{item.description.slice(0, 70)}</p>
 
-                  <div className="flex flex-row items-center space-x-3">
+                  {/* <div className="flex flex-row items-center space-x-3">
                     <h6 className="text-[15px] font-medium text-[#860063] leading-5">Read More</h6>
                     <div className="h-4 w-4 flex items-center justify-center rounded-full bg-[#860063]">
                       <ChevronRightIcon className="h-3 w-3 text-white" />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>
@@ -233,10 +233,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Button
+              {/* <Button
                 text="Read about ofi innovation"
                 buttonStyle="flex bg-[#860063] rounded-[1.875rem] h-[2.625rem] text-center py-[.625rem] px-[2.8125rem] text-[#fff]"
-              />
+              /> */}
             </div>
           </div>
         </div>

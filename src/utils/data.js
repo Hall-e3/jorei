@@ -1,11 +1,15 @@
 import { BriefcaseIcon, MapPinIcon, NewspaperIcon } from "@heroicons/react/24/solid";
 import {
   animal_feed,
+  cocoa,
+  coffee,
   featured1,
   featured2,
   featured3,
   featured4,
   featured5,
+  four,
+  grain,
   hover_cfs,
   hover_cotton,
   hover_edibleoils,
@@ -13,11 +17,6 @@ import {
   hover_grains,
   hover_rice,
   hover_sgrains,
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
   m1,
   m2,
   m3,
@@ -31,47 +30,52 @@ import {
   new1,
   new2,
   new3,
+  nuts,
+  one,
   p1,
   p2,
   p3,
   p4,
   p5,
-  p6
+  p6,
+  spices,
+  three,
+  two
 } from "../constants";
 
 export const slidesData = [
   {
     id: 1,
     title: "Nuts",
-    image: img1,
+    image: nuts,
     description:
       "From orchard to store, we're nut experts. Carefully grown, our nuts are naturally delicious. We use sustainable methods to keep them top-notch. Committed to quality, we bring these tasty treats straight to your favorite store for a wholesome and delightful nut experience."
   },
   {
     id: 2,
     title: "Grain",
-    image: img2,
+    image: grain,
     description:
       "Elevate your business and enrich lives with our exceptional grains. Sourced from vast fields, our commitment to quality and sustainability guarantees grains that surpass expectations. Whether baking, brewing, or cooking, our nutritious grains form the foundation for wholesome products."
   },
   {
     id: 3,
     title: "Spices",
-    image: img3,
+    image: spices,
     description:
       "Spices are the foundation of Flavors that delight consumers. Embark on a flavor journey with our exquisite spices, carefully cultivated for a burst of taste in every dish. Elevate your culinary creations with our premium spices, infusing depth and character into every bite. Choose excellence for a tasteful adventure in fine and fresh ingredients."
   },
   {
     id: 4,
     title: "Cocoa",
-    image: img4,
+    image: cocoa,
     description:
       "From cocoa farm to confectionery creation, we supply cocoa ingredients worldwide. Our dedication to ethical sourcing and sustainability means our cocoa delights taste buds while supporting communities and the environment. Indulge in the rich, velvety experience of our carefully sourced and processed cocoa for a truly decadent treat."
   },
   {
     id: 5,
     title: "Coffee",
-    image: img5,
+    image: coffee,
     description:
       "Discover the story in every cup with our globally sourced high-quality green and soluble coffee. From lush plantations to your favorite brew, we take pride in delivering a rich, aromatic experience. Savor our coffee, crafted with care from bean to cup, ensuring exceptional taste and ethical sourcing."
   }
@@ -81,29 +85,29 @@ export const slides = [
   {
     id: 1,
     title: "Consumers want traceability & sustainability",
-    image: mid1,
+    image: one,
     description: "At we’re constantly increasing volumes of , working closely with farmers to improve supply chain data."
   },
   {
     id: 2,
     title: "Product & Application Development",
-    image: mid2,
+    image: two,
     description: "Use our natural ingredients to create delicious or refresh existing ones."
   },
   {
     id: 3,
     title: "Agri Science & Technology",
-    image: mid3,
+    image: "",
     description: "Learn how we enhance for better products."
   },
   {
     id: 4,
     title: "Digital Technology and Tools",
-    image: mid4,
+    image: four,
     description: "We offer unique for farming improvement. Enhanced data ensures supply chain transparency."
   },
   {
-    id: 5,
+    id: three,
     title: "Ingredient Innovation",
     image: mid5,
     description: "Discover how we drive ingredient innovation and sustainability.."
@@ -237,31 +241,31 @@ export const links = [
 export const routes = [
   {
     id: 1,
+    link: "/products-services",
+    name: "Products & Services"
+  },
+  {
+    id: 2,
+    link: "/about",
+    name: "About Us"
+  },
+  {
+    id: 3,
     link: "/news",
     name: "News & Events",
     icon: <NewspaperIcon className="w-5 h-5 text-[#f78c2a]" />
   },
   {
-    id: 2,
+    id: 4,
     link: "/careers",
     name: "Careers",
     icon: <BriefcaseIcon className="w-5 h-5 text-[#f78c2a]" />
   },
   {
-    id: 3,
+    id: 5,
     link: "/location",
     name: "Location",
     icon: <MapPinIcon className="w-5 h-5 text-[#f78c2a]" />
-  },
-  {
-    id: 4,
-    link: "/about",
-    name: "About Us"
-  },
-  {
-    id: 5,
-    link: "/products-services",
-    name: "Products & Services"
   }
 ];
 export const allNews = [

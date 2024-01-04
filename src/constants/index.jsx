@@ -1,10 +1,6 @@
 const image1 = require("../assets/images/global-footprint-banner.jpg");
 const image2 = require("../assets/images/Ingredients-Circle.png");
 const image3 = require("../assets/images/Fi_Logo_RGB_Europe_2023.png");
-const img1 = require("../assets/images/banner-nuts-new.jpg");
-const img2 = require("../assets/images/banner-spices-landing-page-new.jpg");
-const img3 = require("../assets/images/dairy-main-new.jpg");
-const img4 = require("../assets/images/coffee-min.jpg");
 const img5 = require("../assets/images/cocoa-expertise-min-new.png");
 const mid1 = require("../assets/images/health-and-wellness-home.jpg");
 const mid2 = require("../assets/images/indulgence-sensory.jpg");
@@ -73,15 +69,21 @@ const image8 = require("../assets/images/bicycles-peru-a.webp");
 const image9 = require("../assets/images/bicycles-peru-b.webp");
 const image10 = require("../assets/images/bicycles-peru-mob-pic.webp");
 
+const coffee = require("../assets/jorei/coffee.jpg");
+const cocoa = require("../assets/jorei/cocoa.jpg");
+const grain = require("../assets/jorei/grain.jpg");
+const nuts = require("../assets/jorei/nuts.jpg");
+const spices = require("../assets/jorei/spices.jpg");
+const three = require("../assets/jorei/three.jpg");
+const one = require("../assets/jorei/one.jpg");
+const two = require("../assets/jorei/two.jpg");
+const four = require("../assets/jorei/four.jpg");
+
 export {
   image1,
   image2,
   image3,
-  img1,
-  img2,
-  img3,
   JOREL0G0,
-  img4,
   img5,
   mid1,
   mid2,
@@ -147,5 +149,14 @@ export {
   cotton_american,
   laboratory,
   grow_source,
-  our_organization
+  our_organization,
+  coffee,
+  nuts,
+  cocoa,
+  grain,
+  spices,
+  one,
+  two,
+  three,
+  four
 };
