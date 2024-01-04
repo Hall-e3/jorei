@@ -39,12 +39,12 @@ export default function Carousel({ slidesData, autoSlide = false, autoSlideInter
                 <p className="text-[1.125rem] font-bold leading-6 text-[#222]">{slide.title}</p>
               </div>
               <p className="text-[.875rem] leading-5 text-center font-light">{slide.description}</p>
-              <div className="flex flex-row items-center space-x-3">
+              {/* <div className="flex flex-row items-center space-x-3">
                 <h6 className="text-[1rem] font-medium text-[#860063] leading-5">Read More</h6>
                 <div className="h-5 w-5 flex items-center justify-center rounded-full bg-[#860063]">
                   <ChevronRightIcon className="h-4 w-4 text-white" />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
