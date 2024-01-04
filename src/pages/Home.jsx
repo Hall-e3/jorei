@@ -114,10 +114,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="py-10 md:py-15 bg-background1 bg-no-repeat bg-cover">
+      <div className="py-10 md:py-20 bg-background2 bg-no-repeat bg-cover bg-center">
         <div className="max-w-[1260px] mx-auto px-8 ">
           <div className="flex flex-col space-y-6 md:space-y-10 py-20">
-            <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-center">Revolutionizing taste, from crop to creation</h5>
+            <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-start">Revolutionizing taste, from crop to creation</h5>
             <div className="flex flex-col md:flex-row md:space-x-8">
               <div className="h-full md:w-1/3 md:overflow-hidden order-last md:order-none">
                 <p className="text-center md:text-start text-[17px] font-bold leading-5 md:leading-7">
@@ -127,14 +127,12 @@ export default function Home() {
                   experience.
                 </p>
               </div>
-              <div className="w-full mb-8 md:mb-0 md:w-2/3  border border-SECONDARY_GREEN rounded-lg relative order-first md:order-none ">
+              {/* <div className="w-full mb-8 md:mb-0 md:w-2/3  border border-SECONDARY_GREEN rounded-lg relative order-first md:order-none ">
                 <div className="md:h-[300px] w-full shadow-lg">
                   <img src={image2} alt="staff1" className="object-contain w-full h-full rounded-lg" />
                 </div>
-                {/* <div className="bg-gradient-to-r md:bottom-60 md:left-[50%] xl:bottom-50 xl:right-[40%] xl:left-[45%] from-[#005bac] to-primary_green motion-safe:animate-ping-once text-white h-25 w-25 rounded-full absolute flex flex-col space-y-5 z-20 top-26 left-[35%] right-[45%] items-center justify-center">
-                  <PlayIcon className="w-7 h-7" />
-                </div> */}
-              </div>
+                
+              </div> */}
             </div>
           </div>
         </div>
