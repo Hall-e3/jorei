@@ -114,26 +114,26 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="py-10 md:py-0 ">
-        <div className="max-w-[1260px] mx-auto px-8 md:px-20">
+      <div className="py-10 md:py-15 bg-background1 bg-no-repeat bg-cover">
+        <div className="max-w-[1260px] mx-auto px-8 ">
           <div className="flex flex-col space-y-6 md:space-y-10 py-20">
-            <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-center">It's not a film. It's who we are.</h5>
+            <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-center">Revolutionizing taste, from crop to creation</h5>
             <div className="flex flex-col md:flex-row md:space-x-8">
               <div className="h-full md:w-1/3 md:overflow-hidden order-last md:order-none">
-                <p className="text-center md:text-start text-[16px] text- text-[#333] font-normal leading-5 md:leading-7">
-                  Olam food ingredients is now known as<b>ofi</b>. Focused on the raw materials and ingredient platforms that we're known for globally
-                  <span>cocoa</span>,<span>coffee</span>,<span>dairy</span>,<span>nuts</span>, and
-                  <span>spices</span>. We still offer everything we did before. What’s new is that we’re adding capabilities - especially in product development
-                  - working closely with our customers, sharing our fresh ideas to inspire new concepts. Making it real at every step, from plant to palate.
+                <p className="text-center md:text-start text-[17px] font-bold leading-5 md:leading-7">
+                  Unleashing our global expertise in <span className="text-[#f78c2a]">cocoa</span>, coffee, grain, nuts, and spices,{" "}
+                  <span className="text-white">we're not just</span> maintaining but enhancing our offerings. Explore our added capabilities, especially in
+                  product development. Collaborate with us, turning fresh ideas into tangible delights, from plant to palate, redefining the culinary
+                  experience.
                 </p>
               </div>
               <div className="w-full mb-8 md:mb-0 md:w-2/3  border border-SECONDARY_GREEN rounded-lg relative order-first md:order-none ">
-                <div className="md:h-[300px] w-full">
-                  <img src={image2} alt="staff1" className="object-cover w-full h-full rounded-lg" />
+                <div className="md:h-[300px] w-full shadow-lg">
+                  <img src={image2} alt="staff1" className="object-contain w-full h-full rounded-lg" />
                 </div>
-                <div className="bg-gradient-to-r md:bottom-60 md:left-[50%] xl:bottom-50 xl:right-[40%] xl:left-[45%] from-[#005bac] to-primary_green motion-safe:animate-ping-once text-white h-25 w-25 rounded-full absolute flex flex-col space-y-5 z-20 top-30 left-[35%] right-[45%] items-center justify-center">
+                {/* <div className="bg-gradient-to-r md:bottom-60 md:left-[50%] xl:bottom-50 xl:right-[40%] xl:left-[45%] from-[#005bac] to-primary_green motion-safe:animate-ping-once text-white h-25 w-25 rounded-full absolute flex flex-col space-y-5 z-20 top-26 left-[35%] right-[45%] items-center justify-center">
                   <PlayIcon className="w-7 h-7" />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

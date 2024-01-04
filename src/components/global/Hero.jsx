@@ -95,7 +95,7 @@ export default function Hero() {
                         onMouseEnter={() => setHoveredLinkId(route.id)}
                         className="flex flex-row items-center space-x-2">
                         {route.icon}
-                        <p className={`text-white text-[15.3px]  ${hoveredLinkId === 4 || hoveredLinkId === 5 ? "hover:text-[#f78c2a]" : ""}`}>{route.name}</p>
+                        <p className={`text-white text-[15.3px]  ${hoveredLinkId === 1 || hoveredLinkId === 2 ? "hover:text-[#f78c2a]" : ""}`}>{route.name}</p>
                       </Link>
                     ))}
                   </div>

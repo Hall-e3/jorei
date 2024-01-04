@@ -100,7 +100,7 @@ module.exports = withMT({
     },
     extend: {
       backgroundImage: {
-        background1: "url('/src/assets/images/careers-banner-b.png')",
+        background1: "url('/src/assets/jorei/say.jpg')",
         background2: "url('/src/assets/images/large-rice-harvester.webp')",
         background3: "url('/src/assets/images/background-card-clouds.webp')"
       },

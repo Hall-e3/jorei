@@ -22,6 +22,8 @@ import {
   m3,
   m4,
   m5,
+  mid2,
+  mid3,
   mid5,
   new1,
   new2,
@@ -34,9 +36,7 @@ import {
   p4,
   p5,
   p6,
-  spices,
-  three,
-  two
+  spices
 } from "../constants";
 
 export const slidesData = [
@@ -87,13 +87,13 @@ export const slides = [
   {
     id: 2,
     title: "Product & Application Development",
-    image: two,
+    image: mid2,
     description: "Use our natural ingredients to create delicious or refresh existing ones."
   },
   {
     id: 3,
     title: "Agri Science & Technology",
-    image: "",
+    image: mid3,
     description: "Learn how we enhance for better products."
   },
   {
@@ -103,7 +103,7 @@ export const slides = [
     description: "We offer unique for farming improvement. Enhanced data ensures supply chain transparency."
   },
   {
-    id: three,
+    id: 5,
     title: "Ingredient Innovation",
     image: mid5,
     description: "Discover how we drive ingredient innovation and sustainability.."
