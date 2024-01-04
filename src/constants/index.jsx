@@ -75,7 +75,7 @@ const grain = require("../assets/jorei/grain.jpg");
 const nuts = require("../assets/jorei/nuts.jpg");
 const spices = require("../assets/jorei/spices.jpg");
 const three = require("../assets/jorei/three.jpg");
-const one = require("../assets/jorei/one.jpg");
+const one = require("../assets/jorei/one.png");
 const two = require("../assets/jorei/two.jpg");
 const four = require("../assets/jorei/four.jpg");
 
