@@ -1,35 +1,7 @@
 import React from "react";
 import { Button, Carousel, Footer, Hero } from "../components";
 import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon, PlayIcon, ShareIcon } from "@heroicons/react/24/solid";
-import {
-  image1,
-  image2,
-  image3,
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  m1,
-  m2,
-  m3,
-  m4,
-  m5,
-  mid1,
-  mid2,
-  mid3,
-  mid4,
-  mid5,
-  new1,
-  new2,
-  new3,
-  p1,
-  p2,
-  p3,
-  p4,
-  p5,
-  p6
-} from "../constants";
+import { image2, image3, p4 } from "../constants";
 import { data, datas, news, slides, slidesData } from "../utils/data";
 
 export default function Home() {
@@ -61,16 +33,16 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4">
             <div className="md:flex-1 flex flex-col space-y-4 md:space-y-6 md:items-start md:pr-40">
               <h1 className="text-center md:text-start text-white text-title-md md:text-title-xl font-bold leading-10 md:leading-tight">
-                Naturally good food & beverage ingredients and solutions
+                Wholesome Ingredients and Innovative Solutions for Exquisite Food and Beverages.
               </h1>
               <div className="flex flex-col space-y-3">
                 <p className="text-center md:text-start text-white text-[16px]">
-                  At <span>Ofi</span> we believe in raw potential of nature, ingredients, people, technology,ideas.
+                  Unleash <span>Nature's</span> Potential from ingredients to technology and explore with us the endless possibilities.
                 </p>
                 <p className="text-center md:text-start text-white text-[16px]">We don't just accept what's put in front of us.</p>
                 <p className="text-center md:text-start text-white  text-[16px]">
-                  We ask, what else could this be? At every level we use our imagination and expertise to find more creative, productive and sustainable ways of
-                  doing things.
+                  Embracing imagination and expertise at every level, we redefine the norm, crafting innovative, productive, and sustainable solutions for a
+                  brighter future.
                 </p>
               </div>
             </div>
@@ -110,11 +82,11 @@ export default function Home() {
           <div className="flex flex-col space-y-8 md:space-y-10 items-center">
             <div className="flex flex-col space-y-3 px-8 md:px-0">
               <h4 className="text-[#222] font-bold text-title-md md:text-title-xl leading-8 text-center">
-                Five leading product platforms coming together to serve growing customer needs
+                Our Primary Product Platforms Uniting to Meet The Increasing Demands of Customers.
               </h4>
               <p className="text-[16px] leading-6 text-center">
-                If you need a reliable supplier of cocoa, coffee, dairy, nuts or spices, our sheer scale and specialist knowledge in each makes us a go-to. But
-                the real value comes when we cross-pollinate our thinking to open up exciting new possibilities.
+                Unleash Culinary Potential beyond reliable supplies of cocoa, coffee, grain, nuts, or spices, with our expertise. We don't just deliver – we
+                innovate, cross-pollinating ideas to unlock thrilling possibilities in every flavor.
               </p>
             </div>
 

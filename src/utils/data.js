@@ -1,6 +1,6 @@
 import { BriefcaseIcon, MapPinIcon, NewspaperIcon } from "@heroicons/react/24/solid";
 import {
-    animal_feed,
+  animal_feed,
   featured1,
   featured2,
   featured3,
@@ -12,9 +12,7 @@ import {
   hover_freight,
   hover_grains,
   hover_rice,
-  hover_rubber,
   hover_sgrains,
-  hover_wood,
   img1,
   img2,
   img3,
@@ -47,34 +45,35 @@ export const slidesData = [
     title: "Nuts",
     image: img1,
     description:
-      "From the orchard to the store, we’re at the forefront of global nut production – serving the needs of customers and farmers, and working to reduce our environmental impact."
+      "From orchard to store, we're nut experts. Carefully grown, our nuts are naturally delicious. We use sustainable methods to keep them top-notch. Committed to quality, we bring these tasty treats straight to your favorite store for a wholesome and delightful nut experience."
   },
   {
     id: 2,
-    title: "Diary",
+    title: "Grain",
     image: img2,
-    description: "Our dairy ingredients satisfy your business needs while helping you create tasty, nutritious and convenient products across many categories.."
+    description:
+      "Elevate your business and enrich lives with our exceptional grains. Sourced from vast fields, our commitment to quality and sustainability guarantees grains that surpass expectations. Whether baking, brewing, or cooking, our nutritious grains form the foundation for wholesome products."
   },
   {
     id: 3,
     title: "Spices",
     image: img3,
     description:
-      "Spices are the foundation of flavors that delight consumers. When you buy from us, we can offer you a reliable, high quality, sustainable supply."
+      "Spices are the foundation of Flavors that delight consumers. Embark on a flavor journey with our exquisite spices, carefully cultivated for a burst of taste in every dish. Elevate your culinary creations with our premium spices, infusing depth and character into every bite. Choose excellence for a tasteful adventure in fine and fresh ingredients."
   },
   {
     id: 4,
     title: "Cocoa",
     image: img4,
     description:
-      "We supply cocoa ingredients to customers all over the world, working with partners across the supply chain to create indulgent treats for consumers and a positive future for cocoa."
+      "From cocoa farm to confectionery creation, we supply cocoa ingredients worldwide. Our dedication to ethical sourcing and sustainability means our cocoa delights taste buds while supporting communities and the environment. Indulge in the rich, velvety experience of our carefully sourced and processed cocoa for a truly decadent treat."
   },
   {
     id: 5,
     title: "Coffee",
     image: img5,
     description:
-      "We source and supply high-quality green and soluble coffee globally while building partnerships to secure the future of coffee for farmers and coffee lovers everywhere."
+      "Discover the story in every cup with our globally sourced high-quality green and soluble coffee. From lush plantations to your favorite brew, we take pride in delivering a rich, aromatic experience. Savor our coffee, crafted with care from bean to cup, ensuring exceptional taste and ethical sourcing."
   }
 ];
 
@@ -396,7 +395,7 @@ export const products = [
     image: hover_cotton,
     color: "sixth"
   },
-  
+
   {
     id: 7,
     title: "Commodity Financial Services",
