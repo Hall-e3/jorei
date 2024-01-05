@@ -164,27 +164,28 @@ export const datas = [
   {
     id: 1,
     image: m1,
-    description: "1 in 5 chocolate bars consumed globally use our cocoa beans and products"
+    title: "Chocolate",
+    description:
+      "Chocolate is an essential part of your daily life, with over 80% of enthusiasts choosing these irresistible delights. Join the blissful majority and indulge!"
   },
   {
     id: 2,
     image: m2,
-    description: "The coffee beans we supply can provide around 90 billions cups of coffee"
+    title: "Coffee",
+    description: "Did you know that globally, over 2 billion cups of coffee are consumed every day?"
   },
   {
     id: 3,
     image: m3,
-    description: "Our annual volume of dairy products can make 19 billion slices of cheese"
+    title: "Spices",
+    description:
+      "Spice up recipes with our zestful ingredients! From the heart of flavors to responsible farming, we elevate taste while securing the future of global supply chains. Let's savor success together!"
   },
   {
     id: 4,
     image: m4,
-    description: "Almonds we supply will produce enough flour to bake 350 million cup cakes"
-  },
-  {
-    id: 5,
-    image: m5,
-    description: "We add taste and flavor globally with 270 million bottles of spices per year"
+    title: "Grains",
+    description: "Our Grains, Your Adventure! From Farm to Table, Elevate Your Meals with Delicious Delight. Order Now for Culinary Joy!"
   }
 ];
 

@@ -53,7 +53,7 @@ export default function Home() {
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4">
             <div className="md:flex-1 flex flex-col space-y-4 md:space-y-6 md:items-start md:pr-40">
-              <h1 className="text-center md:text-start text-white text-title-md md:text-title-xl font-bold leading-10 md:leading-tight">
+              <h1 className="text-center md:text-start text-white text-title-md md:text-title-lg font-bold leading-10 md:leading-tight">
                 Wholesome Ingredients and Innovative Solutions for Exquisite Food and Beverages.
               </h1>
               <div className="flex flex-col space-y-3">
@@ -102,7 +102,7 @@ export default function Home() {
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-8 md:space-y-10 items-center">
             <div className="flex flex-col space-y-3 px-8 md:px-0">
-              <h4 className="text-[#222] font-bold text-title-md md:text-title-xl leading-8 text-center">
+              <h4 className="text-[#222] font-bold text-title-md md:text-title-lg leading-8 text-center">
                 Our Primary Product Platforms Uniting to Meet The Increasing Demands of Customers.
               </h4>
               <p className="text-[16px] leading-6 text-center">
@@ -137,7 +137,7 @@ export default function Home() {
       <div className="py-10 md:py-20 bg-background2 bg-no-repeat bg-cover bg-center">
         <div className="max-w-[1260px] mx-auto px-8 ">
           <div className="flex flex-col space-y-6 md:space-y-10 py-20">
-            <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-center md:text-start">Revolutionizing taste, from crop to creation</h5>
+            <h5 className="font-bold text-title-md md:text-title-lg leading-8 text-center md:text-start">Revolutionizing taste, from crop to creation</h5>
             <div className="flex flex-col md:flex-row md:space-x-8">
               <div className="h-full md:w-1/3 md:overflow-hidden order-last md:order-none">
                 <p className="text-center md:text-start text-[17px] font-bold leading-5 md:leading-7">
@@ -272,7 +272,7 @@ export default function Home() {
                   Infuse nutrition, Ethical Sourcing, and Planetary Consciousness into Every Bite!
                 </h4>
               </div>
-              <p className="text-[16px] md:text-md text-center font-light leading-6 text-[#4a4949]">
+              <p className="text-[16px]  text-center leading-6 text-[#4a4949]">
                 Discover the art of culinary brilliance – it's more than just taste. Infuse nutrition, ethical sourcing, and planetary consciousness into every
                 bite. Elevate your creations with our carefully matched, natural, and delectable ingredients. Join the effortless journey of co-creation where
                 excellence knows no compromise!
@@ -325,8 +325,8 @@ export default function Home() {
                             <h6 className="text-[17px] font-bold leading-6 text-[#222]">{item.title}</h6>
                           </div>
                           <div className="flex flex-col space-y-6 items-center bg-[#f8f6f8]">
-                            <p className="text-[16px] text-center font-light leading-6 text-[#4a4949]">{item.description.slice(0, 200)}....</p>
-                            <h6 className="text-[16px] font-medium text-[#860063] leading-5 text-center">Read More</h6>
+                            <p className="text-[16px] text-center leading-6 text-[#4a4949]">{item.description.slice(0, 200)}....</p>
+                            <h6 className="text-[16px] text-[#860063] leading-5 text-center">Read More</h6>
                             <div>
                               <div className="border-2 border-[#ccc] rounded-full p-[.5rem]">
                                 <img src={item.image} alt="image2" className="h-[15.5rem] w-[15.5rem] rounded-full" />
@@ -354,7 +354,7 @@ export default function Home() {
       <div className="py-20 relative">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-10 ">
-            <h4 className="text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">ofi is already part of your everyday life…</h4>
+            <h4 className="text-title-md md:text-title-lg font-bold leading-6 text-center text-[#222]">A Sneak Peek into Your Everyday Adventure!</h4>
 
             <div className="">
               <div className="w-full md:hidden">
@@ -368,7 +368,7 @@ export default function Home() {
                               <img src={item.image} alt="image2" className="h-[15.5rem] w-[15.5rem] rounded-full" />
                             </div>
                             <p className="text-[16px] text-center font-light leading-6 text-[#4a4949]">{item.description}</p>
-                            <h6 className="text-[16px] font-medium text-[#860063] leading-5 text-center">Read More</h6>
+                            <h6 className="text-[16px] font-medium text-[#860063] leading-5 text-center">{item.title}</h6>
                           </div>
                         </div>
                       </div>
@@ -391,15 +391,12 @@ export default function Home() {
                     className="flex-1 flex flex-col space-y-6 border border-white  items-center bg-white py-8 px-4 h-[22.25rem] group hover:border hover:border-SECONDARY_GREEN duration-300 transition hover:rounded-md">
                     <div className="flex flex-col space-y-3 items-center">
                       <img src={item.image} alt={item.title} className="h-[8.5rem] w-[8.5rem] rounded-full group-hover:scale-125 duration-300" />
-                      <p className="text-[1.125rem] font-bold leading-6 text-[#222]">{item.title}</p>
+                      <p className="text-[1.125rem] font-bold leading-6 hidden text-[#222]">{item.title}</p>
                     </div>
                     <p className="text-[.875rem] leading-5  text-center font-light">{item.description.slice(0, 70)}</p>
 
                     <div className="flex flex-row items-center space-x-3 cursor-pointer">
-                      <h6 className="text-[15px] font-medium text-[#860063] leading-5">Read More</h6>
-                      <div className="h-4 w-4  flex items-center justify-center rounded-full bg-[#860063]">
-                        <ChevronRightIcon className="h-3 w-3 text-white" />
-                      </div>
+                      <h6 className="text-[15px] font-medium text-[#860063] leading-5">{item.title}</h6>
                     </div>
                   </div>
                 ))}
