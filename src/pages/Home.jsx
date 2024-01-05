@@ -261,14 +261,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="py-20 relative">
+      <div className="py-20 relative bg-[#f8f6f8]">
         <div className="max-w-[1260px] mx-auto md:px-20">
           <div className="flex flex-col space-y-10 ">
             <div className="flex flex-col space-y-8 px-8">
-              <h4 className="block md:hidden text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">Elevate Your Culinary Creations</h4>
+              <h4 className="block md:hidden text-title-md md:text-title-xl font-bold leading-6 text-center text-[#f78c2a]">Elevate Your Culinary Creations</h4>
               <div className="hidden md:flex md:flex-col md:space-y-1">
-                <h4 className=" text-title-md md:text-title-lg font-bold leading-6 text-center text-[#222]">Elevate Your Culinary Creations.</h4>
-                <h4 className=" text-title-md md:text-title-lg font-bold leading-6 text-center text-[#222]">
+                <h4 className=" text-title-md md:text-title-lg font-bold leading-6 text-center text-[#f78c2a]">Elevate Your Culinary Creations.</h4>
+                <h4 className=" text-title-md md:text-title-md font-bold leading-6 text-center text-[#222]">
                   Infuse nutrition, Ethical Sourcing, and Planetary Consciousness into Every Bite!
                 </h4>
               </div>
@@ -293,13 +293,13 @@ export default function Home() {
                               setImage(item.image);
                             }}
                             className={`px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] cursor-pointer duration-300 transition ${
-                              current === item.id ? "bg-[#f8f6f8] text-[#860063]" : "text-white bg-[#860063]"
+                              current === item.id ? "bg-white text-[#860063]" : "text-white bg-[#860063]"
                             }  font-medium text-[15px] capitalize`}>
                             {item.title}
                           </p>
                         ))}
                       </div>
-                      <div className="py-20 bg-[#f8f6f8] px-20 rounded-lg">
+                      <div className="py-20 bg-white px-20 rounded-lg">
                         <div className="flex flex-row justify-between items-center">
                           <div className="flex-1 pr-40">
                             <p className="leading-snug font-normal text-[16px] text-[#333]">{description}</p>
@@ -393,7 +393,7 @@ export default function Home() {
                       <img src={item.image} alt={item.title} className="h-[8.5rem] w-[8.5rem] rounded-full group-hover:scale-125 duration-300" />
                       <p className="text-[1.125rem] font-bold leading-6 hidden text-[#222]">{item.title}</p>
                     </div>
-                    <p className="text-[.875rem] leading-5  text-center font-light">{item.description.slice(0, 70)}</p>
+                    <p className="text-[.875rem] leading-5  text-center font-light">{item.description}</p>
 
                     <div className="flex flex-row items-center space-x-3 cursor-pointer">
                       <h6 className="text-[15px] font-medium text-[#860063] leading-5">{item.title}</h6>
@@ -413,7 +413,7 @@ export default function Home() {
               <div className="bg-[#f78c2a] h-[.375rem] w-[7.5rem] z-1" />
             </div>
             <div className="flex flex-col items-center space-y-4 md:space-y-10 ">
-              <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-center pt-10">Read ofi news</h5>
+              <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-center pt-10">Read Jor-El news</h5>
               <div className="w-full md:hidden">
                 <div className="overflow-hidden w-full">
                   <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>

@@ -3,6 +3,8 @@ import {
   animal_feed,
   baking,
   beverges,
+  cafein,
+  choco,
   chocolateAndConfectionery,
   cocoa,
   coffee,
@@ -13,6 +15,7 @@ import {
   featured5,
   four,
   grain,
+  grainy,
   hover_cfs,
   hover_cotton,
   hover_edibleoils,
@@ -40,6 +43,7 @@ import {
   savoryAndCulinary,
   snacking,
   spices,
+  spiceyFood,
   three,
   two
 } from "../constants";
@@ -163,27 +167,27 @@ export const data = [
 export const datas = [
   {
     id: 1,
-    image: m1,
+    image: choco,
     title: "Chocolate",
     description:
       "Chocolate is an essential part of your daily life, with over 80% of enthusiasts choosing these irresistible delights. Join the blissful majority and indulge!"
   },
   {
     id: 2,
-    image: m2,
+    image: cafein,
     title: "Coffee",
     description: "Did you know that globally, over 2 billion cups of coffee are consumed every day?"
   },
   {
     id: 3,
-    image: m3,
+    image: spiceyFood,
     title: "Spices",
     description:
       "Spice up recipes with our zestful ingredients! From the heart of flavors to responsible farming, we elevate taste while securing the future of global supply chains. Let's savor success together!"
   },
   {
     id: 4,
-    image: m4,
+    image: grainy,
     title: "Grains",
     description: "Our Grains, Your Adventure! From Farm to Table, Elevate Your Meals with Delicious Delight. Order Now for Culinary Joy!"
   }

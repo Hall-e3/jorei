@@ -83,8 +83,16 @@ const beverges = require("../assets/jorei/beverges.jpg");
 const chocolateAndConfectionery = require("../assets/jorei/chocolateAndConfectionery.jpg");
 const savoryAndCulinary = require("../assets/jorei/savoryAndCulinary.jpg");
 const snacking = require("../assets/jorei/snacking.jpg");
+const grainy = require("../assets/jorei/grainy.jpg");
+const cafein = require("../assets/jorei/cafein.jpg");
+const choco = require("../assets/jorei/choco.jpg");
+const spiceyFood = require("../assets/jorei/spiceyFood.jpg");
 export {
   image1,
+  grainy,
+  cafein,
+  choco,
+  spiceyFood,
   image2,
   image3,
   JOREL0G0,
