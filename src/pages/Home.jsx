@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Carousel, Footer, Hero } from "../components";
 import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon, ShareIcon } from "@heroicons/react/24/solid";
-import { image2, image3, p4 } from "../constants";
+import { image2, image3 } from "../constants";
 import { data, datas, goods, news, slides, slidesData } from "../utils/data";
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
   const [currentItem, setCurrentItem] = React.useState(null);
   const [current, setCurrent] = React.useState(goods[0].id);
   const [description, setDescription] = React.useState(goods[0].description);
+  const [image, setImage] = React.useState(goods[0].image);
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesData.length);
   };
@@ -164,7 +165,7 @@ export default function Home() {
               <div className="bg-[#f78c2a] h-[.375rem] w-[7.5rem] z-1" />
             </div>
             <div className="flex flex-col items-center space-y-4 md:space-y-10">
-              <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-center pt-10">Traceable, delicious & nutritious?</h5>
+              <h5 className="font-bold text-title-md md:text-title-lg leading-8 text-center pt-10">Traceable, delicious & nutritious?</h5>
               <div className="w-full md:hidden">
                 <div className="overflow-hidden w-full">
                   <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
@@ -226,9 +227,11 @@ export default function Home() {
                       </div>
                       <div>
                         <div key={slides[4].id} className="flex-shrink-1 w-full">
-                          <div className="flex flex-row space-x-3 items-center bg-white rounded-[1.25rem] shadow-lg">
-                            <img src={slides[4].image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem]  object-cover" />
-                            <div className="flex flex-col space-y-5 px-6 py-3">
+                          <div className="h-full flex flex-row space-x-3 items-center bg-white rounded-[1.25rem] shadow-lg">
+                            <div className="h-full w-[50%]">
+                              <img src={slides[4].image} alt="mid1" className="h-full rounded-tl-[1.25rem] rounded-tr-[1.25rem]  object-contain" />
+                            </div>
+                            <div className="flex flex-1 flex-col space-y-5 px-6 py-3">
                               <h6 className="text-[16px] font-bold leading-5">{slides[4].title}</h6>
                               <p className="text-[15px] font-normal leading-6 text-[#4a4949]">{slides[4].description}</p>
                             </div>
@@ -264,8 +267,8 @@ export default function Home() {
             <div className="flex flex-col space-y-8 px-8">
               <h4 className="block md:hidden text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">Elevate Your Culinary Creations</h4>
               <div className="hidden md:flex md:flex-col md:space-y-1">
-                <h4 className=" text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">Elevate Your Culinary Creations.</h4>
-                <h4 className=" text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">
+                <h4 className=" text-title-md md:text-title-lg font-bold leading-6 text-center text-[#222]">Elevate Your Culinary Creations.</h4>
+                <h4 className=" text-title-md md:text-title-lg font-bold leading-6 text-center text-[#222]">
                   Infuse nutrition, Ethical Sourcing, and Planetary Consciousness into Every Bite!
                 </h4>
               </div>
@@ -287,6 +290,7 @@ export default function Home() {
                             onClick={() => {
                               setDescription(item.description);
                               setCurrent(item.id);
+                              setImage(item.image);
                             }}
                             className={`px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] cursor-pointer duration-300 transition ${
                               current === item.id ? "bg-[#f8f6f8] text-[#860063]" : "text-white bg-[#860063]"
@@ -302,7 +306,7 @@ export default function Home() {
                           </div>
                           <div className="flex-none">
                             <div className="border-2 border-[#ccc] rounded-full p-[.5rem]">
-                              <img src={p4} alt="image2" className="h-[15.5rem] w-[15.5rem] rounded-full object-contain" />
+                              <img src={image} alt={`${image}imgs`} className="h-[15.5rem] w-[15.5rem] rounded-full object-cover" />
                             </div>
                           </div>
                         </div>

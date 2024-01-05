@@ -1,6 +1,9 @@
 import { BriefcaseIcon, MapPinIcon, NewspaperIcon } from "@heroicons/react/24/solid";
 import {
   animal_feed,
+  baking,
+  beverges,
+  chocolateAndConfectionery,
   cocoa,
   coffee,
   featured1,
@@ -22,9 +25,7 @@ import {
   m3,
   m4,
   m5,
-  mid2,
   mid3,
-  mid5,
   new1,
   new2,
   new3,
@@ -36,6 +37,8 @@ import {
   p4,
   p5,
   p6,
+  savoryAndCulinary,
+  snacking,
   spices,
   three,
   two
@@ -418,30 +421,35 @@ export const goods = [
   {
     id: 1,
     title: "Baking",
+    image: baking,
     description:
       "Imagine making yummy cookies, cakes, and pies with our fun ingredients! Let's mix different flavors, textures, and colors to make treats that make people happy and take care of the Earth. Try using our chocolate powder and nut spreads for super tasty, special cookies!"
   },
   {
     id: 2,
     title: "Beverages",
+    image: beverges,
     description:
       "Embark on a flavor adventure with us – from spiced cold brews to golden milk crafted with dairy or nuts, tailored to contemporary tastes. Even the simplest ingredient transforms. Join us in customizing and co-creating, shaping unique tastes, textures, and nutritional profiles for your hot, cold, or plant-based beverages, turning every sip into an extraordinary experience"
   },
   {
     id: 3,
     title: "Chocolate and Confectionary",
+    image: chocolateAndConfectionery,
     description:
       "Cocoa, adored worldwide in chocolates, desserts, and more. Elevate indulgence with a fresh approach – we're revolutionizing recipes, cutting sugar and sodium with inventive cocoa creations. Explore our innovative, vegan, organic, and traceable solutions. Fancy gluten-free, grain-free cashew flour for decadent vegan 'milk' chocolate bars? Let's redefine cocoa delights for a healthier, planet-friendly treat."
   },
   {
     id: 4,
     title: "Savory and Culinary",
+    image: savoryAndCulinary,
     description:
       "Dive into culinary innovation where trends are set, not just followed. Let's co-create delectable sauces, artisan nut-based cheeses, and exotic spice blends that not only meet desires but redefine them. Picture this: a culinary journey with our Oaxaca-inspired choco mole sauce, a symphony of authentic spices and premium cocoa, promising a rich, antioxidant-packed experience with a captivating aroma that awakens the senses. Join us in creating the extraordinary."
   },
   {
     id: 5,
     title: "Snacking",
+    image: snacking,
     description:
       "Explore a culinary odyssey with us as we lead the way in creating the next breakthrough in trail mix, cereal, and snack bars. Our commitment to pioneering fresh ingredient combinations aligns seamlessly with consumer preferences for taste, texture, nutrition, and traceability. Immerse yourself in a global culinary journey through our Blends of the Americas spice range, featuring meticulously crafted seasoned nut recipes like Blanched Almonds with Spicy Citrus Coast and Candied Cashews with Warm Sedona Sunset. Join us in the pursuit of excellence in flavor innovation."
   }

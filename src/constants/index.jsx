@@ -78,12 +78,21 @@ const three = require("../assets/jorei/three.jpg");
 const one = require("../assets/jorei/one.png");
 const two = require("../assets/jorei/two.jpg");
 const four = require("../assets/jorei/four.jpg");
-
+const baking = require("../assets/jorei/baking.jpg");
+const beverges = require("../assets/jorei/beverges.jpg");
+const chocolateAndConfectionery = require("../assets/jorei/chocolateAndConfectionery.jpg");
+const savoryAndCulinary = require("../assets/jorei/savoryAndCulinary.jpg");
+const snacking = require("../assets/jorei/snacking.jpg");
 export {
   image1,
   image2,
   image3,
   JOREL0G0,
+  snacking,
+  baking,
+  beverges,
+  chocolateAndConfectionery,
+  savoryAndCulinary,
   img5,
   mid1,
   mid2,
