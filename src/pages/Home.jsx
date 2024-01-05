@@ -2,12 +2,14 @@ import React from "react";
 import { Button, Carousel, Footer, Hero } from "../components";
 import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon, ShareIcon } from "@heroicons/react/24/solid";
 import { image2, image3, p4 } from "../constants";
-import { data, datas, news, slides, slidesData } from "../utils/data";
+import { data, datas, goods, news, slides, slidesData } from "../utils/data";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [longText, setLongText] = React.useState(false);
   const [currentItem, setCurrentItem] = React.useState(null);
+  const [current, setCurrent] = React.useState(goods[0].id);
+  const [description, setDescription] = React.useState(goods[0].description);
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesData.length);
   };
@@ -260,19 +262,17 @@ export default function Home() {
         <div className="max-w-[1260px] mx-auto md:px-20">
           <div className="flex flex-col space-y-10 ">
             <div className="flex flex-col space-y-8 px-8">
-              <h4 className="block md:hidden text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">
-                It's not a new idea. It's a chance for infinite possibilities.
-              </h4>
+              <h4 className="block md:hidden text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">Elevate Your Culinary Creations</h4>
               <div className="hidden md:flex md:flex-col md:space-y-1">
-                <h4 className=" text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">It's not a new idea.</h4>
+                <h4 className=" text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">Elevate Your Culinary Creations.</h4>
                 <h4 className=" text-title-md md:text-title-xl font-bold leading-6 text-center text-[#222]">
-                  It's not a new idea. It's a chance for infinite possibilities.
+                  Infuse nutrition, Ethical Sourcing, and Planetary Consciousness into Every Bite!
                 </h4>
               </div>
               <p className="text-[16px] md:text-md text-center font-light leading-6 text-[#4a4949]">
-                It’s easy to make something taste amazing. It’s much harder to fill it with nutritional benefits too. And what about making sure it’s ethically
-                sourced and right for the planet? Whatever category you’re serving, let’s supersede the benchmark with our portfolio of highly complementary
-                natural and delicious ingredients. Co-creation is easy!
+                Discover the art of culinary brilliance – it's more than just taste. Infuse nutrition, ethical sourcing, and planetary consciousness into every
+                bite. Elevate your creations with our carefully matched, natural, and delectable ingredients. Join the effortless journey of co-creation where
+                excellence knows no compromise!
               </p>
             </div>
             <div className="">
@@ -281,23 +281,24 @@ export default function Home() {
                   <div className="flex flex-col space-y-8">
                     <div className=" ">
                       <div className="flex items-center space-x-1">
-                        <p className="px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#f8f6f8] text-[#860063] font-medium text-[15px]">Bakery</p>
-                        <p className="px-6 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-[15px]">Beverages</p>
-                        <p className="px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-[15px]">
-                          Chocolate & Confectionery
-                        </p>
-                        <p className="px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-[15px]">Dairy & Desserts</p>
-                        <p className="px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-[15px]">Savory & Culinary</p>
-                        <p className="px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] bg-[#860063] text-white font-medium text-[15px]">Snacking</p>
+                        {goods.map((item) => (
+                          <p
+                            key={item.id}
+                            onClick={() => {
+                              setDescription(item.description);
+                              setCurrent(item.id);
+                            }}
+                            className={`px-4 py-3.5 rounded-tr-[10px] rounded-tl-[10px] cursor-pointer duration-300 transition ${
+                              current === item.id ? "bg-[#f8f6f8] text-[#860063]" : "text-white bg-[#860063]"
+                            }  font-medium text-[15px] capitalize`}>
+                            {item.title}
+                          </p>
+                        ))}
                       </div>
                       <div className="py-20 bg-[#f8f6f8] px-20 rounded-lg">
                         <div className="flex flex-row justify-between items-center">
                           <div className="flex-1 pr-40">
-                            <p className="leading-snug font-normal text-[16px] text-[#333]">
-                              Our well-established network of farmers and cooperatives, and our skills in logistics and risk management enable us to secure
-                              supplies and deliver them to our customers consistently. Our technologies enhance product traceability, adding value for our
-                              customers.
-                            </p>
+                            <p className="leading-snug font-normal text-[16px] text-[#333]">{description}</p>
                           </div>
                           <div className="flex-none">
                             <div className="border-2 border-[#ccc] rounded-full p-[.5rem]">
