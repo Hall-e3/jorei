@@ -1,4 +1,4 @@
-import { BriefcaseIcon, MapPinIcon, NewspaperIcon } from "@heroicons/react/24/solid";
+import { BriefcaseIcon, NewspaperIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import {
   animal_feed,
   baking,
@@ -23,11 +23,6 @@ import {
   hover_grains,
   hover_rice,
   hover_sgrains,
-  m1,
-  m2,
-  m3,
-  m4,
-  m5,
   mid3,
   new1,
   new2,
@@ -269,9 +264,9 @@ export const routes = [
   },
   {
     id: 5,
-    link: "/location",
-    name: "Location",
-    icon: <MapPinIcon className="w-5 h-5 text-[#f78c2a]" />
+    link: "/contact-us",
+    name: "Contact Us",
+    icon: <PhoneIcon className="w-5 h-5 text-[#f78c2a]" />
   }
 ];
 export const allNews = [
