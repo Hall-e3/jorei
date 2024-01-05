@@ -194,9 +194,9 @@ export default function Home() {
               <div className="hidden w-full md:flex">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
                   <div className="col-span-1">
-                    <div key={slides[0].id} className="h-full flex-shrink-0 w-full">
-                      <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg h-full">
-                        <img src={slides[0].image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
+                    <div key={slides[0].id} className="flex-shrink-0 w-full">
+                      <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg">
+                        <img src={slides[0].image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[31.375rem] w-[100%] object-cover" />
                         <div className="flex flex-col space-y-5 px-6 pt-10 pb-10">
                           <h6 className="text-[16px] font-bold leading-5">{slides[0].title}</h6>
                           <p className="text-[15px] font-normal leading-6 text-[#4a4949]">{slides[0].description}</p>
@@ -227,11 +227,11 @@ export default function Home() {
                       </div>
                       <div>
                         <div key={slides[4].id} className="flex-shrink-1 w-full">
-                          <div className="h-full flex flex-row space-x-3 items-center bg-white rounded-[1.25rem] shadow-lg">
-                            <div className="h-full w-[50%]">
-                              <img src={slides[4].image} alt="mid1" className="h-full rounded-tl-[1.25rem] rounded-tr-[1.25rem]  object-contain" />
+                          <div className="flex flex-row space-x-3 items-center bg-white rounded-[1.25rem] shadow-lg">
+                            <div className="w-2/6">
+                              <img src={slides[4].image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem]  object-contain" />
                             </div>
-                            <div className="flex flex-1 flex-col space-y-5 px-6 py-3">
+                            <div className="flex flex-col space-y-5 px-6 py-3">
                               <h6 className="text-[16px] font-bold leading-5">{slides[4].title}</h6>
                               <p className="text-[15px] font-normal leading-6 text-[#4a4949]">{slides[4].description}</p>
                             </div>
@@ -241,13 +241,13 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-span-1 ">
-                    <div key={slides[3].id} className="h-full flex-shrink-0 w-full ">
-                      <div className="flex flex-col justify-between items-center bg-[#860063] rounded-[1.25rem] shadow-lg h-full">
+                    <div key={slides[3].id} className="flex-shrink-0 w-full">
+                      <div className="flex flex-col justify-between items-center bg-[#860063] rounded-[1.25rem] shadow-lg">
                         <div className="flex flex-col space-y-5 px-6 pt-10 pb-10">
                           <h6 className="text-[16px] font-bold leading-5 text-white">{slides[3].title}</h6>
                           <p className="text-[15px] font-normal leading-6 text-white">{slides[3].description}</p>
                         </div>
-                        <img src={slides[3].image} alt="mid1" className="rounded-bl-[1.25rem] rounded-br-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
+                        <img src={slides[3].image} alt="mid1" className="rounded-bl-[1.25rem] rounded-br-[1.25rem] h-[31.375rem] w-[100%] object-cover" />
                       </div>
                     </div>
                   </div>
