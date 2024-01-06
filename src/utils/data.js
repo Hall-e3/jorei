@@ -209,7 +209,7 @@ export const news = [
     id: 3,
     image: Exports,
     title: "Third Article",
-    date: "KAMPALA, October 17, 2023",
+    date: "October 17, 2023",
     description:
       "Uganda’s exports in August 2023 fetched the country US$669.88 million, an increase of 17.6 percent from US$ 569.78mln earned in the month earlier,the Ministry of Finance says in its latest Performance of the Economy Report.",
     link: "https://thecooperator.news/ugandas-exports-rose-17-6-percent-in-august/"

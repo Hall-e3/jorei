@@ -320,7 +320,7 @@ export default function Home() {
                   <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
                     {data.map((item, index) => (
                       <div key={index} className="flex-shrink-0 w-full px-8">
-                        <div className="flex flex-col space-y-8 bg-white rounded-[1.25rem] shadow-lg py-8">
+                        <div className="flex flex-col space-y-8 bg-[#f8f6f8] rounded-[1.25rem] shadow-lg py-8">
                           <div className="bg-[#860063] flex items-center justify-center py-[1.375rem] rounded-tl-[1rem] rounded-tr-[1rem]">
                             <h6 className="text-[17px] font-bold leading-6 text-[#222]">{item.title}</h6>
                           </div>
@@ -416,9 +416,9 @@ export default function Home() {
               <h5 className="font-bold text-title-md md:text-title-xl leading-8 text-center pt-10">Read Jor-El news</h5>
               <div className="w-full md:hidden">
                 <div className="overflow-hidden w-full">
-                  <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
+                  <div className="w-full flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
                     {news.map((slide, index) => (
-                      <div key={index} className="flex-shrink-0 px-6 w-3/6">
+                      <div key={index} className="flex-shrink-0 px-6 w-full">
                         <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg ">
                           <img src={slide.image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
 
@@ -431,10 +431,12 @@ export default function Home() {
                             <p className="text-[16px] font-normal leading-6 text-[#4a4949]">{slide.description}</p>
                           </div>
                           <div className="w-full flex flex-row items-center justify-between px-6 pb-3">
-                            <h6 className="text-[1rem] font-medium text-[#860063] leading-5 text-center">Read More</h6>
-                            <div className="h-12 w-12 flex items-center justify-center rounded-full shadow-lg">
+                            <a target="#" href={`${slide.link}`} className="text-[1rem] font-medium text-[#860063] leading-5 text-center">
+                              Read More
+                            </a>
+                            {/* <div className="h-12 w-12 flex items-center justify-center rounded-full shadow-lg">
                               <ShareIcon className="w-7 h-7" />
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </div>
@@ -451,7 +453,7 @@ export default function Home() {
               </div>
               <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center">
                 {news.map((item) => (
-                  <div key={item.id} className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg w-3/6 h-[65vh]">
+                  <div key={item.id} className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg md:w-3/6 md:h-[65vh]">
                     <img src={item.image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
 
                     <div className="flex flex-col space-y-6 items-center px-6 md:px-4">
