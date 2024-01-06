@@ -19,9 +19,6 @@ const m3 = require("../assets/images/m3.jpg");
 const m4 = require("../assets/images/m4.jpg");
 const m5 = require("../assets/images/m5.png");
 const JOREL0G0 = require("../assets/images/JOREL0G0.png");
-const new2 = require("../assets/images/new2.png");
-const new1 = require("../assets/images/new1.jpg");
-const new3 = require("../assets/images/new3.jpeg");
 const head_logo = require("../assets/images/olamagri-primary-logo.webp");
 const footer_logo = require("../assets/images/olamagri-footer-logo.webp");
 const large_rice = require("../assets/images/large-rice-harvester.webp");
@@ -87,7 +84,13 @@ const grainy = require("../assets/jorei/grainy.jpg");
 const cafein = require("../assets/jorei/cafein.jpg");
 const choco = require("../assets/jorei/choco.jpg");
 const spiceyFood = require("../assets/jorei/spiceyFood.jpg");
+const Picture1 = require("../assets/jorei/Picture1.png");
+const Exports = require("../assets/jorei/Exports.jpg");
+const Museveni = require("../assets/jorei/Museveni-china-1.jpg");
 export {
+  Museveni,
+  Exports,
+  Picture1,
   image1,
   grainy,
   cafein,
@@ -118,9 +121,6 @@ export {
   m3,
   m4,
   m5,
-  new1,
-  new2,
-  new3,
   hover_side,
   head_logo,
   careers_banner,

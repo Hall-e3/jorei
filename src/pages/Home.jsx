@@ -418,8 +418,8 @@ export default function Home() {
                 <div className="overflow-hidden w-full">
                   <div className="flex transition-transform ease-in-out duration-500 py-5" style={{ transform: `translateX(${translateValue}%)` }}>
                     {news.map((slide, index) => (
-                      <div key={index} className="flex-shrink-0 w-full px-6">
-                        <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg">
+                      <div key={index} className="flex-shrink-0 px-6 w-3/6">
+                        <div className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg ">
                           <img src={slide.image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
 
                           <div className="w-full flex flex-row items-center justify-between px-6">
@@ -451,32 +451,34 @@ export default function Home() {
               </div>
               <div className="hidden w-full md:flex flex-row justify-evenly space-x-5 items-center">
                 {news.map((item) => (
-                  <div key={item.id} className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg">
+                  <div key={item.id} className="flex flex-col space-y-6 items-center bg-white rounded-[1.25rem] shadow-lg w-3/6 h-[65vh]">
                     <img src={item.image} alt="mid1" className="rounded-tl-[1.25rem] rounded-tr-[1.25rem] h-[21.375rem] w-[100%] object-cover" />
 
                     <div className="flex flex-col space-y-6 items-center px-6 md:px-4">
                       <div className="w-full flex flex-row items-center justify-between px-6">
-                        <Button text="Articles" buttonStyle="flex bg-[#860063] text-[14px] rounded-[1.875rem]  text-center px-6 py-2 text-[#fff]" />
+                        <Button text={item.title} buttonStyle="flex bg-[#860063] text-[14px] rounded-[1.875rem]  text-center px-6 py-2 text-[#fff]" />
                         <p className="text-[14px] font-medium text-[#860063] leading-5 text-center">{item.date}</p>
                       </div>
                       <div className="flex flex-col space-y-5 px-6">
                         <h6 className="text-[16px] font-bold leading-5">{item.title}</h6>
-                        <p className="text-[15px] font-normal leading-6 text-[#4a4949]">{item.description.slice(0, 100)}</p>
+                        <p className="text-[15px] font-normal leading-6 text-[#4a4949]">{item.description}</p>
                       </div>
                       <div className="w-full flex flex-row items-center justify-between px-6 pb-3">
-                        <h6 className="text-[15px] font-medium text-[#860063] leading-5 text-center">Read More</h6>
-                        <div className="h-9 w-9 flex items-center justify-center rounded-full shadow-lg">
+                        <a target="#" href={`${item.link}`} className="text-[15px] font-medium text-[#860063] leading-5 text-center">
+                          Read More
+                        </a>
+                        {/* <div className="h-9 w-9 flex items-center justify-center rounded-full shadow-lg">
                           <ShareIcon className="w-5 h-5" />
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-              <Button
+              {/* <Button
                 text="Read more news"
                 buttonStyle="flex bg-[#860063] rounded-[1.875rem] h-[2.625rem] text-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -484,8 +486,8 @@ export default function Home() {
       <div className="py-20 relative bg-[#f78c2a] px-10">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-8 md:space-y-6 items-center">
-            <h4 className="font-bold text-title-md md:text-title-xl leading-6 text-center text-[#222]">ofi is already part of your everyday life…</h4>
-            <p className="text-center text-[16px] font-light text-white">We’d love to hear from you. Get in touch today.</p>
+            <h4 className="font-bold text-title-md md:text-title-xl leading-6 text-center text-[#222]">Jor-el is has been here longer than you can image.</h4>
+            <p className="text-center text-[16px] font-light text-white">We are because you are. Share with us your experiences.</p>
             <Button
               text="Contact Us"
               buttonStyle="text-[16px] font-light border-[.0625rem] border-white text-white h-[2.625rem] max-w-[21.4375rem] py-[.625rem] px-[2.8125rem] flex item-center rounded-[1.875rem]"

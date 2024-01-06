@@ -1,5 +1,8 @@
 import { BriefcaseIcon, NewspaperIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import {
+  Exports,
+  Museveni,
+  Picture1,
   animal_feed,
   baking,
   beverges,
@@ -24,9 +27,6 @@ import {
   hover_rice,
   hover_sgrains,
   mid3,
-  new1,
-  new2,
-  new3,
   nuts,
   one,
   p1,
@@ -191,27 +191,28 @@ export const datas = [
 export const news = [
   {
     id: 1,
-    image: new1,
-    title: "ofi's Carbon Scenario Planner wins prestigious Food Ingredients Europe Award",
+    image: Museveni,
+    title: "First article",
     date: "Nov 28, 2023",
-    description:
-      "’s Carbon Scenario Planner (CSP), a new digital tool developed to help food and beverage manufacturers model the impact of different scenarios for reducing greenhouse gas emissions has won the 2023 Sustainability Innovation Award at Food Ingredients Europe in Frankfurt. This is the "
+    description: "President Yoweri Museveni has appealed to thegovernment of China to open their market for more finished goods from countries likeUganda.",
+    link: "https://www.independent.co.ug/museveni-asks-china-to-allow-more-ugandan-finished-products/"
   },
   {
     id: 2,
-    image: new2,
-    title: "Cultivating the next generation of process engineers",
+    image: Picture1,
+    title: "Second Article",
     date: "Nov 28, 2023",
-    description:
-      "’s Carbon Scenario Planner (CSP), a new digital tool developed to help food and beverage manufacturers model the impact of different scenarios for reducing greenhouse gas emissions has won the 2023 Sustainability Innovation Award at Food Ingredients Europe in Frankfurt. This is the "
+    description: "Uganda to export 300 tonnes of beef to Egypt monthly. ",
+    link: "https://www.monitor.co.ug/uganda/news/national/uganda-to-export-300-tonnes-of-beef-to-egypt-monthly-4298934"
   },
   {
     id: 3,
-    image: new3,
-    title: "ofi Employee Spotlight: Horacio Bueno and Shannon Arballo, North America",
-    date: "Nov 28, 2023",
+    image: Exports,
+    title: "Third Article",
+    date: "KAMPALA, October 17, 2023",
     description:
-      "’s Carbon Scenario Planner (CSP), a new digital tool developed to help food and beverage manufacturers model the impact of different scenarios for reducing greenhouse gas emissions has won the 2023 Sustainability Innovation Award at Food Ingredients Europe in Frankfurt. This is the "
+      "Uganda’s exports in August 2023 fetched the country US$669.88 million, an increase of 17.6 percent from US$ 569.78mln earned in the month earlier,the Ministry of Finance says in its latest Performance of the Economy Report.",
+    link: "https://thecooperator.news/ugandas-exports-rose-17-6-percent-in-august/"
   }
 ];
 
