@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Carousel, Footer, Hero } from "../components";
-import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon, ShareIcon } from "@heroicons/react/24/solid";
+import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { image2, image3 } from "../constants";
 import { data, datas, goods, news, slides, slidesData } from "../utils/data";
 

@@ -7,6 +7,7 @@ const About = Supensing(lazy(() => import("./pages/About")));
 const Careers = Supensing(lazy(() => import("./pages/Careers")));
 const News = Supensing(lazy(() => import("./pages/News")));
 const Products = Supensing(lazy(() => import("./pages/Products")));
+const Contact = Supensing(lazy(() => import("./pages/Contact")));
 function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/news" element={<News />} />
         <Route path="/products-services" element={<Products />} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
     </div>
   );

@@ -12,17 +12,17 @@ export default function Hero() {
   const [drop, setDrop] = React.useState(false);
   const [show, setShow] = React.useState(false);
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
-  
+
   React.useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 10) {
+    window?.addEventListener("scroll", () => {
+      if (window?.scrollY > 10) {
         setShow(true);
       } else {
         setShow(false);
       }
     });
     return () => {
-      window.removeEventListener("scroll", () => {});
+      window?.removeEventListener("scroll", () => {});
     };
   }, []);
 
@@ -99,10 +99,12 @@ export default function Hero() {
                       </Link>
                     ))}
                   </div>
-                  <button className="flex items-center group space-x-3 bg-white hover:bg-SECONDARY_GREEN border border-SECONDARY_GREEN hover:border-white px-[2.09375rem] rounded-[1.25rem] h-[2.5rem] max-w-[21.4375rem]">
-                    <ChatBubbleOvalLeftIcon className="w-6 h-6 text-[#f78c2a]" />
-                    <p className="text-SECONDARY_GREEN group-hover:text-white  text-[.875rem]">Get in touch</p>
-                  </button>
+                  <Link to="/contact-us">
+                    <button className="flex items-center group space-x-3 bg-white hover:bg-SECONDARY_GREEN border border-SECONDARY_GREEN hover:border-white px-[2.09375rem] rounded-[1.25rem] h-[2.5rem] max-w-[21.4375rem]">
+                      <ChatBubbleOvalLeftIcon className="w-6 h-6 text-[#f78c2a]" />
+                      <p className="text-SECONDARY_GREEN group-hover:text-white  text-[.875rem]">Get in touch</p>
+                    </button>
+                  </Link>
                   <div
                     onClick={() => setSearch(true)}
                     className="h-[2.25rem] rounded-[1.875rem] w-[10.9375rem] text-left px-[.9375rem] flex flex-row items-center border border-white py-2.5">

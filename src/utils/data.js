@@ -263,12 +263,7 @@ export const routes = [
     name: "Careers",
     icon: <BriefcaseIcon className="w-5 h-5 text-[#f78c2a]" />
   },
-  {
-    id: 5,
-    link: "/contact-us",
-    name: "Contact Us",
-    icon: <PhoneIcon className="w-5 h-5 text-[#f78c2a]" />
-  }
+ 
 ];
 export const allNews = [
   {
