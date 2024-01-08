@@ -45,7 +45,7 @@ export default function Contact() {
         componentStyle="bg-background2 py-18 bg-no-repeat bg-cover bg-center"
       />
 
-      <div className="py-20 md:py-40 px-4 md:px-10">
+      <div className="py-20  px-4 md:px-10">
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-8">
           {contact_details.map((item) => (
             <div key={item.id} className="flex-shrink-0 w-full p-4 md:p-8 border border-stroke hover:border hover:border-SECONDARY_GREEN rounded-md">
