@@ -15,11 +15,13 @@ import Carousel from "./global/Carousel";
 import HeroBottom from "./global/HeroBottom";
 import ServiceProducts from "./global/ServiceProducts";
 import CareerComponent from "./global/CareerComponent";
+import TextArea from "./global/TextArea";
 export {
   Loader,
   Spinner,
   Button,
   Divider,
+  TextArea,
   ServiceProducts,
   FetchLoading,
   HeroBottom,
