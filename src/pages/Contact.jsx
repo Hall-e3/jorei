@@ -78,7 +78,7 @@ export default function Contact() {
                 <TextArea rows={10} placeholder="Start writing your message" styles="border border-stroke rounded-md" name="message" />
               </div>
               <div>
-                <Button type="submit" text="Submit Now" buttonStyle="bg-[#f78c2a] text-white py-3 text-lg font-bold rounded-md px-4" />
+                <Button text="Send" buttonStyle="bg-[#f78c2a] text-white py-3 text-lg font-bold rounded-md px-4" />
               </div>
             </div>
           </div>
