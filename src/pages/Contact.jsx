@@ -8,7 +8,7 @@ const contact_details = [
   {
     id: 1,
     title: "Email",
-    subtitle: "jorelagriculture@gmail.com",
+    subtitle: "jorelagriexporters@gmail.com",
     icon: <EnvelopeIcon className="w-5 h-5" />
   },
   {
@@ -20,7 +20,8 @@ const contact_details = [
   {
     id: 3,
     title: "Contact",
-    subtitle: "+256 762 831647",
+    subtitle: "+256 762 831647 for UG Sales",
+    subtitle1: "240-316-6448 for US Sales",
     icon: <PhoneIcon className="w-5 h-5" />
   }
 ];
@@ -49,10 +50,13 @@ export default function Contact() {
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-8">
           {contact_details.map((item) => (
             <div key={item.id} className="flex-shrink-0 w-full p-4 md:p-8 border border-stroke hover:border hover:border-SECONDARY_GREEN rounded-md">
-              <div className="flex flex-col space-y-8 bg-white rounded-[1.25rem]">
-                <div className="flex flex-col space-y-3 items-center">
+              <div className="flex flex-col space-y-6 bg-white rounded-[1.25rem]">
+                <div className="flex flex-col space-y-2 items-center">
                   <div>{item.icon}</div>
-                  <p className="text-[16px] text-center leading-6">{item.subtitle}</p>
+                  <div>
+                    <p className="text-[16px] text-center leading-6">{item.subtitle}</p>
+                    {item.subtitle1 && <p className="text-[16px] text-center leading-6">{item.subtitle1}</p>}
+                  </div>
                   <h6 className="text-[14px] font-medium text-[#860063] leading-5 text-center">{item.title}</h6>
                 </div>
               </div>

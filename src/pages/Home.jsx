@@ -490,7 +490,7 @@ export default function Home() {
       <div className="py-20 relative bg-[#f78c2a] px-10">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-8 md:space-y-6 items-center">
-            <h4 className="font-bold text-title-md md:text-title-xl leading-6 text-center text-[#222]">Jor-el is has been here longer than you can imagine.</h4>
+            <h4 className="font-bold text-title-md md:text-title-xl leading-6 text-center text-[#222]">Jor-el has been here longer than you can imagine.</h4>
             <p className="text-center text-[16px] font-light text-white">We are because you are. Share with us your experiences.</p>
             <Button
               text="Contact Us"
