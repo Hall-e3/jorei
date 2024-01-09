@@ -20,7 +20,7 @@ export default function Products() {
         <div className="max-w-[1260px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 space-y-10 md:space-y-0 md:gap-20">
             <div>
-              <h3 className="text-title-sm sm:text-title-md md:text-title-xl font-semibold text-[#2e2d2c] leading-tight">
+              <h3 className="text-title-sm sm:text-title-md md:text-title-lg font-semibold text-[#2e2d2c] leading-tight">
                 We offer our customers a <span className="text-[#ff7000]"> deep understanding</span> of market needs, built through our on-the-ground presence
                 in Africa majorly over the last 2 years.
               </h3>

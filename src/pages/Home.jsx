@@ -3,6 +3,7 @@ import { Button, Carousel, Footer, Hero } from "../components";
 import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { image2, image3 } from "../constants";
 import { data, datas, goods, news, slides, slidesData } from "../utils/data";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -10,6 +11,7 @@ export default function Home() {
   const [currentItem, setCurrentItem] = React.useState(null);
   const [current, setCurrent] = React.useState(goods[0].id);
   const [description, setDescription] = React.useState(goods[0].description);
+  const navigate = useNavigate();
   const [image, setImage] = React.useState(goods[0].image);
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesData.length);
@@ -488,10 +490,11 @@ export default function Home() {
       <div className="py-20 relative bg-[#f78c2a] px-10">
         <div className="max-w-[1260px] mx-auto">
           <div className="flex flex-col space-y-8 md:space-y-6 items-center">
-            <h4 className="font-bold text-title-md md:text-title-xl leading-6 text-center text-[#222]">Jor-el is has been here longer than you can image.</h4>
+            <h4 className="font-bold text-title-md md:text-title-xl leading-6 text-center text-[#222]">Jor-el is has been here longer than you can imagine.</h4>
             <p className="text-center text-[16px] font-light text-white">We are because you are. Share with us your experiences.</p>
             <Button
               text="Contact Us"
+              onClick={() => navigate("/contact-us")}
               buttonStyle="text-[16px] font-light border-[.0625rem] border-white text-white h-[2.625rem] max-w-[21.4375rem] py-[.625rem] px-[2.8125rem] flex item-center rounded-[1.875rem]"
             />
           </div>
