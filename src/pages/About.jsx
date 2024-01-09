@@ -16,6 +16,7 @@ export default function About() {
         title="Cultivating Sustainable Future"
         button={true}
         buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center justify-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
+        subtitle="Join our journey in cultivating a sustainable future for agriculture! We're not just exporting produce; we're growing relationships. With top-notch quality, innovation, and a personal touch, let's sow the seeds of success together. Your partner for a greener, more fruitful tomorrow!"
         buttonText="Down Factsheet"
         image={cewcew}
       />

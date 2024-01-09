@@ -2,7 +2,7 @@ import React from "react";
 import { Footer, Hero, HeroBottom, Input } from "../components";
 import { image4 } from "../constants";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
-import { allNews, dataNews, downlinks, news } from "../utils/data";
+import { dataNews, downlinks, news } from "../utils/data";
 
 export default function News() {
   const [active, setActive] = React.useState(1);
@@ -20,6 +20,7 @@ export default function News() {
         buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center justify-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
         buttonText="Down Fact sheet"
         componentStyle="color_black"
+        subtitle="Stay informed with us! Explore the latest updates, performance highlights, and diverse perspectives in our News and Events section. Dive into a world of transparency, where every action contributes to our shared narrative of success. Join the conversation, stay connected, and be part of the unfolding story."
         image={image4}
       />
       <div className="py-20 px-[30px] md:px-0">

@@ -3,8 +3,6 @@ import { Footer, Hero, HeroBottom } from "../components";
 import { image4 } from "../constants";
 import { products } from "../utils/data";
 
-
-
 export default function Products() {
   return (
     <div className="h-screen w-full">
@@ -14,6 +12,7 @@ export default function Products() {
         button={true}
         buttonStyle="flex bg-[#f78c2a] rounded-md h-[2.625rem] text-center justify-center py-[.625rem] px-[2.8125rem] md:px-6 md:py- text-[#fff]"
         buttonText="Product Customization"
+        subtitle=" Harvest prosperity with us! Elevate your agricultural exports with innovative solutions, top-quality produce, and transparent practices. Our personalized service ensures a fruitful partnership. Join us in sowing the seeds of success in the global market!"
         componentStyle="color_black"
         image={image4}
       />
