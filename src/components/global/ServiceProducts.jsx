@@ -22,8 +22,7 @@ export default function ServiceProducts() {
             <div className="flex flex-col space-y-6 ">
               <h4 className="text-title-md md:text-title-xl font-semibold leading-1">Our Products & Services</h4>
               <p className="text-[16px] leading-1">
-                Whether it's working with rice farmers in Asia, sourcing cotton in Australia, or producing value-added products in Africa, we help our customers
-                around the world meet the increasing demand for food, feed and fibre.
+                Weaving communities, agriculture, and markets for sustainability, ethical sourcing, and culinary wonders. Join us!
               </p>
             </div>
             <div className="flex items-center justify-center">

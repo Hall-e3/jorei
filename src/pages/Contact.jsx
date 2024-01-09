@@ -42,7 +42,7 @@ export default function Contact() {
           </p>
         }
         image={image4}
-        componentStyle="bg-background2 py-18 bg-no-repeat bg-cover bg-center"
+        componentStyle="bg-background3 py-18 bg-no-repeat bg-cover bg-center"
       />
 
       <div className="py-20  px-4 md:px-10">

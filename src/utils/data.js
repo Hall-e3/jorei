@@ -1,8 +1,9 @@
-import { BriefcaseIcon, NewspaperIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { BriefcaseIcon, NewspaperIcon } from "@heroicons/react/24/solid";
 import {
   Exports,
   Museveni,
   Picture1,
+  Transportation,
   animal_feed,
   baking,
   beverges,
@@ -26,6 +27,8 @@ import {
   hover_grains,
   hover_rice,
   hover_sgrains,
+  jorel,
+  jorel1,
   mid3,
   nuts,
   one,
@@ -194,7 +197,7 @@ export const news = [
     image: Museveni,
     title: "First article",
     date: "Nov 28, 2023",
-    description: "President Yoweri Museveni has appealed to thegovernment of China to open their market for more finished goods from countries likeUganda.",
+    description: "President Yoweri Museveni has appealed to the government of China to open their market for more finished goods from countries likeUganda.",
     link: "https://www.independent.co.ug/museveni-asks-china-to-allow-more-ugandan-finished-products/"
   },
   {
@@ -256,14 +259,13 @@ export const routes = [
     link: "/news",
     name: "News & Events",
     icon: <NewspaperIcon className="w-5 h-5 text-[#f78c2a]" />
-  },
-  {
-    id: 4,
-    link: "/careers",
-    name: "Careers",
-    icon: <BriefcaseIcon className="w-5 h-5 text-[#f78c2a]" />
-  },
- 
+  }
+  // {
+  //   id: 4,
+  //   link: "/careers",
+  //   name: "Careers",
+  //   icon: <BriefcaseIcon className="w-5 h-5 text-[#f78c2a]" />
+  // }
 ];
 export const allNews = [
   {
@@ -368,44 +370,44 @@ export const products = [
     image: hover_edibleoils,
     color: "second"
   },
+  // {
+  //   id: 3,
+  //   title: "Rice",
+  //   subtitle: "Sustainable Production of Rice.",
+  //   image: hover_rice,
+  //   color: "third"
+  // },
   {
     id: 3,
-    title: "Rice",
-    subtitle: "Sustainable Production of Rice.",
-    image: hover_rice,
-    color: "third"
-  },
-  {
-    id: 4,
     title: "Specialty Grains & Seeds",
     subtitle: "Sustainable Production of Specialty Grains & Seeds.",
     image: hover_sgrains,
     color: "fourth"
   },
   {
-    id: 5,
+    id: 4,
     title: "Integrated Feed & Protein",
     subtitle: "A Supported, Sustainable Supply Chain.",
     image: animal_feed,
     color: "fifth"
   },
-  {
-    id: 6,
-    title: "Cotton",
-    subtitle: "Universal Supplier of First Class, Sustainable Cotton.",
-    image: hover_cotton,
-    color: "sixth"
-  },
+  // {
+  //   id: 6,
+  //   title: "Cotton",
+  //   subtitle: "Universal Supplier of First Class, Sustainable Cotton.",
+  //   image: hover_cotton,
+  //   color: "sixth"
+  // },
 
   {
-    id: 7,
+    id: 5,
     title: "Commodity Financial Services",
     subtitle: "Applying Insight, Research and Innovation to CFS.",
     image: hover_cfs,
     color: "nine"
   },
   {
-    id: 8,
+    id: 6,
     title: "Freight Management",
     subtitle: "Our shipping capabilities cover a wide range of bulk cargoes. ",
     image: hover_freight,
@@ -448,5 +450,29 @@ export const goods = [
     image: snacking,
     description:
       "Explore a culinary odyssey with us as we lead the way in creating the next breakthrough in trail mix, cereal, and snack bars. Our commitment to pioneering fresh ingredient combinations aligns seamlessly with consumer preferences for taste, texture, nutrition, and traceability. Immerse yourself in a global culinary journey through our Blends of the Americas spice range, featuring meticulously crafted seasoned nut recipes like Blanched Almonds with Spicy Citrus Coast and Candied Cashews with Warm Sedona Sunset. Join us in the pursuit of excellence in flavor innovation."
+  }
+];
+
+export const aboutGoods = [
+  {
+    id: 1,
+    title: "We Grow & Source",
+    image: jorel,
+    description:
+      "Harnessing the synergy of our cultivation initiatives and partnerships with diverse producers, we seamlessly source and deliver premium products, ensuring a global reach for our customers."
+  },
+  {
+    id: 2,
+    title: "We Process & Manufacture",
+    image: jorel1,
+    description:
+      "With a highly motivated and innovative team, unmatched operational excellence is achieved, converting diverse raw materials like sesame, cocoa, coffee, grains, rice, and cotton into a premium array of value-added products, including flour, pasta, semolina, fortified branded rice, and animal feeds."
+  },
+  {
+    id: 3,
+    title: "Distributing Through Transportation",
+    image: Transportation,
+    description:
+      "Leveraging our supply chain expertise, we navigate the complexities of handling, storing, and transporting food, feed, and fiber with efficiency. Our digital integration ensures seamless market access for farmers and delivers reliable supplies to our customers."
   }
 ];

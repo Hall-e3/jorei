@@ -3,6 +3,8 @@ import { Footer, Hero, HeroBottom } from "../components";
 import { image4 } from "../constants";
 import { products } from "../utils/data";
 
+
+
 export default function Products() {
   return (
     <div className="h-screen w-full">
@@ -20,21 +22,17 @@ export default function Products() {
           <div className="grid grid-cols-1 md:grid-cols-2 space-y-10 md:space-y-0 md:gap-20">
             <div>
               <h3 className="text-title-sm sm:text-title-md md:text-title-xl font-semibold text-[#2e2d2c] leading-tight">
-                We offer our customers a<span className="text-[#ff7000]"> deep understanding</span> of market needs, built through our on-the-ground presence in
-                Asia and Africa over the last 30 years.
+                We offer our customers a <span className="text-[#ff7000]"> deep understanding</span> of market needs, built through our on-the-ground presence
+                in Africa majorly over the last 2 years.
               </h3>
             </div>
             <div className="flex flex-col space-y-6">
               <p className="text-[16px] leading-1 text-[#2e2d2c]">
-                Our operating capabilities in global origination, processing, trading, logistics, distribution and risk management set us apart from our peers,
-                while our strategic manufacturing assets in key destination markets strengthen our service to customers.
+                Distinct in global origination, processing, trading, and logistics, we transcend with strategic manufacturing assets in key markets.
               </p>
               <p className="text-[16px] leading-1 text-[#2e2d2c]">
-                We seek to empower you to imagine extraordinary answers to the world’s everyday food supply challenges, fulfilling your own ambitions and
-                positively influencing our global business and the world around us.
-              </p>
-              <p className="text-[16px] leading-1 text-[#2e2d2c]">
-                Because of the scale of the challenge, we encourage colleagues to take ownership of decisions and explore new ways of doing things.
+                Empowering innovation, we tackle global food challenges, fostering individual ambitions, and shaping a positive impact. Amid challenges, we
+                champion autonomy, urging colleagues to own decisions and pioneer novel approaches
               </p>
             </div>
           </div>
@@ -43,14 +41,13 @@ export default function Products() {
       <div className="py-20 px-10 md:px-0">
         <div className="max-w-[1580px] mx-auto">
           <div className="w-full flex flex-col space-y-10 ">
-            <div className="flex flex-col space-y-6 items-center">
+            <div className="flex flex-col space-y-3 items-center">
               <h3 className="text-title-sm sm:text-title-md md:text-title-xl text-center md:text-left font-semibold text-[#2e2d2c]">Our Products & Services</h3>
               <p className="text-[16px] leading-1 text-[#2e2d2c] text-center">
-                Whether it's working with rice farmers in Asia, sourcing cotton in Australia, or producing value-added products in Africa, we help our customers
-                around the world meet the increasing demand for food, feed and fibre.
+                Weaving communities, agriculture, and markets for sustainability, ethical sourcing, and culinary wonders. Join us!
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8">
               {products.map((product) => (
                 <div
                   key={product.id}

@@ -2,10 +2,10 @@ import React from "react";
 import { Footer, Hero, HeroBottom, Input } from "../components";
 import { image4 } from "../constants";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
-import { allNews, dataNews, downlinks } from "../utils/data";
+import { allNews, dataNews, downlinks, news } from "../utils/data";
 
 export default function News() {
-  const [active, setActive] = React.useState(0);
+  const [active, setActive] = React.useState(1);
   const handleChange = (evt) => {
     const selectedValue = parseInt(evt.target.value, 10);
     setActive(selectedValue);
@@ -124,13 +124,13 @@ export default function News() {
             <div>
               {active === 1 && (
                 <>
-                  {allNews.length === 0 ? (
+                  {news.length === 0 ? (
                     <div className="flex items-center justify-center">
                       <p className="text-[16px] font-bold">No records found</p>
                     </div>
                   ) : (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-15">
-                      {allNews.map((item) => (
+                      {news.map((item) => (
                         <div key={item.id} className="flex flex-col space-y-3">
                           <img src={item.image} alt={item.title} className="rounded-md h-[18rem]" />
                           <p className="text-black text-[15px]">{item.date}</p>
@@ -144,13 +144,13 @@ export default function News() {
               )}
               {active === 2 && (
                 <>
-                  {allNews.length === 0 ? (
+                  {news.length === 0 ? (
                     <div className="flex items-center justify-center">
                       <h6 className="text-lg font-bold">No records found</h6>
                     </div>
                   ) : (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-20">
-                      {allNews.map((item) => (
+                      {news.map((item) => (
                         <div key={item.id} className="flex flex-col space-y-3">
                           <img src={item.image} alt={item.title} className="rounded-md h-[18rem]" />
                           <p className="text-black text-[15px]">{item.date}</p>
@@ -171,13 +171,13 @@ export default function News() {
               )}
               {active === 4 && (
                 <>
-                  {allNews.length === 0 ? (
+                  {news.length === 0 ? (
                     <div className="flex items-center justify-center">
                       <h6 className="text-lg font-bold">No records found</h6>
                     </div>
                   ) : (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-20">
-                      {allNews.map((item) => (
+                      {news.map((item) => (
                         <div key={item.id} className="flex flex-col space-y-3">
                           <img src={item.image} alt={item.title} className="rounded-md h-[18rem]" />
                           <p className="text-black text-[15px]">{item.date}</p>

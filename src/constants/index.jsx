@@ -87,9 +87,19 @@ const spiceyFood = require("../assets/jorei/spiceyFood.jpg");
 const Picture1 = require("../assets/jorei/Picture1.png");
 const Exports = require("../assets/jorei/Exports.jpg");
 const Museveni = require("../assets/jorei/Museveni-china-1.jpg");
+const cewcew = require("../assets/jorei/cewcew.jpg");
+const jorel = require("../assets/jorei/jorel.jpg");
+const jorel1 = require("../assets/jorei/jorel1.jpg");
+const Transportation = require("../assets/jorei/Transportation.jpeg");
+const contact = require("../assets/jorei/contact.jpg");
 export {
   Museveni,
+  contact,
   Exports,
+  Transportation,
+  cewcew,
+  jorel,
+  jorel1,
   Picture1,
   image1,
   grainy,
