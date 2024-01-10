@@ -14,6 +14,7 @@ export default function Contact() {
     subject: "",
     body: ""
   });
+  console.log(values);
   const [message, setMessage] = useState(null);
 
   const handleInputChange = (e) => {
@@ -32,7 +33,8 @@ export default function Contact() {
     const templateId = "template_n6661n7";
     try {
       setLoading(true);
-      const { user_name, user_email, subject, body } = { ...values };
+
+      const { user_name, user_email, subject, body } = values;
 
       await emailjs.send(serviceId, templateId, {
         user_name,
@@ -101,7 +103,8 @@ export default function Contact() {
               <div className="w-full flex flex-col md:flex-row md:space-x-6 space-y-3 md:space-y-0">
                 <Input
                   label="Your Name"
-                  name={values.user_name}
+                  value={values.user_name}
+                  name="user_name"
                   type="text"
                   placeholder="Your Name"
                   styles="border border-stroke rounded-md flex-1 py-3"
@@ -111,7 +114,8 @@ export default function Contact() {
                 <Input
                   label="Your Email"
                   type="email"
-                  name={values.user_email}
+                  value={values.user_email}
+                  name="user_email"
                   placeholder="Your Email*"
                   styles="border border-stroke rounded-md flex-1 py-3"
                   required
@@ -122,7 +126,8 @@ export default function Contact() {
               <div className="flex flex-col md:flex-row w-full md:space-x-6 space-y-3 md:space-y-0">
                 <Input
                   label="Subject"
-                  name={values.subject}
+                  value={values.subject}
+                  name="subject"
                   onChange={handleInputChange}
                   type="text"
                   placeholder="Subject"
@@ -133,7 +138,8 @@ export default function Contact() {
               <div>
                 <TextArea
                   onChange={handleInputChange}
-                  name={values.body}
+                  value={values.body}
+                  name="body"
                   required
                   rows={10}
                   placeholder="Start writing your message"
