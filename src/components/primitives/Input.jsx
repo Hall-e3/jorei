@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Input({ label, type, name, placeholder, value, onChange, styles, disabled, onFocus }) {
+export default function Input({ label,ref,required, type, name, placeholder, value, onChange, styles, disabled, onFocus }) {
   return (
     <div className="w-full">
       <label className="block mb-2 text-[14px] text-[#2e2d2c]">{label}</label>
@@ -14,6 +14,8 @@ export default function Input({ label, type, name, placeholder, value, onChange,
           placeholder={placeholder}
           disabled={disabled}
           onChange={onChange}
+          ref={ref}
+          required={required}
         />
       </div>
     </div>

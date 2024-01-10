@@ -1,32 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Footer, Hero, HeroBottom, Input, TextArea } from "../components";
 import { image4 } from "../constants";
-import { ChevronRightIcon, EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
-
-const contact_details = [
-  {
-    id: 1,
-    title: "Email",
-    subtitle: "jorelagriexporters@gmail.com",
-    icon: <EnvelopeIcon className="w-5 h-5" />
-  },
-  {
-    id: 2,
-    title: "Address",
-    subtitle: "Kampala,Uganda",
-    icon: <MapPinIcon className="w-5 h-5" />
-  },
-  {
-    id: 3,
-    title: "Contact",
-    subtitle: "+256 762 831647 for UG Sales",
-    subtitle1: "240-316-6448 for US Sales",
-    icon: <PhoneIcon className="w-5 h-5" />
-  }
-];
+import emailjs from "@emailjs/browser";
+import { contact_details } from "../utils/data";
 
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
+  const [values, setValues] = React.useState({
+    user_name: "",
+    user_email: "",
+    subject: "",
+    body: ""
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value
+    });
+  };
+
+  useEffect(() => emailjs.init("kATYIbLE5YZ6B8Rm2"), []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const serviceId = "service_3tf5qqe";
+    const templateId = "template_n6661n7";
+    try {
+      setLoading(true);
+      const { user_name, user_email, subject, body } = { ...values };
+
+      await emailjs.send(serviceId, templateId, {
+        user_name,
+        user_email,
+        subject,
+        message: body
+      });
+      // alert("email successfully sent check inbox");
+    } catch (error) {
+      alert("Failed to send email. Please try again later.");
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="h-screen w-full overflow-x-hidden">
       <Hero />
@@ -68,23 +89,58 @@ export default function Contact() {
         <div className="max-w-[1240px] mx-auto flex justify-center">
           <div className="w-full flex flex-col justify-center space-y-8">
             <h3 className="text-3xl font-bold text-center">Send Us A Message</h3>
-            <div className="w-full border border-stroke rounded-md px-4 py-6 lg:px-10 lg:py-15 md:space-y-4 lg:space-y-8 space-y-8">
+            <form onSubmit={handleSubmit} className="w-full border border-stroke rounded-md px-4 py-6 lg:px-10 lg:py-15 md:space-y-4 lg:space-y-8 space-y-8">
               <div className="w-full flex flex-col md:flex-row md:space-x-6 space-y-3 md:space-y-0">
-                <Input label="Your Name" type="text" placeholder="Your Name" name="user_name" styles="border border-stroke rounded-md flex-1 py-3" />
-                <Input label="Your Email" type="email" placeholder="Your Email*" name="user_email" styles="border border-stroke rounded-md flex-1 py-3" />
+                <Input
+                  label="Your Name"
+                  name={values.user_name}
+                  type="text"
+                  placeholder="Your Name"
+                  styles="border border-stroke rounded-md flex-1 py-3"
+                  required
+                  onChange={handleInputChange}
+                />
+                <Input
+                  label="Your Email"
+                  type="email"
+                  name={values.user_email}
+                  placeholder="Your Email*"
+                  styles="border border-stroke rounded-md flex-1 py-3"
+                  required
+                  onChange={handleInputChange}
+                />
               </div>
 
               <div className="flex flex-col md:flex-row w-full md:space-x-6 space-y-3 md:space-y-0">
-                <Input label="Your Phone" type="text" placeholder="Your Phone" name="user_phone" styles="border border-stroke rounded-md py-3" />
-                <Input label="Subject" type="text" placeholder="Subject" name="subject" styles="border border-stroke rounded-md py-3" />
+                <Input
+                  label="Subject"
+                  name={values.subject}
+                  onChange={handleInputChange}
+                  type="text"
+                  placeholder="Subject"
+                  styles="border border-stroke rounded-md py-3"
+                  required
+                />
               </div>
               <div>
-                <TextArea rows={10} placeholder="Start writing your message" styles="border border-stroke rounded-md" name="message" />
+                <TextArea
+                  onChange={handleInputChange}
+                  name={values.body}
+                  required
+                  rows={10}
+                  placeholder="Start writing your message"
+                  styles="border border-stroke rounded-md"
+                />
               </div>
               <div>
-                <Button text="Send" buttonStyle="bg-[#f78c2a] text-white py-3 text-lg font-bold rounded-md px-4" />
+                <Button
+                  type="submit"
+                  text={loading ? "Sending ...." : "Send"}
+                  buttonStyle="bg-[#f78c2a] text-white py-3 text-lg font-bold rounded-md px-4"
+                  disabled={loading}
+                />
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

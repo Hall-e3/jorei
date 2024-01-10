@@ -1,4 +1,4 @@
-import { BriefcaseIcon, NewspaperIcon } from "@heroicons/react/24/solid";
+import { BriefcaseIcon, EnvelopeIcon, MapPinIcon, NewspaperIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import {
   Exports,
   Museveni,
@@ -474,5 +474,26 @@ export const aboutGoods = [
     image: Transportation,
     description:
       "Leveraging our supply chain expertise, we navigate the complexities of handling, storing, and transporting food, feed, and fiber with efficiency. Our digital integration ensures seamless market access for farmers and delivers reliable supplies to our customers."
+  }
+];
+export const contact_details = [
+  {
+    id: 1,
+    title: "Email",
+    subtitle: "jorelagriexporters@gmail.com",
+    icon: <EnvelopeIcon className="w-5 h-5" />
+  },
+  {
+    id: 2,
+    title: "Address",
+    subtitle: "Kampala,Uganda",
+    icon: <MapPinIcon className="w-5 h-5" />
+  },
+  {
+    id: 3,
+    title: "Contact",
+    subtitle: "+256 762 831647 for UG Sales",
+    subtitle1: "240-316-6448 for US Sales",
+    icon: <PhoneIcon className="w-5 h-5" />
   }
 ];
