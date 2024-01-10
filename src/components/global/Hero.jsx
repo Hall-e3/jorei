@@ -1,17 +1,19 @@
 import React from "react";
 import Logo from "./Logo";
-import { Bars3CenterLeftIcon, ChatBubbleOvalLeftIcon, ChevronDownIcon, MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
+import { Bars3CenterLeftIcon, ChatBubbleOvalLeftIcon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Link, useLocation } from "react-router-dom";
 import { routes } from "../../utils/data";
 
 export default function Hero() {
-  const [search, setSearch] = React.useState(false);
   const [hoveredLinkId, setHoveredLinkId] = React.useState(0);
   const [woods, setWoods] = React.useState(false);
   const [about, setAbout] = React.useState(false);
   const [drop, setDrop] = React.useState(false);
   const [show, setShow] = React.useState(false);
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
+  const location = useLocation();
+  const { pathname: path } = { ...location };
+  console.log(path);
 
   React.useEffect(() => {
     window?.addEventListener("scroll", () => {
@@ -86,26 +88,27 @@ export default function Hero() {
                   </div>
                 </>
               ) : ( */}
-                <div className="flex flex-row items-center space-x-5">
-                  <div className="flex flex-row items-center space-x-6">
-                    {routes.map((route) => (
-                      <Link
-                        key={route.id}
-                        to={`${route.link}`}
-                        onMouseEnter={() => setHoveredLinkId(route.id)}
-                        className="flex flex-row items-center space-x-2">
-                        {route.icon}
-                        <p className={`text-white text-[15.3px]  ${hoveredLinkId === 1 || hoveredLinkId === 2 ? "hover:text-[#f78c2a]" : ""}`}>{route.name}</p>
-                      </Link>
-                    ))}
-                  </div>
-                  <Link to="/contact-us">
-                    <button className="flex items-center group space-x-3 bg-white hover:bg-SECONDARY_GREEN border border-SECONDARY_GREEN hover:border-white px-[2.09375rem] rounded-[1.25rem] h-[2.5rem] max-w-[21.4375rem]">
-                      <ChatBubbleOvalLeftIcon className="w-6 h-6 text-[#f78c2a]" />
-                      <p className="text-SECONDARY_GREEN group-hover:text-white  text-[.875rem]">Get in touch</p>
-                    </button>
-                  </Link>
-                  {/* <div
+              <div className="flex flex-row items-center space-x-5">
+                <div className="flex flex-row items-center space-x-6">
+                  {routes.map((route) => (
+                    <Link key={route.id} to={`${route.link}`} onMouseEnter={() => setHoveredLinkId(route.id)} className="flex flex-row items-center space-x-2">
+                      {route.icon}
+                      <p
+                        className={`text-white text-[15.3px] ${path === route.link && "border-b-2 border-[#f78c2a] py-2"}   ${
+                          hoveredLinkId === route.id ? "hover:text-[#f78c2a]" : ""
+                        }`}>
+                        {route.name}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+                <Link to="/contact-us">
+                  <button className="flex items-center group space-x-3 bg-white hover:bg-SECONDARY_GREEN border border-SECONDARY_GREEN hover:border-white px-[2.09375rem] rounded-[1.25rem] h-[2.5rem] max-w-[21.4375rem]">
+                    <ChatBubbleOvalLeftIcon className="w-6 h-6 text-[#f78c2a]" />
+                    <p className="text-SECONDARY_GREEN group-hover:text-white  text-[.875rem]">Get in touch</p>
+                  </button>
+                </Link>
+                {/* <div
                     onClick={() => setSearch(true)}
                     className="h-[2.25rem] rounded-[1.875rem] w-[10.9375rem] text-left px-[.9375rem] flex flex-row items-center border border-white py-2.5">
                     <MagnifyingGlassIcon className="w-5 h-5 text-[#f78c2a]" />
