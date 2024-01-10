@@ -50,7 +50,7 @@ export default function Contact() {
     }
   };
 
-  if (message) {
+  if (message !== null) {
     setTimeout(() => {
       setMessage(null);
     }, 3000);
@@ -148,7 +148,7 @@ export default function Contact() {
                   disabled={loading}
                 />
               </div>
-              {message && <div className="text-[15px] font-bold bg-green-400 text-green-900 py-2 px-3 w-full">{message}</div>}
+              {message && message !== null && <div className="text-[15px] font-bold bg-green-400 text-green-900 py-2 px-3 w-full">{message}</div>}
             </form>
           </div>
         </div>
