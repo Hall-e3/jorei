@@ -48,7 +48,7 @@ export default function Hero() {
               <Logo width={100} height={100} />
             </Link>
             <div className="flex flex-none md:hidden flex-row items-center space-x-3">
-              {search ? (
+              {/* {search ? (
                 <div className="h-[2.25rem] w-[10.9375rem] text-left  flex flex-row items-center border-b border-white py-2.5">
                   <MagnifyingGlassIcon className="w-6 h-6 text-[#f78c2a]" />
                   <input className="text-sm outline-none w-full bg-SECONDARY_GREEN pl-1.5 text-white" />
@@ -61,14 +61,14 @@ export default function Hero() {
                   <MagnifyingGlassIcon className="w-5 h-5 text-[#f78c2a]" />
                   <input className="text-sm outline-none w-full bg-SECONDARY_GREEN pl-1.5" placeholder="Search" />
                 </div>
-              )}
+              )} */}
 
               <div className="block md:hidden">
                 <Bars3CenterLeftIcon onClick={() => setShowMobileMenu((prev) => !prev)} className="text-white w-7 h-7 cursor-pointer" />
               </div>
             </div>
             <div className="hidden flex-none transition duration-300 md:flex flex-row items-center space-x-3">
-              {search ? (
+              {/* {search ? (
                 <>
                   <div className="h-[2.25rem] w-[10.9375rem] text-left  flex md:hidden flex-row items-center border-b border-white py-2.5">
                     <MagnifyingGlassIcon className="w-6 h-6 text-[#f78c2a]" />
@@ -85,7 +85,7 @@ export default function Hero() {
                     </div>
                   </div>
                 </>
-              ) : (
+              ) : ( */}
                 <div className="flex flex-row items-center space-x-5">
                   <div className="flex flex-row items-center space-x-6">
                     {routes.map((route) => (
@@ -105,14 +105,15 @@ export default function Hero() {
                       <p className="text-SECONDARY_GREEN group-hover:text-white  text-[.875rem]">Get in touch</p>
                     </button>
                   </Link>
-                  <div
+                  {/* <div
                     onClick={() => setSearch(true)}
                     className="h-[2.25rem] rounded-[1.875rem] w-[10.9375rem] text-left px-[.9375rem] flex flex-row items-center border border-white py-2.5">
                     <MagnifyingGlassIcon className="w-5 h-5 text-[#f78c2a]" />
                     <input className="text-sm outline-none w-full bg-SECONDARY_GREEN pl-1.5" placeholder="Search" />
                   </div>
                 </div>
-              )}
+              )} */}
+              </div>
             </div>
           </div>
         </div>
