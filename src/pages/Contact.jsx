@@ -14,6 +14,7 @@ export default function Contact() {
     subject: "",
     body: ""
   });
+  const [message, setMessage] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -39,6 +40,7 @@ export default function Contact() {
         subject,
         message: body
       });
+      setMessage("Your email has been successfully submitted");
       // alert("email successfully sent check inbox");
     } catch (error) {
       alert("Failed to send email. Please try again later.");
@@ -47,6 +49,12 @@ export default function Contact() {
       setLoading(false);
     }
   };
+
+  if (message) {
+    setTimeout(() => {
+      setMessage(null);
+    }, 3000);
+  }
 
   return (
     <div className="h-screen w-full overflow-x-hidden">
@@ -140,6 +148,7 @@ export default function Contact() {
                   disabled={loading}
                 />
               </div>
+              {message && <div className="text-[15px] font-bold bg-green-400 text-green-900 py-2 px-3 w-full">{message}</div>}
             </form>
           </div>
         </div>
